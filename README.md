@@ -7,15 +7,17 @@
 
 ### Definitions
 
-- Ontologie en informatique : Ensemble structuré de concepts permettant de donner un sens aux informations.
+- **[Ontologie en informatique](https://en.wikipedia.org/wiki/Ontology_(information_science)):** Representation, formal naming, and definitions of the categories, properties, and relations between the concepts, data, or entities that pertain to one, many, or all domains of discourse.
+
+- **[Sementic Role Labelling](https://en.wikipedia.org/wiki/Semantic_role_labeling):** Process of assigning labels to words or phrases in a sentence that indicates their semantic role in the sentence, such as that of an agent, goal, or result.
 
 
 ## Technical
 
 ### Constraints
 
-- Ontologie en TOML (pas YAML beurk)
-- ROS2 Humble (EOL : May 2027)
+- Ontologie en [TOML](https://en.wikipedia.org/wiki/TOML) (pas YAML beurk)
+- [ROS 2 Humble](https://docs.ros.org/en/humble/index.html) (EOL : May 2027)
 - Python 3.11 (EOL : October 2027)
 
 ### Solutions

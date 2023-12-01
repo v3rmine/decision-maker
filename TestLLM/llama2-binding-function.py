@@ -1,20 +1,8 @@
 from os.path import expanduser
 import json
 
-from langchain.chains import LLMChain
-from langchain.memory import ConversationBufferMemory
-from langchain_experimental.chat_models import Llama2Chat
-from langchain.llms import LlamaCpp
-from langchain.prompts.chat import (
-    ChatPromptTemplate,
-    HumanMessagePromptTemplate,
-    MessagesPlaceholder,
-)
-from langchain.schema import SystemMessage
+from llama_cpp import Llama
 
-B_FUNC, E_FUNC = "<FUNCTIONS>", "</FUNCTIONS>\n\n"
-B_TYPES, E_TYPES = "<TYPES>", "</TYPES>\n\n"
-B_INST, E_INST = "[INST] ", " [/INST]"
 function_metadata = [{
     "function": "go",
     "description": "Move the robot to some coordinates.",
@@ -26,7 +14,7 @@ function_metadata = [{
         }
     ],
 }, {
-    "function": "get_location_coordinates",
+    "function": "get_location",
     "description": "Return the coordinates associated with an location name.",
     "arguments": [
         {
@@ -48,15 +36,19 @@ function_metadata = [{
             "type": "string",
             "description": "Name of the element to search."
         }
-    ]
+    ],
+    "return": {
+        "type": "coordinates",
+        "description": "Coordinates associated with the element"
+    }
 }, {
     "function": "grab",
-    "description": "Grab an element with the robot hand",
+    "description": "Grab an element at some coordinates with the robot hand",
     "arguments": [
         {
-            "name": "element",
-            "type": "string",
-            "description": "Name of the element to grab."
+            "name": "where",
+            "type": "coordinates",
+            "description": "Coordinates of the element to grab."
         }
     ]
 }]
@@ -76,93 +68,83 @@ types_metadata = [{
 }]
 
 function_list = json.dumps(function_metadata, indent=4)
-functions=function_list.strip().replace("{", "{{").replace("}", "}}")
+functions = function_list.strip().replace("{", "{{").replace("}", "}}")
 types_list = json.dumps(types_metadata, indent=4)
-types=types_list.strip().replace("{", "{{").replace("}", "}}")
-template_messages = [
-    SystemMessage(content=
-    """
-    You convert a prompt, a list of TYPES, a list of FUNCTIONS to a list of sequential function calls, one function call per line.
-    Example:
-    <TYPES>
-    [{
-        "ident": "string",
-        "desc": "sequence of text"
-    }, {
-        "ident": "list",
-        "desc": "list of elements",
-        "args": [{
-            "type": "generic",
-            "desc": "element of the list"
-        }]
-    }]
-    </TYPES>
+types = types_list.strip().replace("{", "{{").replace("}", "}}")
 
-    <FUNCTIONS>
-    [{
-        "function": "search",
-        "description": "Search for a query online.",
-        "arguments": [
-            {
-                "name": "element",
-                "type": "string",
-                "description": "Name of the element to search."
-            }
-        ],
-        "returns": {
-            "type": "list<string>",
-            "description": "List of found content."
-        }
-    }, {
-        "function": "filter",
-        "description": "Filter a list to remove the unwanted elements",
-        "arguments": [
-            {
-                "name": "element",
-                "type": "list<string>",
-                "description": "Name of the element to grab."
-            },
-            {
-                "name": "pattern",
-                "type": "string",
-                "description": "Pattern to keep in the list"
-            }
-        ],
-        "returns": {
-            "type": "list<string>",
-            "description": "Filtered list of results"
-        }
-    }]
-    </FUNCTIONS>
-
-    [INST] Search for cats online where orange is in content [/INST]
-
-    [AI]
-    result = search("cats")
-    filter(result, "orange")
-    [/AI]
-    """),
-    MessagesPlaceholder(variable_name="chat_history"),
-    HumanMessagePromptTemplate.from_template(f"{B_TYPES}{types}{E_TYPES}{B_FUNC}{functions}{E_FUNC}{B_INST}{{text}}{E_INST}\n\n"),
-]
-prompt_template = ChatPromptTemplate.from_messages(template_messages)
-print(prompt_template.to_json())
 model_path = expanduser("./llama-2-7b-chat.Q3_K_M.gguf")
-
-llm = LlamaCpp(
+llm = Llama(
     model_path=model_path,
     streaming=False,
-    temperature=0.5,
+    temperature=0,
     top_p=1,
-    n_ctx=1024,
+    n_ctx=2048,
+    verbose=False,
+    use_mmap=True,
+    use_mlock=True,
 )
-model = Llama2Chat(llm=llm)
 
-memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
-chain = LLMChain(llm=model, prompt=prompt_template, memory=memory)
-
-print(
-    chain.run(
-        text="Go to the kitchen and bring a banana",
-    )
+resp = llm.create_chat_completion(
+    messages = [
+        {
+            "role": "system", 
+            "content": f"""
+            You are a helful functions chain plannifier, that only communicate in valid JSON files.
+            Here are your capabilities:
+            {{
+                "types": {types},
+                "functions": {functions}
+            }}
+            The expected output from you has to be a valid JSON array with the functions chain:
+            [
+                {{
+                    "function": <function1_name>,
+                    "args": [<optional function_parameters>],
+                    "store_result": <optional $variable to store result>
+                }}, {{
+                    "function": <function2_name>,
+                    "args": [<optional function_parameters>],
+                    "store_result": <optional $variable to store result>
+                }}
+            ]
+            """
+        },
+        {
+            "role": "user",
+            "content": """
+            { "prompt":"Go to the kitchen and bring a banana" }
+            """,
+        },
+        {
+            "role": "assistant",
+            "content": """
+            [
+                {
+                    "function": "get_location",
+                    "args": [{ "location_name": "kitchen" }],
+                    "store_result": "$location"
+                }, {
+                    "function": "go",
+                    "args": [{ "to": "$location" }]
+                }, {
+                    "function": "search",
+                    "args": [{ "element": "banana" }],
+                    "store_result": "$banana_location"
+                }, {
+                    "function": "grab",
+                    "args": [{ "where": "$banana_location" }]
+                }
+            ]
+            """
+        },
+        {
+            "role": "user",
+            "content": """
+            { "prompt": "Grab an apple in the fridge in the kitchen" }
+            """
+        }
+    ]
 )
+
+assistant_response = json.loads(json.dumps(resp))['choices'][0]['message']['content']
+print(assistant_response)

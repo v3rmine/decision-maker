@@ -22,7 +22,7 @@
 
 ### Solutions
 
-1. LLM fonctionnel via un model fine-tuned
+1. [LLM fonctionnel via un model fine-tuned](./ExplorationLlama2/README.md)
 2. Semantic role labelling (SpaCy)
 3. LLM REL (SpaCy)? LangChain?
 
@@ -40,18 +40,6 @@ ip link set eth0 up
 5. Setup nvidia https://developer.nvidia.com/embedded/learn/get-started-jetson-agx-orin-devkit
 6. Ajout cuda au PATH : `echo 'export PATH="$PATH:/usr/local/cuda/bin"' >> ~/.bashrc`
 7. Monitor jetson usage : https://rnext.it/jetson_stats/
-
-### Setup llama
-1. `git clone https://github.com/ggerganov/llama.cpp ~/Git/llama.cpp`
-2. `cd ~/Git/llama.cpp`
-3. `sed -i 's|NVCC_FLAGS += -arch=native|NVCC_FLAGS += -arch=compute_87|' Makefile` (`compute_87` is the corresponding arch of Jetson ORIN)
-4. `make LLAMA_CUBLAS=1`
-
-## Choix modèle LLAMA
-- https://huggingface.co/TheBloke/speechless-code-mistral-7B-v1.0-GGUF
-- https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF
-- https://huggingface.co/TheBloke/open-llama-3b-v2-wizard-evol-instuct-v2-196k-GGUF
-- https://huggingface.co/TheBloke/Llama-2-7B-GGUF
 
 ## Contributors
 

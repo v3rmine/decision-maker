@@ -91,7 +91,7 @@ history = [
     {
         "role": "user",
         "content": """
-        { "prompt":"Go to the kitchen and bring a banana" }
+        { "prompt":"Go to the kitchen and grab a banana" }
         """,
     },
     {

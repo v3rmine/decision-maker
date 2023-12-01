@@ -37,8 +37,14 @@ ip link set eth0 up
 ```
 3. update & upgrade
 4. Install `htop`, `build-essential`
-5. Setup nvidia https://developer.nvidia.com/embedded/learn/get-started-jetson-agx-orin-devkit  
+5. Setup nvidia https://developer.nvidia.com/embedded/learn/get-started-jetson-agx-orin-devkit
+6. Ajout cuda au PATH : `echo 'export PATH="$PATH:/usr/local/cuda/bin"' >> ~/.bashrc`
 
+## Choix modèle LLAMA
+- https://huggingface.co/TheBloke/speechless-code-mistral-7B-v1.0-GGUF
+- https://huggingface.co/TheBloke/speechless-codellama-34b-v2.0-GGUF
+- https://huggingface.co/TheBloke/open-llama-3b-v2-wizard-evol-instuct-v2-196k-GGUF
+- https://huggingface.co/TheBloke/Llama-2-7B-GGUF
 
 ## Contributors
 

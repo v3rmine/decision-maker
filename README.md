@@ -39,6 +39,13 @@ ip link set eth0 up
 4. Install `htop`, `build-essential`
 5. Setup nvidia https://developer.nvidia.com/embedded/learn/get-started-jetson-agx-orin-devkit
 6. Ajout cuda au PATH : `echo 'export PATH="$PATH:/usr/local/cuda/bin"' >> ~/.bashrc`
+7. Monitor jetson usage : https://rnext.it/jetson_stats/
+
+### Setup llama
+1. `git clone https://github.com/ggerganov/llama.cpp ~/Git/llama.cpp`
+2. `cd ~/Git/llama.cpp`
+3. `sed -i 's|NVCC_FLAGS += -arch=native|NVCC_FLAGS += -arch=compute_87|' Makefile` (`compute_87` is the corresponding arch of Jetson ORIN)
+4. `make LLAMA_CUBLAS=1`
 
 ## Choix modèle LLAMA
 - https://huggingface.co/TheBloke/speechless-code-mistral-7B-v1.0-GGUF

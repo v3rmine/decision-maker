@@ -26,6 +26,20 @@
 2. Semantic role labelling (SpaCy)
 3. LLM REL (SpaCy)? LangChain?
 
+## Setup Jetson AGX Orin Devkit
+1. OEM setup ubuntu
+2. Setup eth0 jusqu'au prochain reboot
+```sh
+#!/bin/sh
+ip link set eth0 down
+ip link set eth0 address <cloned mac address>
+ip link set eth0 up 
+```
+3. update & upgrade
+4. Install `htop`, `build-essential`
+5. Setup nvidia https://developer.nvidia.com/embedded/learn/get-started-jetson-agx-orin-devkit  
+
+
 ## Contributors
 
 - Julien CAPOSIENA ([@julien-cpsn](https://github.com/Julien-cpsn))

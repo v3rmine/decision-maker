@@ -1,0 +1,43 @@
+[ontology]
+name = "GenericServiceRobotOntology"
+
+# ---------- #
+
+[entities]
+
+# Define the entities and their attributes
+[entities.attributes]
+
+Robot = [ "current_location", "task_list" ]
+User = [ "id", "name", "location" ]
+Location = [ "name", "type" ]
+Object = [ "type", "location" ]
+Task = [ "description", "status" ]
+
+
+# Define the relations between entities
+[entities.relations]
+
+robot_assigned_to_task = { from = "Robot", to = "Task" }
+object_located_in = { from = "Object", to = "Location" }
+user_in_location = { from = "User", to = "Location" }
+
+# ---------- #
+
+[tasks]
+
+[tasks.generated_task_example]
+steps = [
+  "IdentifyUser",
+  "RecordCurrentLocation",
+  "AnalyzeEnvironment",
+  "NavigateToLocation",
+  "SearchForObject",
+  "NavigateToObject",
+  "GraspObject",
+  "VerifyGrasp",
+  "ReturnToUser",
+  "DeliverObject",
+]
+
+SearchForObject = {}

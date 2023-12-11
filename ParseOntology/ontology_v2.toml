@@ -1,0 +1,36 @@
+[Ontology]
+    name = "GenericServiceRobotOntology"
+    description = "An helpful description"
+    language = "english"
+
+[Robot]
+    name = "Pepper"
+    middleware = "ROS2"
+
+    [Robot.Abilities]
+        # xxx = ['*']
+        # yyy = []
+        navigation_2d = ['get_current_interest_point', 'get_object_interest_point', 'get_interest_point_location', 'go_to']
+        vision = ['detect_objects', 'detect_humans']
+        object_grasping = ['grab_object', 'put_object']
+        speech_recognition = ['speech_to_text', 'detect_sound']
+        text_to_speech = ['say']
+        display = ['display_text']
+        audio = ['play_sound']
+
+
+[Entities]
+
+    [Entities.Human]
+        age = 10
+
+    [Entities.Location]
+        wall_color = 'red'
+
+    #[Entities.InterestPoint]
+
+    [Entities.Object]
+        weight = 1.0
+
+    [Entities.Furniture]
+        color = 'brown'

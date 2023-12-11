@@ -1,5 +1,6 @@
 .vscode/
 .idea/
 .venv/
+venv/
 *.gguf
 __pycache__

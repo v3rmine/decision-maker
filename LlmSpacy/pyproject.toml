@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "llm-spacy"
+version = "0.1.0"
+description = ""
+authors = ["Johan Planchon <dev@johan.moe>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+llm-spacy = "llm_spacy:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+spacy = { extras = ["transformers"], version = "^3.7.2" }
+spacy-llm = "^0.6.4"
+en_core_web_sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz" }
+fr_core_news_sm = { url = "https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.7.0/fr_core_news_sm-3.7.0.tar.gz" }
+setuptools = "^69.0.2"
+wheel = "^0.42.0"
+accelerate = "^0.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

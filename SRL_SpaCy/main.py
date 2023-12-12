@@ -63,7 +63,7 @@ def check_children(token: Token) -> List:
     children = []
     for child in token.children:
         if child.dep_ in order:
-            data = [child.text, child.dep_, 1]
+            data = [child.lemma_, child.dep_, 1]
 
             for sub_child in child.children:
                 if sub_child.dep_ == 'nummod' and sub_child.like_num:
@@ -92,7 +92,7 @@ def handle_sentence(sentence: Span):
     dependencies = check_children(root)
     dependencies = sorted(dependencies, key=lambda child: order.index(child[1]))
 
-    token_txt = root.text
+    token_txt = root.lemma_
     for dependency in dependencies:
         token_txt += f" {dependency[0]}"
 
@@ -152,12 +152,19 @@ def handle_doc(doc: Doc):
         print()
 
 
-@Language.component('split_and_or')
-def set_custom_boundaries(doc: Doc):
-    for token in doc[:-1]:
-        if token.text == 'and' or token.text == 'or':
-            doc[token.i + 1].is_sent_start = True
-    return doc
+def split_sentence_by_and(text: str) -> str:
+    parts = text.split()
+
+    for word_index in range(1, len(parts)-1):
+        if parts[word_index] in ['and', 'or', 'then']:
+            possible_verb = nlp(parts[word_index + 1])
+
+            if possible_verb[0].pos_ == 'VERB':
+                parts[word_index-1] += '.'
+                del parts[word_index]
+
+    final_text = ' '.join(parts)
+    return final_text
 
 
 if __name__ == '__main__':
@@ -169,16 +176,17 @@ if __name__ == '__main__':
 
     # Rule-based splitting, splits sentences on punctuation like . ! ?
     nlp.add_pipe('sentencizer')
-    nlp.add_pipe('split_and_or', before='parser')
 
     try:
         while True:
             print('------------------------')
-            text = input('Enter a sentence: ')
+            input_text = input('Enter a sentence: ')
             print()
 
+            input_text = split_sentence_by_and(input_text)
+
             # Process text
-            doc = nlp(text)
+            doc = nlp(input_text)
 
             handle_doc(doc)
 

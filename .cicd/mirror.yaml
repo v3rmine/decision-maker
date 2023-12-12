@@ -1,0 +1,22 @@
+resources:
+- name: repo-src
+  type: git
+  icon: gitlab
+  source:
+    uri: "https://gitlab.com/cpelyon/rob/5irc-2023-2024/projets/Sujet_1_LLM_Decisionnel/S1_G1_Caposiena_Planchon.git"
+    username: joxcat
+    password: ((gitlab-access-token))
+- name: repo-mirror
+  type: git
+  icon: github
+  source:
+    uri: https://github.com/joxcat/decision-maker.git
+    username: joxcat
+    password: ((github-access-token))
+
+jobs:
+- name: mirror
+  plan:
+    - get: repo-src
+      trigger: true
+    - put: repo-mirror

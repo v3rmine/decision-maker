@@ -21,10 +21,8 @@
 - Python 3.11 (EOL : October 2027)
 
 ### Solutions
-
-1. [LLM fonctionnel via un model fine-tuned](./ExplorationLlama2/README.md)
-2. Semantic role labelling (SpaCy)
-3. LLM REL (SpaCy)? LangChain?
+- [Semantic role labelling (SpaCy)](./SRL_SpaCy/)
+- [Via LLM](./ExplorationLLM/README.md)
 
 ## Setup Jetson AGX Orin Devkit
 1. OEM setup ubuntu

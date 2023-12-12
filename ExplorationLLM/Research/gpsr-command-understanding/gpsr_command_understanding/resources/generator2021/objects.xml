@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<categories>
+    <category name="tools" defaultLocation="cabinet" room="kitchen">
+        <object name="screwdriver" />
+        <object name="fire extinguisher" difficulty="hard"/>
+        <object name="flashlight" />
+    </category>
+    <category name="kitchen items" defaultLocation="cabinet" room="kitchen">
+        <object name="kettle"  />
+        <object name="pan"  />
+    </category>
+    <category name="cleaning supplies" defaultLocation="cabinet" room="kitchen">
+        <object name="dishsoap" />
+        <object name="laundry detergent" />
+        <object name="bleach" />
+        <object name="vinegar" />
+    </category>
+    <category name="toiletries" defaultLocation="bathroom cabinet" room="bathroom">
+        <object name="shampoo" />
+        <object name="soap" />
+        <object name="towel"  type="alike"/>
+        <object name="sponge" />
+        <object name="toothpaste" />
+        <object name="cloth" />
+        <object name="toilet paper" />
+        <object name="tissue" />
+        <object name="toothbrush" />
+        <object name="prescription bottle" />
+        <object name="tampon" />
+        <object name="painkiller" />
+        <object name="hand soap" />
+        <object name="hand sanitizer" />
+        <object name="bandage" />
+        <object name="moisturizer" />
+    </category>
+    <category name="snacks" defaultLocation="center table" room="living room">
+        <object name="chips" />
+        <object name="chocolate" />
+        <object name="cookies" />
+        <object name="edamame" />
+        <object name="crackers" />
+    </category>
+    <category name="fruits" defaultLocation="dining table" room="dining room">
+        <object name="apple"  type="alike" fruit="true"/>
+        <object name="melon"  type="alike" fruit="true"/>
+        <object name="banana"  type="alike" fruit="true"/>
+        <object name="pear"  type="alike" fruit="true"/>
+        <object name="peach"  type="alike" fruit="true"/>
+    </category>
+    <category name="food" defaultLocation="cabinet" room="kitchen">
+        <object name="pasta" />
+        <object name="rice" />
+        <object name="noodles" />
+        <object name="canned tuna" />
+        <object name="pickles" />
+        <object name="canned beans" />
+        <object name="canned soup" />
+        <object name="peanut butter" />
+        <object name="jelly" />
+        <object name="mixed nuts" />
+        <object name="honey" />
+        <object name="sugar" />
+        <object name="flour" />
+        <object name="gelatin" />
+        <object name="salt" />
+        <object name="pepper" />
+        <object name="soy sauce" />
+        <object name="ketchup" />
+        <object name="mustard" />
+    </category>
+    <category name="food" defaultLocation="cupboard" room="kitchen">
+        <object name="cereal"   canPour="true"/>
+        <object name="spaghetti"   canPour="true"/>
+        <object name="bread"   canPour="true"/>
+    </category>
+    <category name="drinks" defaultLocation="fridge" room="kitchen">
+        <object name="tea"  canPour="true"/>
+        <object name="coffee"  canPour="true"/>
+        <object name="beer"  alcoholic="true"/>
+        <object name="wine"  alcoholic="true"/>
+        <object name="soda"  canPour="true"/>
+        <object name="water"  canPour="true"/>
+        <object name="milk"  canPour="true"/>
+    </category>
+    <category name="food" defaultLocation="fridge" room="kitchen">
+        <object name="pizza" />
+        <object name="curry" />
+        <object name="tofu" />
+        <object name="butter" />
+    </category>
+    <category name="food" defaultLocation="freezer" room="kitchen">
+        <object name="ice cream" />
+        <object name="vegetables" />
+        <object name="spinach" />
+        <object name="broccoli" />
+        <object name="dumplings" />
+        <object name="wontons" />
+    </category>
+    <category name="cutlery" defaultLocation="cutlery drawer" room="dining room">
+        <object name="tea spoon"  />
+        <object name="spoon"  />
+        <object name="fork"  />
+        <object name="knife"  />
+        <object name="napkin"  />
+        <object name="scissors"  />
+    </category>
+    <category name="tableware" defaultLocation="sideboard" room="dining room">
+        <object name="big dish"  canPlaceOn="true"/>
+        <object name="small dish"  canPlaceOn="true"/>
+        <object name="bowl"  canPourIn="true"/>
+        <object name="glass"  canPourIn="true"/>
+        <object name="mug"  canPourIn="true"/>
+    </category>
+    <category name="containers" defaultLocation="counter" room="kitchen">
+        <object name="tray"  type="special" canPlaceOn="true" twoHands="true"/>
+        <object name="box"  type="special" canPlaceIn="true" twoHands="true"/>
+        <object name="bag"  type="special" canPlaceIn="true"/>
+        <object name="water bottle" />
+    </category>
+    <category name="personal items" defaultLocation="counter" room="kitchen">
+        <object name="laptop" />
+        <object name="tablet" />
+        <object name="purse" />
+    </category>
+    <category name="personal items" defaultLocation="nightstand" room="bedroom">
+        <object name="keys" />
+        <object name="wallet" />
+        <object name="phone" />
+        <object name="watch" />
+        <object name="glasses" />
+        <object name="headphones" />
+    </category>
+    <category name="personal items" defaultLocation="shoe rack" room="corridor">
+        <object name="running shoes" />
+        <object name="jacket" />
+        <object name="hat" />
+        <object name="sunglasses" />
+    </category>
+    <category name="toys" defaultLocation="center table" room="living room">
+        <object name="board game" />
+        <object name="blocks" />
+        <object name="pacifier" />
+    </category>
+    <category name="household items" defaultLocation="center table" room="living room">
+        <object name="tv remote" />
+    </category>
+    <category name="personal items" defaultLocation="bookshelf" room="living room">
+        <object name="notebook" />
+        <object name="book" />
+        <object name="phone charger" />
+    </category>
+</categories>
+
+

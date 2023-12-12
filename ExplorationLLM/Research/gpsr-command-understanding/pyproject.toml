@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "gpsr-command-understanding"
+version = "0.1.0"
+description = ""
+authors = ["nickswalker <nick@nickwalker.us>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+allennlp = "2.0.0"
+editdistance = "^0.6.2"
+importlib-resources = "<6"
+lark-parser = ">=0.8.5"
+lxml = "^4.9.3"
+overrides = "<4"
+flask = "^3.0.0"
+flask-cors = "^4.0.0"
+gevent = "^23.9.1"
+tensorboard = "^2.15.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

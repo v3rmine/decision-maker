@@ -1,0 +1,135 @@
+#!/usr/bin/env bash
+
+function usage {
+    cat <<- EOF
+    usage: train_all_models.sh name experiments_dir_path
+
+    Runs allennlp train on all experiment files in a path.
+
+    Options:
+        -t --train-path                Absolute path to the training data
+        -v --val-path                  Absolute path to the validation data
+        -c --cpu                       Use the CPU (instead of GPU)
+        -h --help                      Print this message
+EOF
+        exit 1
+}
+
+
+if [[ $# -lt 2 ]]; then
+    echo "Pass a name and a path to a directory of experiments"
+    exit 1
+fi
+
+force=0
+use_cpu=0
+experiment_name="$1"
+shift
+experiment_path="$1"
+shift
+
+if [[ ! -d "$experiment_path" ]]; then
+    echo "Second argument should be a path to a directory of experiment configurations"
+    exit 1
+fi
+
+
+results_path="${experiment_path}/results_${experiment_name}"
+mkdir -p "$results_path"
+args=()
+while [[ $# -gt 0 ]]; do
+    key="$1"
+    case $key in
+        -t|--train-path)
+            shift
+            train_path=$1
+        ;;
+        -v|--val-path)
+            shift
+            validation_path=$1
+        ;;
+        -c|--cpu)
+            use_cpu=1
+        ;;
+        -h|--help)
+                usage
+        ;;
+        -f|--force)
+          force=1
+        ;;
+        --)
+            # Get rid of --
+            shift
+            # The remainder are grabbag args to pass to the script
+            args+=($@)
+            break
+        ;;
+        *)
+           >&2 echo "Unknown argument: $1"
+           exit 1
+        ;;
+    esac
+    shift # move past argument
+done
+
+if [[ $use_cpu == 0 ]]; then
+  export CUDA_DEVICE=0
+else
+  export CUDA_DEVICE=-1
+fi
+if [[ "$train_path" ]]; then
+  export TRAIN_PATH="${train_path}"
+fi
+if [[ "$validation_path" ]]; then
+  export VALIDATION_PATH="${validation_path}"
+fi
+
+export EVALUATE_ON_TEST=0
+experiment_files=${experiment_path}/*.jsonnet
+summary_path="${results_path}/training_summary.txt"
+
+if [[ $force == 0 && -f "${summary_path}" ]]; then
+  echo "${summary_path} already exists. Remove it if you want to train again"
+  exit 1
+fi
+# Clear the file
+echo "" > "$summary_path"
+
+# Runs a particular experiment file
+run_file() {
+    local file=$1
+    model_name="${TRANSFORMER_NAME}${name}"
+    echo "${model_name}"
+    set -x;
+    # TODO: Figure out how to quiet some but not all logging
+    allennlp train "$file" -s "${results_path}/${model_name}" --include-package gpsr_command_understanding "${args[@]}" > /dev/null 2>&1
+    set +x;
+
+    # Paste the final metrics into a summary file
+    metrics_path="${results_path}/${model_name}/metrics.json"
+    echo -e "\n ${model_name}" >> "$summary_path"
+    cat "$metrics_path" >> "$summary_path"
+}
+
+set -x;
+for file in ${experiment_files}; do
+    name=$(basename "$file")
+    # remove .json extension
+    name="${name%.*}"
+    if [[ "${name}" == "transformer_seq2seq" ]]; then
+      # Get the list of different transformers to try
+      readarray -t embeddings < "${experiment_path}/transformers"
+      for embedding in "${embeddings[@]}"; do
+        # If the line starts with a hash, skip this parameterization
+        if [[ ${embedding:0:1} == "#" ]]; then
+          continue
+        fi
+        export TRANSFORMER_NAME="${embedding}"
+        run_file "$file"
+      done
+    else
+      export TRANSFORMER_NAME=""
+      run_file "$file"
+    fi
+done
+set +x;

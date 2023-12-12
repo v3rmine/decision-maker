@@ -1,0 +1,4 @@
+*.pyc
+experiments/results*/
+*.swp
+venv/

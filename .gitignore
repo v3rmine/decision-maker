@@ -1,6 +1,12 @@
+# Editors
 .vscode/
 .idea/
+.fleet/
+
+# Python
 .venv/
 venv/
+__pycache__/
+
+# ML
 *.gguf
-__pycache__

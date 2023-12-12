@@ -1,0 +1,16 @@
+MODEL_NAME: "t5"
+PRETRAINED_PATH: "t5-base"
+MODEL_WEIGHTS: "model/tage_t5.pt"
+
+TASK_FILE: "configs/tasks.txt"
+ARG_FILE: "configs/args.txt"
+GND_FILE: "configs/grounding.txt"
+
+TRAIN_DATA_FILE: "data/train.csv"
+DEV_DATA_FILE: "data/dev.csv"
+TEST_DATA_FILE: "data/test.csv"
+
+BATCH_SIZE: 8
+NUM_BEAMS: 1
+MIN_LENGTH: 0
+MAX_LENGTH: 100

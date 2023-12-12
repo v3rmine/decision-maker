@@ -1,0 +1,17 @@
+Agent
+Area
+Category
+Container_portal
+Containing_object
+Cotheme
+Degree
+Desired_state
+Device
+Goal
+coGoal
+Manner
+Operational_state
+Recipient
+Source
+coSource
+Theme

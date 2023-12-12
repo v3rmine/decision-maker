@@ -1,0 +1,16 @@
+Being_located
+Being_in_category
+Bringing
+Changing_operational_state
+Checking_state
+Cutting
+Following
+Giving
+Inspecting
+Motion
+Opening
+Picking
+Placing
+Pushing
+Rotation
+Searching

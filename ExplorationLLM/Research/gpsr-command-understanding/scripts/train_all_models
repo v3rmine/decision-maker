@@ -102,7 +102,7 @@ run_file() {
     echo "${model_name}"
     set -x;
     # TODO: Figure out how to quiet some but not all logging
-    allennlp train "$file" -s "${results_path}/${model_name}" --include-package gpsr_command_understanding "${args[@]}" > /dev/null 2>&1
+    allennlp train "$file" -s "${results_path}/${model_name}" --include-package gpsr_command_understanding "${args[@]}"
     set +x;
 
     # Paste the final metrics into a summary file

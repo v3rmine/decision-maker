@@ -80,8 +80,8 @@ for dir in $results_dirs; do
       continue
     fi
     set -x
-    allennlp evaluate "${model_path}" "${test_path}" --output-file "${dir}/evaluation_${dataset_name}.json" --include-package gpsr_command_understanding $gpu_arg > /dev/null 2>&1
-    allennlp predict "${model_path}" "${test_path}"   --output-file "${dir}/predictions_${dataset_name}.json" --use-dataset-reader --predictor command_parser --include-package gpsr_command_understanding --batch-size 64 $gpu_arg > /dev/null 2>&1
+    allennlp evaluate "${model_path}" "${test_path}" --output-file "${dir}/evaluation_${dataset_name}.json" --include-package gpsr_command_understanding $gpu_arg
+    allennlp predict "${model_path}" "${test_path}"   --output-file "${dir}/predictions_${dataset_name}.json" --use-dataset-reader --predictor command_parser --include-package gpsr_command_understanding --batch-size 64 $gpu_arg
 
     set +x
     echo -e "\n ${model_name}" >> "${summary_path}"

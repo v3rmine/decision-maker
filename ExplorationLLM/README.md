@@ -2,6 +2,7 @@
 
 ## Pistes
 - [LLM fonctionnel via un model fine-tuned](./ExplorationLlama2/README.md)
+- [Spacy et LLM](./LlmSpacy/README.md)
 
 ## Papier de Recherche
 - [Language and Robotics: Complex SentenceUnderstanding](https://sci-hub.se/10.1007/978-3-030-27529-7_54)

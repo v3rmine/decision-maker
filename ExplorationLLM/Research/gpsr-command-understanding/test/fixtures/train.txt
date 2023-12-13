@@ -1,0 +1,18 @@
+look for the <object> in the <location>
+(find (lambda $1 e (is_a $1 " <object> ") (at $1 " <location> ")))
+locate the <object> in the <location>
+(find (lambda $1 e (is_a $1 " <object> ") (at $1 " <location> ")))
+find the <object> in the <location>
+(find (lambda $1 e (is_a $1 " <object> ") (at $1 " <location> ")))
+Tell me how many <object> there are on the <location>
+(say (count (lambda $1 e (is_a $1 " <object> ") (at $1 " <location> "))))
+look for a person in the <location> and say <whattosay>
+(say " <whattosay> " (lambda $1 e (person $1) (at $1 " <location> ")))
+look for a person in the <location> and tell <whattosay>
+(say " <whattosay> " (lambda $1 e (person $1) (at $1 " <location> ")))
+locate a person in the <location> and say <whattosay>
+(say " <whattosay> " (lambda $1 e (person $1) (at $1 " <location> ")))
+locate a person in the <location> and tell <whattosay>
+(say " <whattosay> " (lambda $1 e (person $1) (at $1 " <location> ")))
+find a person in the <location> and say <whattosay>
+(say " <whattosay> " (lambda $1 e (person $1) (at $1 " <location> ")))

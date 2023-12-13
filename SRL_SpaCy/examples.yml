@@ -1,0 +1,14 @@
+- text: Bring me my phone from the kitchen.
+  spans:
+    - text: me
+      is_entity: true
+      label: HUMAN
+      reason: refers to a human
+    - text: phone
+      is_entity: true
+      label: OBJECT
+      reason: is an object
+    - text: kitchen
+      is_entity: true
+      label: LOCATION
+      reason: is a part of a house

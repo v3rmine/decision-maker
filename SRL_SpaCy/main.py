@@ -172,15 +172,36 @@ def split_sentence_by_and(text: str) -> str:
 
 if __name__ == '__main__':
     spacy.prefer_gpu()
+    """
+    'label_definitions': {
+        'ROBOT': 'You as a general purpose service robot, e.g. you',
+        'HUMAN': 'A person, e.g. me, him, John, her, Anna.',
+        'LOCATION': 'A room in a house, e.g. kitchen, living-room, bathroom',
+        'OBJECT': 'Any object that can be found in a house, e.g. pencil, apple, drink, phone',
+    }
+    """
+
+    llm_config = {
+        'task': {
+            '@llm_tasks': 'spacy.NER.v3',
+            'labels': ['ROBOT', 'HUMAN', 'LOCATION', 'OBJECT'],
+        },
+        'model': {
+            '@llm_models': 'spacy.GPT-3-5.v1',
+            'name': 'gpt-3.5-turbo'
+        }
+    }
 
     print('Loading model...')
     nlp = spacy.load('en_core_web_lg')  # en_core_web_lg
-    NER_nlp = assemble('config.cfg')
+    NER_nlp = spacy.blank('en')
+    NER_llm = NER_nlp.add_pipe("llm_ner", config=llm_config)
+    NER_nlp.initialize()
     print('Model loaded!')
 
+    print(NER_nlp.components)
     # Rule-based splitting, splits sentences on punctuation like . ! ?
     nlp.add_pipe('sentencizer')
-    NER_nlp.add_pipe('sentencizer')
 
     try:
         while True:

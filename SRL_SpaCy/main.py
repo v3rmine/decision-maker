@@ -2,10 +2,10 @@ from typing import List
 
 import spacy
 from numerizer import numerize
-from spacy import Language
 from spacy.tokens import Token
 from spacy.tokens.doc import Doc
 from spacy.tokens.span import Span
+from spacy_llm.util import assemble
 
 """
 POS_LIST = ["ADJ", "ADP", "ADV", "AUX", "CONJ", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB", "X", "SPACE"]
@@ -45,24 +45,27 @@ advmod: adverbial modifier
 
 order = ['dobj', 'pobj', 'dative']
 possibilities = [
-    ('grab', 'dobj'),
-    ('grab', 'dobj', 'pobj'),
-    ('grab', 'dobj', 'pobj', 'dative'),
-    ('grab', 'dobj', 'dative'),
-    ('put', 'dobj', 'pobj'),
-    ('go', 'pobj'),
-    ('detect', 'dobj'),
-    ('detect', 'dative'),
-    ('say', 'dobj'),
-    ('display', 'dobj'),
-    ('play', 'dobj'),
+    ('grab', 'OBJECT'),
+    ('grab', 'OBJECT', 'LOCATION'),
+    ('grab', 'OBJECT', 'HUMAN'),
+    ('grab', 'OBJECT', 'LOCATION', 'HUMAN'),
+    ('put', 'OBJECT', 'LOCATION'),
+    ('go', 'LOCATION'),
+    ('detect', 'OBJECT'),
+    ('detect', 'HUMAN'),
+    #('say', 'dobj'),
+    #('display', 'dobj'),
+    #('play', 'dobj'),
 ]
 
 
 def check_children(token: Token) -> List:
     children = []
+
+    print(token)
     for child in token.children:
-        if child.dep_ in order:
+        if child.ent_type_ in ["ROBOT", "HUMAN", "LOCATION", "OBJECT"]:
+            print(child.text, child.ent_type_)
             data = [child.lemma_, child.dep_, 1]
 
             for sub_child in child.children:
@@ -79,6 +82,9 @@ def check_children(token: Token) -> List:
 def handle_sentence(sentence: Span):
     root = None
 
+    ner = NER_nlp(sentence.text_with_ws)
+    entities = ner.ents
+
     print('\tWORDS')
     for token in sentence:
         print('\t', token.text, token.dep_, token.pos_, token.ent_type_ if token.ent_type_ != '' else '∅', token.head.text, [child for child in token.children])
@@ -89,15 +95,12 @@ def handle_sentence(sentence: Span):
     # ========
     print('\n\tPOSSIBILITIES')
 
-    dependencies = check_children(root)
-    dependencies = sorted(dependencies, key=lambda child: order.index(child[1]))
-
     token_txt = root.lemma_
-    for dependency in dependencies:
-        token_txt += f" {dependency[0]}"
+    for entity in entities:
+        token_txt += f" {entity.text}"
 
     token_nlp = nlp(token_txt)
-    print('\t', root, dependencies, '>', token_txt)
+    print('\t', root, [(entity.text, entity.label_) for entity in entities], '>', token_txt)
 
     best_result = [0, None]
 
@@ -107,9 +110,9 @@ def handle_sentence(sentence: Span):
         filled = 0
 
         for arg in possibility[1:]:
-            for dep in dependencies:
-                if arg == dep[1]:
-                    possibility_txt = possibility_txt.replace(arg, dep[0])
+            for entity in entities:
+                if arg == entity.label_:
+                    possibility_txt = possibility_txt.replace(arg, entity.text)
                     filled += 1
 
         if filled != len(possibility) - 1:
@@ -172,10 +175,12 @@ if __name__ == '__main__':
 
     print('Loading model...')
     nlp = spacy.load('en_core_web_lg')  # en_core_web_lg
+    NER_nlp = assemble('config.cfg')
     print('Model loaded!')
 
     # Rule-based splitting, splits sentences on punctuation like . ! ?
     nlp.add_pipe('sentencizer')
+    NER_nlp.add_pipe('sentencizer')
 
     try:
         while True:

@@ -24,6 +24,9 @@
 - [Semantic role labelling (SpaCy)](./SRL_SpaCy/)
 - [Via LLM](./ExplorationLLM/README.md)
 
+## CICD
+[Pipeline](https://cicd.planchon.dev/teams/main/pipelines/cpe.robot-project-mirror)
+    
 ## Setup Jetson AGX Orin Devkit
 1. OEM setup ubuntu
 2. Setup eth0 jusqu'au prochain reboot

@@ -1,10 +1,50 @@
 # Exploration de la piste des LLM
 
-## Pistes
+- [Exploration de la piste des LLM](#exploration-de-la-piste-des-llm)
+  - [Pistes personnelles](#pistes-personnelles)
+  - [Repository de Code](#repository-de-code)
+  - [Papier de Recherche](#papier-de-recherche)
+  - [Datasets](#datasets)
+  - [Résultats gpsr-command-understanding](#résultats-gpsr-command-understanding)
+    - [Phrases de test](#phrases-de-test)
+    - [Trained LLM List](#trained-llm-list)
+    - [`Take the tray and put it on the desk`](#take-the-tray-and-put-it-on-the-desk)
+    - [`Tell me how many people are in the corridor`](#tell-me-how-many-people-are-in-the-corridor)
+    - [`Could you meet Robin at the dining table and follow her to the dining room`](#could-you-meet-robin-at-the-dining-table-and-follow-her-to-the-dining-room)
+    - [`Could you grasp the tray from the side table and bring it to me`](#could-you-grasp-the-tray-from-the-side-table-and-bring-it-to-me)
+    - [`Please follow Robin from the entrance to the bedroom`](#please-follow-robin-from-the-entrance-to-the-bedroom)
+    - [`Give me the bowl`](#give-me-the-bowl)
+    - [`Please Tell me how many tableware there are on the bookcase`](#please-tell-me-how-many-tableware-there-are-on-the-bookcase)
+    - [`Take the orange from the dining room to the counter`](#take-the-orange-from-the-dining-room-to-the-counter)
+    - [`Grasp the tray and put it on the dining table`](#grasp-the-tray-and-put-it-on-the-dining-table)
+    - [`Greet Francis at the bed and lead her to her uber`](#greet-francis-at-the-bed-and-lead-her-to-her-uber)
+
+## Pistes personnelles
 - [LLM fonctionnel via un model fine-tuned](./ExplorationLlama2/README.md)
 - [Spacy et LLM](./LlmSpacy/README.md)
 
-## gpsr-command-understanding
+## Repository de Code
+- [GRUT: Grounded language Understanding via Transformers](./Research/grut/README.md) (source: https://github.com/crux82/grut)
+- [GPSR Command Understanding](./Research/gpsr-command-understanding/README.md) (source: https://github.com/nickswalker/gpsr-command-understanding)
+- [REL/SRL recherche italienne](./Research/NLP-Semantic-Role-Labeling/README.md) (source: https://github.com/andreabac3/NLP-Semantic-Role-Labeling)
+- [tagE: Enabling an Embodied Agent to Understand Human Instructions](./Research/tagE/README.md) (source: https://github.com/csarkar/tagE)
+- [LU4R: adaptive spoken Language Understanding For Robots](http://sag.art.uniroma2.it/lu4r.html)
+
+## Papier de Recherche
+- [Language and Robotics: Complex SentenceUnderstanding](https://sci-hub.se/10.1007/978-3-030-27529-7_54)
+- [Enabling human-like task identification from natural conversation](https://arxiv.org/abs/2008.10073)
+- [Natural Spoken Instructions Understanding for Robot with Dependency Parsing](https://sci-hub.se/10.1109/CYBER46603.2019.9066566)
+- [Mapping natural language procedures descriptions to linear temporal logic templates](https://link.springer.com/article/10.1007/s10489-023-04882-0)
+- [Foundation Model based Open Vocabulary Task Planning andExecutive System for General Purpose Service Robots](https://arxiv.org/abs/2308.03357)
+- [tagE: Enabling an Embodied Agent to Understand Human Instructions](https://arxiv.org/abs/2310.15605)
+- [Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots](https://arxiv.org/abs/1907.01115v1)
+
+## Datasets
+- [Human Robot Interaction Corpus (HuRIC 2.1)](https://github.com/crux82/huric)
+- [RoboCup@Home Command Generator](https://github.com/kyordhel/GPSRCmdGen)
+- [Rockin - FBM3@Home: Speech Understanding](https://web.archive.org/web/20170603103044/http://thewiki.rockinrobotchallenge.eu/index.php?title=Datasets#FBM3.40Home:_Speech_Understanding)
+
+## Résultats gpsr-command-understanding
 ### Phrases de test
 ```
 Take the tray and put it on the desk
@@ -214,22 +254,3 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( count ( lambda $1 e ( person $1 ) ( male $1 ) ( at $1 \" <room> \" ) ) ) )`                                    | 164ms        |
 | roberta-basetransformer_seq2seq            | `( guide ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ) )`                                                      | 121ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( guide ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ) \" <location> \" )`                                     | 126ms        |
-
-## Papier de Recherche
-- [Language and Robotics: Complex SentenceUnderstanding](https://sci-hub.se/10.1007/978-3-030-27529-7_54)
-- [Enabling human-like task identification from natural conversation](https://arxiv.org/abs/2008.10073)
-- [Natural Spoken Instructions Understanding for Robot with Dependency Parsing](https://sci-hub.se/10.1109/CYBER46603.2019.9066566)
-- [Mapping natural language procedures descriptions to linear temporal logic templates](https://link.springer.com/article/10.1007/s10489-023-04882-0)
-- [Foundation Model based Open Vocabulary Task Planning andExecutive System for General Purpose Service Robots](https://arxiv.org/abs/2308.03357)
-- [tagE: Enabling an Embodied Agent to Understand Human Instructions](https://arxiv.org/abs/2310.15605)
-- [Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots](https://arxiv.org/abs/1907.01115v1)
-
-## Repository de Code
-- [REL/SRL recherche italienne](./Research/NLP-Semantic-Role-Labeling/README.md) (source: https://github.com/andreabac3/NLP-Semantic-Role-Labeling)
-- [tagE: Enabling an Embodied Agent to Understand Human Instructions](./Research/tagE/README.md) (source: https://github.com/csarkar/tagE)
-- [LU4R: adaptive spoken Language Understanding For Robots](http://sag.art.uniroma2.it/lu4r.html)
-
-## Datasets
-- [Human Robot Interaction Corpus (HuRIC 2.1)](https://github.com/crux82/huric)
-- [RoboCup@Home Command Generator](https://github.com/kyordhel/GPSRCmdGen)
-- [Rockin - FBM3@Home: Speech Understanding](https://web.archive.org/web/20170603103044/http://thewiki.rockinrobotchallenge.eu/index.php?title=Datasets#FBM3.40Home:_Speech_Understanding)

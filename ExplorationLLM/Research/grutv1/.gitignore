@@ -1,0 +1,10 @@
+runs/
+model/
+cache_dir/
+outputs/
+venv/
+__pycache__/
+test.py
+confronto/
+external_scripts/
+todo.txt

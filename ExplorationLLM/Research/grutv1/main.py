@@ -214,7 +214,7 @@ def main():
         if args.input != None:
             text = args.input
 
-        predictor = Predictor(model, num_beans=num_beams, return_sequences=return_sequences)
+        predictor = Predictor(model_dir=model, num_beans=num_beams, return_sequences=return_sequences)
         result = predictor.predict(task, text)
         print(result)
 

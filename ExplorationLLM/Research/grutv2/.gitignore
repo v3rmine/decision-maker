@@ -8,4 +8,7 @@ test.py
 confronto/
 external_scripts/
 todo.txt
-data/huric/
+logs/
+data/huric_dataset/
+
+data/huric_sentences_en.csv

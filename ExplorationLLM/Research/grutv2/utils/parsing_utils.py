@@ -40,9 +40,9 @@ if os.path.exists(word_embedding_file_en) and os.path.exists(word_embedding_file
                 # TODO: in future add it back, after you compute POS tagging on input sentence
                 word = line_splitted[0].split("::")[0]
                 word_embeddings['it'][word] = [float(x) for x in line_splitted[-1].split(",")]
-else:
-    print("WORD EMBEDDINGS NOT FOUND\nEXIT")
-    quit()
+#else:
+#    print("WORD EMBEDDINGS NOT FOUND\nEXIT")
+#    quit()
 #############################################################################
 
 def get_frame_lists_from_SRL_prediction(prediction: str, truth: str):

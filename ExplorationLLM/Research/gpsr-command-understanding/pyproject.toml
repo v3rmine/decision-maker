@@ -7,18 +7,25 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-allennlp = "2.0.0"
+python = "^3.8"
+allennlp = ">=2.0.0"
 editdistance = "^0.6.2"
 importlib-resources = "<6"
 lark-parser = ">=0.8.5"
 lxml = "^4.9.3"
+# Additionnal dependencies
 overrides = "<4"
 flask = "^3.0.0"
 flask-cors = "^4.0.0"
 gevent = "^23.9.1"
-tensorboard = "^2.15.1"
+typing_extensions = "^4.5.0"
+torch = { version = "<1.13.0+cu116", source = "pytorch" }
 
-[build-system]
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu116"
+priority = "explicit"
+
+[build-system]  
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

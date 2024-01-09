@@ -50,3 +50,29 @@
 
 ### Retours
 Les premiers retour sont concluents, nous pensons qu'avec un TPU optimisé pour la génération de texte, un modèle généraliste finetuné sur des exemples de requêtes avec retours et contraint avec le format JSON. Il est possible de générer une chaine d'appel depuis un simple prompt en language naturel. Cependant entre la contrainte de temps et celle de puissance, nous ne poursuivrons pas cette piste pour la suite du projet.
+
+### WIP: Rocket3-b
+prompt:
+<pre>
+<|im_start|>user
+I will send a task and you will reply using only the known functions.
+In case of any missing function the you respond with just "ERROR".
+You know the following functions:
+- `GET_CURRENT_LOCATION(): LOCATION` Get the current location
+- `GO(to: LOCATION)` Move to some coordinates
+- `GET_LOCATION(location_name: STRING): LOCATION` Return the location associated with a location name
+- `SEARCH(object_name: STRING): LOCATION` Search for an object
+- `GRAB(where: LOCATION)` Grab an element at some coordinates
+The first task is:
+Bring me back one of the apple from the kitchen<|im_end|>
+<|im_start|>assistant
+$initial_loc = GET_CURRENT_LOCATION()
+$kitchen_location = GET_LOCATION(location_name:"kitchen")
+GO(to:$kitchen_location)
+$apple_location = SEARCH(object_name:"apple")
+GRAB($apple_location)
+GO(to:$initial_loc)<|im_end|>
+<|im_start|>user
+Bring me back one of the apple from the kitchen<|im_end|>
+<|im_start|>assistant\n
+</pre>

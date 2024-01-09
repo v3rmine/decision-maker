@@ -1,0 +1,657 @@
+id,input_text,target_text
+2732,please get the cushion from the bed,"TAKING(Theme('the cushion'), Source('from the bed'))"
+2746,search for the bottle,LOCATING(Sought_entity('for the bottle'))
+2683,carry the mug to the living room,"BRINGING(Theme('the mug'), Goal('to the living room'))"
+2672,activate the television,CHANGE_OPERATIONAL_STATE(Device('the television'))
+2679,bring the mobile to the dining room,"BRINGING(Theme('the mobile'), Goal('to the dining room'))"
+2747,search for the stove in the studio,"LOCATING(Sought_entity('for the stove'), Ground('in the studio'))"
+2724,look for the bed in the bathroom,"LOCATING(Sought_entity('for the bed'), Ground('in the bathroom'))"
+2745,reach martina from behind,"MOTION(Goal('martina'), Path('from behind'))"
+2708,go get the book,TAKING(Theme('the book'))
+2718,go to the studio,MOTION(Goal('to the studio'))
+2719,go to the television in the living room,MOTION(Goal('to the television in the living room'))
+2676,bring the bottle to the bathroom sink,"BRINGING(Theme('the bottle'), Goal('to the bathroom sink'))"
+2756,drop the phone in the kitchen fridge,"RELEASING(Theme('the phone'), Goal('in the kitchen fridge'))"
+2722,look for my phone,LOCATING(Sought_entity('for my phone'))
+2687,find my address book in the living room,"LOCATING(Sought_entity('my address book'), Ground('in the living room'))"
+2675,bring the book to the dining room,"BRINGING(Theme('the book'), Goal('to the dining room'))"
+2741,put the bottle on the table in the studio,"PLACING(Theme('the bottle'), Goal('on the table in the studio'))"
+2764,disconnect from the router,ATTACHING(Goal('from the router'))
+2731,please follow that person and do it slowly,"COTHEME(Cotheme('that person'), Manner('slowly'))"
+2697,find the stove in the studio,"LOCATING(Sought_entity('the stove'), Ground('in the studio'))"
+2680,bring the mobile to the living room,"BRINGING(Theme('the mobile'), Goal('to the living room'))"
+2735,please put the book on the table in the dining room,"PLACING(Theme('the book'), Goal('on the table in the dining room'))"
+2751,take the bottle to the kitchen,"BRINGING(Theme('the bottle'), Goal('to the kitchen'))"
+2730,please follow me to the living room,"COTHEME(Cotheme('me'), Goal('to the living room'))"
+2691,find the bottle of wine in the kitchen,"LOCATING(Sought_entity('the bottle of wine'), Ground('in the kitchen'))"
+2693,find the phone in the studio,"LOCATING(Sought_entity('the phone'), Ground('in the studio'))"
+2673,activate the television at the right of the console,CHANGE_OPERATIONAL_STATE(Device('the television at the right of the console'))
+2713,go to studio,MOTION(Goal('to studio'))
+2737,please take the mug to the bedroom,"BRINGING(Theme('the mug'), Goal('to the bedroom'))"
+2742,put the phone in the kitchen stove,"PLACING(Theme('the phone'), Goal('in the kitchen stove'))"
+2694,find the pillow,LOCATING(Sought_entity('the pillow'))
+2727,move towards the kitchen,MOTION(Goal('towards the kitchen'))
+2739,put the book on the bed,"PLACING(Theme('the book'), Goal('on the bed'))"
+2709,go into the bathroom,MOTION(Goal('into the bathroom'))
+2744,search for a pillow in the living room,"LOCATING(Sought_entity('for a pillow'), Ground('in the living room'))"
+2738,please walk slowly to the kitchen,"MOTION(Manner('slowly'), Goal('to the kitchen'))"
+2710,go into the dining room with the bottle,MOTION(Goal('into the dining room'))
+2696,find the shower,LOCATING(Sought_entity('the shower'))
+2734,please put the book in the dining room,"PLACING(Theme('the book'), Goal('in the dining room'))"
+2723,look for my phone in the bathroom and the bedroom,"LOCATING(Sought_entity('for my phone'), Ground('in the bathroom and the bedroom'))"
+2678,bring the bottle to the kitchen,"BRINGING(Theme('the bottle'), Goal('to the kitchen'))"
+2711,go near the couch,MOTION(Goal('near the couch'))
+2743,put the phone on the table in the dining room,"PLACING(Theme('the phone'), Goal('on the table in the dining room'))"
+2699,find the television,LOCATING(Sought_entity('the television'))
+2684,come to the table,MOTION(Goal('to the table'))
+2692,find the phone,LOCATING(Sought_entity('the phone'))
+2720,go to the television in the studio,MOTION(Goal('to the television in the studio'))
+2700,find the white vase,LOCATING(Sought_entity('the white vase'))
+2725,look for the soap in the bathroom,"LOCATING(Sought_entity('for the soap'), Ground('in the bathroom'))"
+2703,follow mark slowly,"COTHEME(Cotheme('mark'), Manner('slowly'))"
+2690,find the bottle,LOCATING(Sought_entity('the bottle'))
+2677,bring the bottle to the couch,"BRINGING(Theme('the bottle'), Goal('to the couch'))"
+2755,take the phone to the bedroom,"BRINGING(Theme('the phone'), Goal('to the bedroom'))"
+2729,please find the table in the bedroom,"LOCATING(Sought_entity('the table'), Ground('in the bedroom'))"
+2757,leave the book in the bedroom,"RELEASING(Theme('the book'), Goal('in the bedroom'))"
+2733,please move towards the living room,MOTION(Goal('towards the living room'))
+2749,take the bottle to the bedroom,"BRINGING(Theme('the bottle'), Goal('to the bedroom'))"
+2716,go to the living room,MOTION(Goal('to the living room'))
+2715,go to the fridge,MOTION(Goal('to the fridge'))
+2728,please find the bed,LOCATING(Sought_entity('the bed'))
+2705,follow the guy in the blue hoodie,COTHEME(Cotheme('the guy in the blue hoodie'))
+2726,move towards the bedroom,MOTION(Goal('towards the bedroom'))
+2695,find the plates on the table,"LOCATING(Sought_entity('the plates'), Ground('on the table'))"
+2748,take the book to the bedroom,"BRINGING(Theme('the book'), Goal('to the bedroom'))"
+2750,take the bottle to the dining room,"BRINGING(Theme('the bottle'), Goal('to the dining room'))"
+2702,follow john slowly,"COTHEME(Cotheme('john'), Manner('slowly'))"
+2714,go to the closet of the dining room,MOTION(Goal('to the closet of the dining room'))
+2682,bring the phone to the bedroom,"BRINGING(Theme('the phone'), Goal('to the bedroom'))"
+2698,find the table in the bedroom,"LOCATING(Sought_entity('the table'), Ground('in the bedroom'))"
+2717,go to the lounge,MOTION(Goal('to the lounge'))
+2752,take the mobile into the bedroom,"BRINGING(Theme('the mobile'), Goal('into the bedroom'))"
+2704,follow me slowly,"COTHEME(Cotheme('me'), Manner('slowly'))"
+2681,bring the mug to the bedroom,"BRINGING(Theme('the mug'), Goal('to the bedroom'))"
+2688,find my hat on the bed in the bedroom,"LOCATING(Sought_entity('my hat'), Ground('on the bed in the bedroom'))"
+2736,please take the book to the bathroom,"BRINGING(Theme('the book'), Goal('to the bathroom'))"
+2685,could you bring the phone to the bathroom please,"BRINGING(Agent('you'), Theme('the phone'), Goal('to the bathroom'))"
+2701,find vittorio 's phone,LOCATING(Sought_entity('vittorio 's phone'))
+2686,find a bottle in the kitchen,"LOCATING(Sought_entity('a bottle'), Ground('in the kitchen'))"
+2707,go find the book,LOCATING(Sought_entity('the book'))
+2712,go to dining room,MOTION(Goal('to dining room'))
+2689,find the bed in the bathroom,"LOCATING(Sought_entity('the bed'), Ground('in the bathroom'))"
+2721,look for my handbag in the dining room,"LOCATING(Sought_entity('for my handbag'), Ground('in the dining room'))"
+2758,give me one apple from the table,"GIVING(Recipient('me'), Theme('one apple from the table'))"
+2706,get the phone and take it to the bathroom,"TAKING(Theme('the phone')) - BRINGING(Theme('it'), Goal('to the bathroom'))"
+2740,put the bottle on the table in the dining room,"PLACING(Theme('the bottle'), Goal('on the table in the dining room'))"
+2674,bring me the bottle,"BRINGING(Beneficiary('me'), Theme('the bottle'))"
+2754,take the phone to the bathroom,"BRINGING(Theme('the phone'), Goal('to the bathroom'))"
+3395,michael carry me the phone that is on the glass table in the dining room,"BRINGING(Beneficiary('me'), Theme('the phone that is on the glass table in the dining room')) - BEING_LOCATED(Theme('that'), Location('on the glass table in the dining room'))"
+3326,go to the couch and bring me my laptop,"MOTION(Goal('to the couch')) - BRINGING(Beneficiary('me'), Theme('my laptop'))"
+3358,robot can you bring me the telephone,"BRINGING(Agent('you'), Beneficiary('me'), Theme('the telephone'))"
+3348,please open the storage cupboard,CLOSURE(Containing_object('the storage cupboard'))
+3374,robot come with me to the living room,"COTHEME(Cotheme('with me'), Goal('to the living room'))"
+3393,hang my coat in the closet in my bedroom,"PLACING(Theme('my coat'), Goal('in the closet in my bedroom'))"
+3361,robot can you get me a glass of water from the kitchen,"BRINGING(Agent('you'), Beneficiary('me'), Theme('a glass of water'), Source('from the kitchen'))"
+3318,find the towel,LOCATING(Sought_entity('the towel'))
+3276,robot can you bring me my reading glasses from the bedroom,"BRINGING(Agent('you'), Beneficiary('me'), Theme('my reading glasses'), Source('from the bedroom'))"
+3290,bring me the remote control,"BRINGING(Beneficiary('me'), Theme('the remote control'))"
+3306,could you close the shutters please,"CLOSURE(Agent('you'), Container_portal('the shutters'))"
+3383,the trash needs to go out could you take it out please,"BRINGING(Agent('you'), Theme('it'), Goal('out'))"
+3384,turn off the boiler,"CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the boiler'))"
+3298,can you put the soap in the washing machine,"PLACING(Agent('you'), Theme('the soap'), Goal('in the washing machine'))"
+3343,let 's take the soap to the kitchen,"BRINGING(Agent(''s'), Theme('the soap'), Goal('to the kitchen'))"
+3359,robot can you come to the studio with me,"MOTION(Theme('you'), Goal('to the studio'))"
+3315,could you turn on the television please,"CHANGE_OPERATIONAL_STATE(Agent('you'), Operational_state('on'), Device('the television'))"
+3352,put the can in the bin,"PLACING(Theme('the can'), Goal('in the bin'))"
+3347,please open the pantry,CLOSURE(Containing_object('the pantry'))
+3362,robot can you open the laundry room cabinet,"CLOSURE(Agent('you'), Containing_object('the laundry room cabinet'))"
+3334,i would like some cutlery can you get me some,"BRINGING(Agent('you'), Beneficiary('me'), Theme('some'))"
+3294,bring the shampoo to the shower,"BRINGING(Theme('the shampoo'), Goal('to the shower'))"
+3317,find the magazine and put it on the table,"LOCATING(Sought_entity('the magazine')) - PLACING(Theme('it'), Goal('on the table'))"
+3278,robot can you start my laptop computer,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('my laptop computer'))"
+3332,i want to jump in the shower can you turn it on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('it'), Operational_state('on'))"
+3310,could you put my clothes on the washing line please,"PLACING(Agent('you'), Theme('my clothes'), Goal('on the washing line'))"
+3288,bring me my coat,"BRINGING(Beneficiary('me'), Theme('my coat'))"
+3389,turn on the television,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the television'))"
+3323,get me my towel,"BRINGING(Beneficiary('me'), Theme('my towel'))"
+3297,can you put the detergent in the washing machine,"PLACING(Agent('you'), Theme('the detergent'), Goal('in the washing machine'))"
+3289,bring me my towel,"BRINGING(Beneficiary('me'), Theme('my towel'))"
+3366,robot can you pass me a plate,"GIVING(Donor('you'), Recipient('me'), Theme('a plate'))"
+3329,i need some toilet paper can you get me some,"BRINGING(Agent('you'), Beneficiary('me'), Theme('some'))"
+3327,go to the laundry room,MOTION(Goal('to the laundry room'))
+3302,check if there 's clothes in the washing machine,"INSPECTING(Ground('there 's clothes in the washing machine')) - BEING_LOCATED(Theme('clothes'), Location('in the washing machine'))"
+3321,get me my catalogue on the bedside table,"BRINGING(Beneficiary('me'), Theme('my catalogue'), Source('on the bedside table'))"
+3281,take the laptop near the table of the dining room,TAKING(Theme('the laptop near the table of the dining room'))
+3349,please pick up the phone,TAKING(Theme('the phone'))
+3307,could you hang my clothes on the cloth horse please,"PLACING(Agent('you'), Theme('my clothes'), Goal('on the cloth horse'))"
+3336,i would like to read an architecture magazine can you bring me one,"BRINGING(Agent('you'), Beneficiary('me'), Theme('one'))"
+3300,can you turn the taps in the shower on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the taps in the shower'), Operational_state('on'))"
+3386,turn off the tap,"CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the tap'))"
+3295,bring the soap to the shower,"BRINGING(Theme('the soap'), Goal('to the shower'))"
+3350,please take my trash to the laundry room,"BRINGING(Theme('my trash'), Goal('to the laundry room'))"
+3337,i 'd really like to take a shower could you turn the shower on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the shower'), Operational_state('on'))"
+3381,take the newspaper from the stand and put it on the coffee table,"TAKING(Theme('the newspaper'), Source('from the stand')) - PLACING(Theme('it'), Goal('on the coffee table'))"
+3367,robot can you pass me the remote for the television,"GIVING(Donor('you'), Recipient('me'), Theme('the remote'), Reason('for the television'))"
+3355,put the plate on the counter,"PLACING(Theme('the plate'), Goal('on the counter'))"
+3273,bring me a fork from the press,"BRINGING(Beneficiary('me'), Theme('a fork'), Source('from the press'))"
+3287,bring me my book from the table,"BRINGING(Beneficiary('me'), Theme('my book'), Source('from the table'))"
+3283,take the phone near the table at your right,TAKING(Theme('the phone near the table at your right'))
+3338,i 'm hungry go to the kitchen,MOTION(Goal('to the kitchen'))
+3320,get a fork from the drawer,"TAKING(Theme('a fork'), Source('from the drawer'))"
+3279,robot can you turn the electric oven on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the electric oven'), Operational_state('on'))"
+3324,get my computer from the seat,"TAKING(Theme('my computer'), Source('from the seat'))"
+3309,could you please turn on the tv,"CHANGE_OPERATIONAL_STATE(Agent('you'), Operational_state('on'), Device('the tv'))"
+3284,take the mug on the table in the living room,TAKING(Theme('the mug on the table in the living room'))
+3299,can you turn the shower on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the shower'), Operational_state('on'))"
+3275,robot can you bring me a magazine,"BRINGING(Agent('you'), Beneficiary('me'), Theme('a magazine'))"
+3372,robot can you turn the oven on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the oven'), Operational_state('on'))"
+3342,let 's go to the laundry room,"MOTION(Theme(''s'), Goal('to the laundry room'))"
+3391,restart the wifi,CHANGE_OPERATIONAL_STATE(Device('the wifi'))
+3369,robot can you put the tv on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the tv'), Operational_state('on'))"
+3308,could you pick up the telephone,"TAKING(Agent('you'), Theme('the telephone'))"
+3291,bring me the towel from the drawer,"BRINGING(Beneficiary('me'), Theme('the towel'), Source('from the drawer'))"
+3390,turn on the thermostat,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the thermostat'))"
+3357,robot can you bring me the phone,"BRINGING(Agent('you'), Beneficiary('me'), Theme('the phone'))"
+3304,close the curtains in the living room,CLOSURE(Container_portal('the curtains in the living room'))
+3365,robot can you pass me a plastic plate,"GIVING(Donor('you'), Recipient('me'), Theme('a plastic plate'))"
+3330,i need some utensils could you take me some,"BRINGING(Agent('you'), Beneficiary('me'), Theme('some'))"
+3377,shut off the boiler,"CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the boiler'))"
+3373,robot can you turn the television on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the television'), Operational_state('on'))"
+3344,look for the towel,LOCATING(Sought_entity('for the towel'))
+3285,take my jacket from the jacket hook in my bedroom,"TAKING(Theme('my jacket'), Source('from the jacket hook in my bedroom'))"
+3356,robot can you bring me a towel,"BRINGING(Agent('you'), Beneficiary('me'), Theme('a towel'))"
+3378,stop the tap,CHANGE_OPERATIONAL_STATE(Device('the tap'))
+3351,put the bottle in the bin,"PLACING(Theme('the bottle'), Goal('in the bin'))"
+3354,put the cup in the sink,"PLACING(Theme('the cup'), Goal('in the sink'))"
+3314,could you turn on my pc,"CHANGE_OPERATIONAL_STATE(Agent('you'), Operational_state('on'), Device('my pc'))"
+3301,check if the stereo is on,"INSPECTING(Ground('the stereo'), Desired_state('is on'))"
+3353,put the can in the trash,"PLACING(Theme('the can'), Goal('in the trash'))"
+3305,could you bring my water into the bedroom,"BRINGING(Agent('you'), Theme('my water'), Goal('into the bedroom'))"
+3274,robot can you bring me a bath towel,"BRINGING(Agent('you'), Beneficiary('me'), Theme('a bath towel'))"
+3322,get me my jacket,"BRINGING(Beneficiary('me'), Theme('my jacket'))"
+3380,take the bottle from the table and use it to water the plant,"TAKING(Theme('the bottle'), Source('from the table'))"
+3313,could you switch on my laptop please,"CHANGE_OPERATIONAL_STATE(Agent('you'), Operational_state('on'), Device('my laptop'))"
+3316,find the bottle of water and water the plant,LOCATING(Sought_entity('the bottle of water'))
+3340,let 's go get my book in the living room,TAKING(Theme('my book in the living room'))
+3360,robot can you fully lower the window blinds,"CLOSURE(Agent('you'), Degree('fully'), Container_portal('the window blinds'))"
+3375,see if the radio is on,"INSPECTING(Ground('the radio'), Desired_state('is on'))"
+3346,please close the blinds,CLOSURE(Container_portal('the blinds'))
+3303,check the answer machine for any messages,"INSPECTING(Ground('the answer machine'), Unwanted_entity('for any messages'))"
+3319,follow me to the bathroom,"COTHEME(Cotheme('me'), Goal('to the bathroom'))"
+3387,turn on the heating,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the heating'))"
+3368,robot can you put the blinds all the way down,"CLOSURE(Agent('you'), Container_portal('the blinds'), Degree('all the way down'))"
+3364,robot can you open the washing machine,"CLOSURE(Agent('you'), Containing_object('the washing machine'))"
+3370,robot can you take me to the laundry room,"BRINGING(Agent('you'), Theme('me'), Goal('to the laundry room'))"
+3311,could you put the vase on the coffee table,"PLACING(Agent('you'), Theme('the vase'), Goal('on the coffee table'))"
+3325,go straight to the living room,MOTION(Goal('straight to the living room'))
+3331,i want to go to sleep turn off the light,"CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the light'))"
+3296,can you please take out the garbage,"BRINGING(Agent('you'), Goal('out'), Theme('the garbage'))"
+3272,bring me a chair from the studio,"BRINGING(Beneficiary('me'), Theme('a chair'), Source('from the studio'))"
+3335,i would like some loo roll can you get me some loo roll,"BRINGING(Agent('you'), Beneficiary('me'), Theme('some loo roll'))"
+3341,let 's go to the guest bedroom,"MOTION(Theme(''s'), Goal('to the guest bedroom'))"
+3385,turn off the light and turn off the computer,"CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the light')) - CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the computer'))"
+3292,bring over the gray folder,"BRINGING(Area('over'), Theme('the gray folder'))"
+3328,go to the telephone and check for any messages,MOTION(Goal('to the telephone')) - INSPECTING(Unwanted_entity('for any messages'))
+3363,robot can you open the washer,"CLOSURE(Agent('you'), Containing_object('the washer'))"
+3312,could you put the vase on the table please,"PLACING(Agent('you'), Theme('the vase'), Goal('on the table'))"
+3376,see if the washing machine is empty,"INSPECTING(Ground('the washing machine'), Desired_state('is empty'))"
+3339,i 'm tired switch off the light please,"CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the light'))"
+3379,switch on the tv,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the tv'))"
+3333,i want to watch tv bring me the remote,"BRINGING(Beneficiary('me'), Theme('the remote'))"
+3280,robot can you pass me the television remote,"GIVING(Donor('you'), Recipient('me'), Theme('the television remote'))"
+3345,open the press,CLOSURE(Containing_object('the press'))
+3388,turn on the light and go to the computer,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the light')) - MOTION(Goal('to the computer'))"
+3293,bring the newspaper to the studio,"BRINGING(Theme('the newspaper'), Goal('to the studio'))"
+3277,robot can you open the cabinet,"CLOSURE(Agent('you'), Containing_object('the cabinet'))"
+3371,robot can you turn my laptop on,"CHANGE_OPERATIONAL_STATE(Agent('you'), Device('my laptop'), Operational_state('on'))"
+3382,take the tray to the bedroom,"BRINGING(Theme('the tray'), Goal('to the bedroom'))"
+2337,go to the dining room,MOTION(Goal('to the dining room'))
+2382,can you please search the book and bring it to me,"LOCATING(Perceiver('you'), Sought_entity('the book')) - BRINGING(Theme('it'), Beneficiary('to me'))"
+2290,this is a bathroom with a shower bath and double sink,"BEING_IN_CATEGORY(Item('this'), Category('a bathroom with a shower bath and double sink'))"
+2380,please go to the chair,MOTION(Goal('to the chair'))
+2403,carry the phone to the chair,"BRINGING(Theme('the phone'), Goal('to the chair'))"
+2250,you are in the bedroom and the bed is between two lamps,"BEING_LOCATED(Theme('you'), Location('in the bedroom')) - BEING_LOCATED(Theme('the bed'), Location('between two lamps'))"
+2191,search for towel,LOCATING(Sought_entity('for towel'))
+2372,search for the bottle of wine on the table,"LOCATING(Sought_entity('for the bottle of wine'), Ground('on the table'))"
+2296,go to the fridge inside the kitchen,MOTION(Goal('to the fridge inside the kitchen'))
+2376,take my phone into the living room,"BRINGING(Theme('my phone'), Goal('into the living room'))"
+2181,follow the person with the blonde hair and the black pants fast,"COTHEME(Cotheme('the person with the blonde hair and the black pants'), Speed('fast'))"
+2262,move to the lamp on the right side of the bed,MOTION(Goal('to the lamp on the right side of the bed'))
+2335,this is a living room with white furniture,"BEING_IN_CATEGORY(Item('this'), Category('a living room with white furniture'))"
+2411,bring me my towel that is in the bathroom,"BRINGING(Beneficiary('me'), Theme('my towel that is in the bathroom')) - BEING_LOCATED(Theme('that'), Location('in the bathroom'))"
+2249,can you please go to the living room,"MOTION(Theme('you'), Goal('to the living room'))"
+2253,can you bring me the coke from the fridge,"BRINGING(Agent('you'), Beneficiary('me'), Theme('the coke'), Source('from the fridge'))"
+2195,put the mug in the living room,"PLACING(Theme('the mug'), Goal('in the living room'))"
+2381,this is a bedroom with one bed and two night stands,"BEING_IN_CATEGORY(Item('this'), Category('a bedroom with one bed and two night stands'))"
+2424,check the toilet paper,INSPECTING(Ground('the toilet paper'))
+2258,bring the phone to the dinner table,"BRINGING(Theme('the phone'), Goal('to the dinner table'))"
+2390,robot please take the mug to the sink,"BRINGING(Theme('the mug'), Goal('to the sink'))"
+2434,give me the towel,"GIVING(Recipient('me'), Theme('the towel'))"
+2263,place the mug on the sink nearest to the refrigerator,"PLACING(Theme('the mug'), Goal('on the sink nearest to the refrigerator'))"
+2183,can you bring the mug to the couch in the living room please,"BRINGING(Agent('you'), Theme('the mug'), Goal('to the couch in the living room'))"
+2267,go along with them,COTHEME(Cotheme('with them'))
+2171,this is a table with a glass deck,"BEING_IN_CATEGORY(Item('this'), Category('a table with a glass deck'))"
+2342,can you find me the butcher knife,"LOCATING(Perceiver('you'), Sought_entity('the butcher knife'))"
+2430,there are two abat jour next to the bed and seven pillows,"BEING_LOCATED(Theme('two abat jour'), Location('next to the bed'), Theme('seven pillows'))"
+2265,please go to the mirror,MOTION(Goal('to the mirror'))
+2346,follow my friend into the living room,"COTHEME(Cotheme('my friend'), Goal('into the living room'))"
+2405,please find the fruit,LOCATING(Sought_entity('the fruit'))
+2259,please follow the person in front of you,COTHEME(Cotheme('the person in front of you'))
+2418,could you please move the trash bin from the kitchen to the studio,"BRINGING(Agent('you'), Theme('the trash bin'), Source('from the kitchen'), Goal('to the studio'))"
+2361,follow me to the bedroom,"COTHEME(Cotheme('me'), Goal('to the bedroom'))"
+2426,there is a table in the center of the dining room,"BEING_LOCATED(Theme('a table'), Location('in the center of the dining room'))"
+2295,can you go to the kitchen and bring me some bread from the pantry,"MOTION(Theme('you'), Goal('to the kitchen')) - BRINGING(Beneficiary('me'), Theme('some bread'), Source('from the pantry'))"
+2339,follow the man closely,"COTHEME(Cotheme('the man'), Manner('closely'))"
+2364,find the glasses on the table,"LOCATING(Sought_entity('the glasses'), Ground('on the table'))"
+2256,move to the living room,MOTION(Goal('to the living room'))
+2266,find me a cushion,LOCATING(Sought_entity('a cushion'))
+2375,hey robot follow john everywhere he goes and keep the same pace as he has,"COTHEME(Cotheme('john'), Area('everywhere he goes'))"
+2352,could you please move to the sink and open the cold water,"MOTION(Theme('you'), Goal('to the sink')) - CHANGE_OPERATIONAL_STATE(Device('the cold water'))"
+2378,please enter the bathroom and go towards the sink on the left hand side,ARRIVING(Goal('the bathroom')) - MOTION(Goal('towards the sink on the left hand side'))
+2394,robot please follow the postman,COTHEME(Cotheme('the postman'))
+2189,follow me carefully,"COTHEME(Cotheme('me'), Manner('carefully'))"
+2363,put the pillow under the bed,"PLACING(Theme('the pillow'), Goal('under the bed'))"
+2350,you are in a very big bathroom,"BEING_LOCATED(Theme('you'), Location('in a very big bathroom'))"
+2359,would you please follow me to the kitchen,"COTHEME(Theme('you'), Cotheme('me'), Goal('to the kitchen'))"
+2419,disconnect from the laptop at the right of the counter,ATTACHING(Goal('from the laptop at the right of the counter'))
+2283,please follow me,COTHEME(Cotheme('me'))
+2178,can you find the refrigerator for me,"LOCATING(Perceiver('you'), Sought_entity('the refrigerator'))"
+2182,can you please move near the right lamp,"MOTION(Theme('you'), Goal('near the right lamp'))"
+2410,move near the television of the kitchen,MOTION(Goal('near the television of the kitchen'))
+2293,go follow my sister around the house,"COTHEME(Cotheme('my sister'), Path('around the house'))"
+2188,search for the lamp,LOCATING(Sought_entity('for the lamp'))
+2278,could you please go to the door,"MOTION(Theme('you'), Goal('to the door'))"
+2273,get the blue slippers from the bathroom,"TAKING(Theme('the blue slippers'), Source('from the bathroom'))"
+2355,michael go to the kitchen and get me some water,"MOTION(Goal('to the kitchen')) - BRINGING(Beneficiary('me'), Theme('some water'))"
+2285,could you find a glass in the dining room,"LOCATING(Perceiver('you'), Sought_entity('a glass'), Ground('in the dining room'))"
+2288,go to the dining table,MOTION(Goal('to the dining table'))
+2431,could you please check if the coffee is ready,"INSPECTING(Inspector('you'), Ground('the coffee'), Desired_state('is ready'))"
+2307,this is a bathroom where the door is on the right,"BEING_IN_CATEGORY(Item('this'), Category('a bathroom where the door is on the right')) - BEING_LOCATED(Theme('the door'), Place('on the right'))"
+2194,follow that person,COTHEME(Cotheme('that person'))
+2254,this is a bed room,"BEING_IN_CATEGORY(Item('this'), Category('a bed room'))"
+2412,deliver this message to the person in the living room,"BRINGING(Theme('this message'), Beneficiary('to the person in the living room'))"
+2373,this is a bedroom with big double bed and two bedside tables,"BEING_IN_CATEGORY(Item('this'), Category('a bedroom with big double bed and two bedside tables'))"
+2302,take the mug to the bedroom,"BRINGING(Theme('the mug'), Goal('to the bedroom'))"
+2291,can you take the mug to the coffee table in the living room,"BRINGING(Agent('you'), Theme('the mug'), Goal('to the coffee table in the living room'))"
+2369,follow the man in black,COTHEME(Cotheme('the man in black'))
+2338,find the lamp in the living room,"LOCATING(Sought_entity('the lamp'), Ground('in the living room'))"
+2200,there is some bread on the desk,"BEING_LOCATED(Theme('some bread'), Location('on the desk'))"
+2415,go in front of the main door and open it,MOTION(Goal('in front of the main door')) - CLOSURE(Container_portal('it'))
+2271,can you slowly follow my father,"COTHEME(Theme('you'), Manner('slowly'), Cotheme('my father'))"
+2379,robot follow me slowly,"COTHEME(Cotheme('me'), Manner('slowly'))"
+2187,drive to the fridge,MOTION(Goal('to the fridge'))
+2349,find the red pillow,LOCATING(Sought_entity('the red pillow'))
+2299,the sink is in the kitchen,"BEING_LOCATED(Theme('the sink'), Location('in the kitchen'))"
+2371,put the coffee mug into the dishwasher,"PLACING(Theme('the coffee mug'), Goal('into the dishwasher'))"
+2287,please move to the fridge,MOTION(Goal('to the fridge'))
+2360,would you please bring me my phone from the bed room,"BRINGING(Agent('you'), Beneficiary('me'), Theme('my phone'), Source('from the bed room'))"
+2416,grab the box on the left of the desktop,TAKING(Theme('the box on the left of the desktop'))
+2192,the fridge is on your right side,"BEING_LOCATED(Theme('the fridge'), Location('on your right side'))"
+2367,this is a double bedroom with four pictures on the wall,"BEING_IN_CATEGORY(Item('this'), Category('a double bedroom with four pictures on the wall'))"
+2170,follow this guy,COTHEME(Cotheme('this guy'))
+2397,robot go to the shower,MOTION(Goal('to the shower'))
+2300,get my coat from the closet,"TAKING(Theme('my coat'), Source('from the closet'))"
+2175,please carry the mug to the bathroom,"BRINGING(Theme('the mug'), Goal('to the bathroom'))"
+2344,can you place the mug to the head of the table,"PLACING(Agent('you'), Theme('the mug'), Goal('to the head of the table'))"
+2301,come with me,COTHEME(Cotheme('with me'))
+2197,go to the bathroom,MOTION(Goal('to the bathroom'))
+2268,please bring the mug to the bedroom,"BRINGING(Theme('the mug'), Goal('to the bedroom'))"
+2173,carry the book to my nightstand,"BRINGING(Theme('the book'), Goal('to my nightstand'))"
+2358,michael follow the guy with the red hoodie and the white shoes,COTHEME(Cotheme('the guy with the red hoodie and the white shoes'))
+2292,can you go to the bathroom please,"MOTION(Theme('you'), Goal('to the bathroom'))"
+2294,can you grab my wine glass from the dining room,"TAKING(Agent('you'), Theme('my wine glass'), Source('from the dining room'))"
+2176,please find the lamp,LOCATING(Sought_entity('the lamp'))
+2281,this is a very wide and bright livingroom,"BEING_IN_CATEGORY(Item('this'), Category('a very wide and bright livingroom'))"
+2413,go to living room and turn on the tv,"MOTION(Goal('to living room')) - CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the tv'))"
+2409,go to the bathroom take the rag go to the hall and clean the mirror,MOTION(Goal('to the bathroom')) - TAKING(Theme('the rag')) - MOTION(Goal('to the hall'))
+2248,carry the mug to the dining room,"BRINGING(Theme('the mug'), Goal('to the dining room'))"
+2336,put the cell phone on the dining room table,"PLACING(Theme('the cell phone'), Goal('on the dining room table'))"
+2277,please follow me slowly,"COTHEME(Cotheme('me'), Manner('slowly'))"
+2297,can you please follow that guy over there,"COTHEME(Theme('you'), Cotheme('that guy over there'))"
+2251,can you please bring my phone to the bathroom,"BRINGING(Agent('you'), Theme('my phone'), Goal('to the bathroom'))"
+2186,follow the person behind you,COTHEME(Cotheme('the person behind you'))
+2332,take my cellphone to the bedroom,"BRINGING(Theme('my cellphone'), Goal('to the bedroom'))"
+2305,go to the bedroom,MOTION(Goal('to the bedroom'))
+2198,there are a lot of couches in the living room,"BEING_LOCATED(Theme('a lot of couches'), Location('in the living room'))"
+2174,go to the kitchen,MOTION(Goal('to the kitchen'))
+2257,bring me the pillow from the bed,"BRINGING(Beneficiary('me'), Theme('the pillow'), Source('from the bed'))"
+2280,bring me my telephone from the couch,"BRINGING(Beneficiary('me'), Theme('my telephone'), Source('from the couch'))"
+2270,the living room is very light and bright,"BEING_IN_CATEGORY(Item('the living room'), Category('very light and bright'))"
+2333,find the refrigerator,LOCATING(Sought_entity('the refrigerator'))
+2184,there are two sinks in the kitchen,"BEING_LOCATED(Theme('two sinks'), Location('in the kitchen'))"
+2199,go to the living room and find a drink for me,MOTION(Goal('to the living room')) - LOCATING(Sought_entity('a drink'))
+2407,please follow me to the table,"COTHEME(Cotheme('me'), Goal('to the table'))"
+2303,find a plate,LOCATING(Sought_entity('a plate'))
+2275,the bath-tub is on the left side,"BEING_LOCATED(Theme('the bath-tub'), Location('on the left side'))"
+2306,follow the person in front of me,COTHEME(Cotheme('the person in front of me'))
+2422,hang this jacket in the closet of the corridor,"PLACING(Theme('this jacket'), Goal('in the closet of the corridor'))"
+2417,bring slowly the box near the counter of the kitchen,"BRINGING(Manner('slowly'), Theme('the box'), Goal('near the counter of the kitchen'))"
+2429,this is a bed room where we can find a bed and few pillows and two clops,"BEING_IN_CATEGORY(Item('this'), Category('a bed room')) - BEING_LOCATED(Theme('a bed and few pillows and two clops'), Location('where'))"
+2289,robot go get a book for me,TAKING(Theme('a book'))
+2279,follow me,COTHEME(Cotheme('me'))
+2193,drive to kitchen,MOTION(Goal('to kitchen'))
+2345,can you follow my mother to the garden,"COTHEME(Theme('you'), Cotheme('my mother'), Goal('to the garden'))"
+2387,follow me very fast,"COTHEME(Cotheme('me'), Manner('very fast'))"
+2264,there is a bed with two lamps,BEING_LOCATED(Theme('a bed with two lamps'))
+2304,carry this mug to the bedstand,"BRINGING(Theme('this mug'), Goal('to the bedstand'))"
+2374,hey robot take the book and put it in the oven,"PLACING(Theme('it'), Goal('in the oven')) - TAKING(Theme('the book'))"
+2351,please pick my mobile phone and put it on the chair near the table,"TAKING(Theme('my mobile phone')) - PLACING(Theme('it'), Goal('on the chair near the table'))"
+2343,can you go over to the sofa,"MOTION(Theme('you'), Goal('over to the sofa'))"
+2185,bring the mug to the kitchen,"BRINGING(Theme('the mug'), Goal('to the kitchen'))"
+2406,please go to the sink,MOTION(Goal('to the sink'))
+2414,take the remote control and turn on the tv,"TAKING(Theme('the remote control')) - CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the tv'))"
+2408,bring the cigarettes near the counter on the right,"BRINGING(Theme('the cigarettes'), Goal('near the counter on the right'))"
+2298,take my phone and place it on the bench in the kitchen,"TAKING(Theme('my phone')) - PLACING(Theme('it'), Goal('on the bench in the kitchen'))"
+2423,check main door status,INSPECTING(Ground('main door status'))
+2356,michael find my book on the sofa near the window,"LOCATING(Sought_entity('my book'), Ground('on the sofa near the window'))"
+2276,please find the flowers,LOCATING(Sought_entity('the flowers'))
+2340,fetch me the tissue box,"BRINGING(Beneficiary('me'), Theme('the tissue box'))"
+2353,john can you go to the bathroom to the down right cupboard and take a towel for me please thank you,"MOTION(Theme('you'), Goal('to the bathroom to the down right cupboard')) - TAKING(Agent('you'), Theme('a towel'))"
+2433,in this room there are six chairs,"BEING_LOCATED(Location('in this room'), Theme('six chairs'))"
+2366,go close to the shower,MOTION(Goal('close to the shower'))
+2261,go quickly to the corner and follow the skinny person,"MOTION(Manner('quickly'), Goal('to the corner')) - COTHEME(Cotheme('the skinny person'))"
+2190,bring mug to bedroom,"BRINGING(Theme('mug'), Goal('to bedroom'))"
+2425,there are two couches facing one another,BEING_LOCATED(Theme('two couches facing one another'))
+2427,please move to the front of the fridge,MOTION(Goal('to the front of the fridge'))
+2252,follow the guy with the blue jacket,COTHEME(Cotheme('the guy with the blue jacket'))
+2362,move to the left of the table,MOTION(Goal('to the left of the table'))
+2368,put my mobile phone on the kitchen table,"PLACING(Theme('my mobile phone'), Goal('on the kitchen table'))"
+2269,please go to the table,MOTION(Goal('to the table'))
+2282,bring me the towel from the bathroom,"BRINGING(Beneficiary('me'), Theme('the towel'), Source('from the bathroom'))"
+2196,find the wine in the dining room,"LOCATING(Sought_entity('the wine'), Ground('in the dining room'))"
+2377,please find me the black cushion which is on the bed,"LOCATING(Sought_entity('the black cushion which is on the bed')) - BEING_LOCATED(Theme('which'), Location('on the bed'))"
+2272,bring the phone to the living room,"BRINGING(Theme('the phone'), Goal('to the living room'))"
+2274,bring the book near the lamp,"BRINGING(Theme('the book'), Goal('near the lamp'))"
+2365,follow the person behind me,COTHEME(Cotheme('the person behind me'))
+2348,please move to the far end of this table,MOTION(Goal('to the far end of this table'))
+2370,bring me yogurt from the fridge,"BRINGING(Beneficiary('me'), Theme('yogurt'), Source('from the fridge'))"
+2404,there is a radio next to the bed,"BEING_LOCATED(Theme('a radio'), Location('next to the bed'))"
+2347,put the book on the chair near the dining table,"PLACING(Theme('the book'), Goal('on the chair near the dining table'))"
+2260,go to the sofa and search for the pillow,MOTION(Goal('to the sofa')) - LOCATING(Sought_entity('for the pillow'))
+2177,please bring the mobile phone to the livingroom,"BRINGING(Theme('the mobile phone'), Goal('to the livingroom'))"
+2172,search for the coffee cups,LOCATING(Sought_entity('for the coffee cups'))
+2354,john can you take the mug in the kitchen and bring it to the side of the bathtub please thanks,"TAKING(Agent('you'), Theme('the mug in the kitchen')) - BRINGING(Theme('it'), Goal('to the side of the bathtub'))"
+2255,follow the person in front of you,COTHEME(Cotheme('the person in front of you'))
+3055,could you please bring us some water,"BRINGING(Agent('you'), Beneficiary('us'), Theme('some water'))"
+3154,you should bring me the brown envelope that is on the table,"BRINGING(Agent('you'), Beneficiary('me'), Theme('the brown envelope that is on the table')) - BEING_LOCATED(Theme('that'), Location('on the table'))"
+3111,put this book on the bookshelf,"PLACING(Theme('this book'), Goal('on the bookshelf'))"
+3073,go to the coffee machine,MOTION(Goal('to the coffee machine'))
+3074,go to the dining room take all the plates from the table and put them in the dishwasher,"MOTION(Goal('to the dining room')) - TAKING(Theme('all the plates'), Source('from the table')) - PLACING(Theme('them'), Goal('in the dishwasher'))"
+3104,put the jacket in the wardrobe,"PLACING(Theme('the jacket'), Goal('in the wardrobe'))"
+3097,please move along the fences,MOTION(Path('along the fences'))
+3041,bring me the glasses,"BRINGING(Beneficiary('me'), Theme('the glasses'))"
+3118,robot could you move near the table,"MOTION(Theme('you'), Goal('near the table'))"
+3040,bring me the cookie jar,"BRINGING(Beneficiary('me'), Theme('the cookie jar'))"
+3109,put the pillow on the chair,"PLACING(Theme('the pillow'), Goal('on the chair'))"
+3089,look for my mobile phone,LOCATING(Sought_entity('for my mobile phone'))
+3075,go to the garden,MOTION(Goal('to the garden'))
+3151,there are some plastic bags in the kitchen drawer can you take one and bring it here,"BEING_LOCATED(Theme('some plastic bags'), Location('in the kitchen drawer')) - TAKING(Agent('you'), Theme('one')) - BRINGING(Theme('it'), Goal('here'))"
+3086,i would like some beer can you grab one from the fridge and bring it here,"TAKING(Agent('you'), Theme('one'), Source('from the fridge')) - BRINGING(Theme('it'), Goal('here'))"
+3147,take the salt box,TAKING(Theme('the salt box'))
+3134,take the apple jam jar,TAKING(Theme('the apple jam jar'))
+3087,let go of the pack of beer,RELEASING(Theme('of the pack of beer'))
+3141,take the corn can on the kitchen table,TAKING(Theme('the corn can on the kitchen table'))
+3054,could you go to the bedroom and take the postcard on the nightstand please,"MOTION(Theme('you'), Goal('to the bedroom')) - TAKING(Theme('the postcard on the nightstand'))"
+3059,find a bottle of water,LOCATING(Sought_entity('a bottle of water'))
+3145,take the magazine that is in the bathroom,"TAKING(Theme('the magazine that is in the bathroom')) - BEING_LOCATED(Theme('that'), Location('in the bathroom'))"
+3082,i lost my ring in the living room can you search for it maybe it 's near the sofa,"LOCATING(Cognizer('you'), Sought_entity('for it')) - BEING_LOCATED(Theme('it'), Location('near the sofa'))"
+3077,grab the beer pack near the kitchen door,TAKING(Theme('the beer pack near the kitchen door'))
+3093,move to the bedroom,MOTION(Goal('to the bedroom'))
+3079,grab the cake plate,TAKING(Theme('the cake plate'))
+3137,take the bottle of water on the table,TAKING(Theme('the bottle of water on the table'))
+3092,move to bedroom,MOTION(Goal('to bedroom'))
+3095,please find the sunglasses,LOCATING(Sought_entity('the sunglasses'))
+3072,go next to the tv set,MOTION(Goal('next to the tv set'))
+3133,take my wristwatch,TAKING(Theme('my wristwatch'))
+3116,robot can you find a pack of napkins,"LOCATING(Cognizer('you'), Sought_entity('a pack of napkins'))"
+3043,bring the fruit onto the dining table,"BRINGING(Theme('the fruit'), Goal('onto the dining table'))"
+3128,search the living room for the remote control,"LOCATING(Ground('the living room'), Sought_entity('for the remote control'))"
+3060,find a magazine,LOCATING(Sought_entity('a magazine'))
+3138,take the cereal box,TAKING(Theme('the cereal box'))
+3122,robot put this plate in the center of the table,"PLACING(Theme('this plate'), Goal('in the center of the table'))"
+3152,there 's a wristwatch on the couch side table can you bring it to me,"BEING_LOCATED(Theme('a wristwatch'), Location('on the couch side table')) - BRINGING(Agent('you'), Theme('it'), Beneficiary('to me'))"
+3044,bring the toilet paper to the bathroom,"BRINGING(Theme('the toilet paper'), Goal('to the bathroom'))"
+3121,robot please search for the horn glasses,LOCATING(Sought_entity('for the horn glasses'))
+3053,carefully search for my wallet please,"LOCATING(Manner('carefully'), Sought_entity('for my wallet'))"
+3066,go in the bathroom and find the newspaper,MOTION(Goal('in the bathroom')) - LOCATING(Sought_entity('the newspaper'))
+3045,bring us some mustard,"BRINGING(Beneficiary('us'), Theme('some mustard'))"
+3107,put the mobile phone in the nightstand,"PLACING(Theme('the mobile phone'), Goal('in the nightstand'))"
+3132,take my trousers on the bed and put them in the washing machine,"TAKING(Theme('my trousers on the bed')) - PLACING(Theme('them'), Goal('in the washing machine'))"
+3098,please robot put the pan on the stove and control it,"PLACING(Theme('the pan'), Goal('on the stove')) - INSPECTING(Ground('it'))"
+3115,robot can you bring the cornflakes box from the kitchen table,"BRINGING(Agent('you'), Theme('the cornflakes box'), Source('from the kitchen table'))"
+3039,bring me the cereals and the milk,"BRINGING(Beneficiary('me'), Theme('the cereals and the milk'))"
+3153,there 's a yellow jacket in the dining room can you bring it to me,"BEING_LOCATED(Theme('a yellow jacket'), Location('in the dining room')) - BRINGING(Agent('you'), Theme('it'), Beneficiary('to me'))"
+3119,robot i need you in the bathroom go there please,MOTION(Goal('there'))
+3125,search for the scissors in the red drawer,"LOCATING(Sought_entity('for the scissors'), Ground('in the red drawer'))"
+3124,search for a blue plate,LOCATING(Sought_entity('for a blue plate'))
+3081,grab this mug,TAKING(Theme('this mug'))
+3142,take the forks from the dishwasher,"TAKING(Theme('the forks'), Source('from the dishwasher'))"
+3117,robot carefully search the bedroom for my mobile phone,"LOCATING(Manner('carefully'), Ground('the bedroom'), Sought_entity('for my mobile phone'))"
+3129,sorry robot can you go to the kitchen and turn on the coffee machine,"MOTION(Theme('you'), Goal('to the kitchen')) - CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the coffee machine'))"
+3130,take a coffee mug,TAKING(Theme('a coffee mug'))
+3051,can you go to the kitchen find a glass and bring it to me,"MOTION(Theme('you'), Goal('to the kitchen')) - LOCATING(Sought_entity('a glass')) - BRINGING(Theme('it'), Beneficiary('to me'))"
+3091,move away from the oven,MOTION(Source('away from the oven'))
+3120,robot listen go into the bedroom and find the black pen it should be on the nightstand,"MOTION(Goal('into the bedroom')) - LOCATING(Sought_entity('the black pen')) - BEING_LOCATED(Theme('it'), Location('on the nightstand'))"
+3068,go in the kitchen and switch off the coffee machine and the dishwasher,"MOTION(Goal('in the kitchen')) - CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the coffee machine and the dishwasher'))"
+3090,move along the wall,MOTION(Path('along the wall'))
+3112,put this pan on the stove,"PLACING(Theme('this pan'), Goal('on the stove'))"
+3067,go in the dining room and remove the tablecloth,MOTION(Goal('in the dining room')) - TAKING(Theme('the tablecloth'))
+3150,there are some napkins on the kitchen table can you bring them here,"BEING_LOCATED(Theme('some napkins'), Location('on the kitchen table')) - BRINGING(Agent('you'), Theme('them'), Goal('here'))"
+3136,take the black paperback from the bookshelf,"TAKING(Theme('the black paperback'), Source('from the bookshelf'))"
+3064,go close to the window,MOTION(Goal('close to the window'))
+3100,put down the newspaper,"PLACING(Area('down'), Theme('the newspaper'))"
+3099,please take some pasta from the kitchen cabinet,"TAKING(Theme('some pasta'), Source('from the kitchen cabinet'))"
+3063,find the wallet,LOCATING(Sought_entity('the wallet'))
+3065,go in front of the poster,MOTION(Goal('in front of the poster'))
+3038,bring me a glass of water,"BRINGING(Beneficiary('me'), Theme('a glass of water'))"
+3149,the keys should be on the table on the right of a pile of napkins,"BEING_LOCATED(Theme('the keys'), Location('on the table on the right of a pile of napkins'))"
+3062,find the keys,LOCATING(Sought_entity('the keys'))
+3108,put the pillow on the bed,"PLACING(Theme('the pillow'), Goal('on the bed'))"
+3105,put the kettle on the stove,"PLACING(Theme('the kettle'), Goal('on the stove'))"
+3143,take the glass jar,TAKING(Theme('the glass jar'))
+3085,i want some fruit bring me an apple or an orange,"BRINGING(Beneficiary('me'), Theme('an apple or an orange'))"
+3052,can you move a little bit to the right,"MOTION(Theme('you'), Distance('a little bit'), Area('to the right'))"
+3042,bring the beers here and put them on the table next to the couch,"BRINGING(Theme('the beers'), Goal('here')) - PLACING(Theme('them'), Goal('on the table next to the couch'))"
+3113,release the bag,RELEASING(Theme('the bag'))
+3114,release the pot,RELEASING(Theme('the pot'))
+3084,i really need you to bring me my aspirin it is in one of the drawers of the bathroom,"BRINGING(Agent('you'), Beneficiary('me'), Theme('my aspirin')) - BEING_LOCATED(Theme('it'), Location('in one of the drawers of the bathroom'))"
+3078,grab the book with the blue cover,TAKING(Theme('the book with the blue cover'))
+3049,can you bring the mayo over here,"BRINGING(Agent('you'), Theme('the mayo'), Goal('over here'))"
+3070,go near the window,MOTION(Goal('near the window'))
+3050,can you find a red t-shirt in the dresser,"LOCATING(Perceiver('you'), Sought_entity('a red t-shirt'), Ground('in the dresser'))"
+3061,find my tablet,LOCATING(Sought_entity('my tablet'))
+3103,put the baking tray in the oven,"PLACING(Theme('the baking tray'), Goal('in the oven'))"
+3135,take the beer cans in the kitchen,TAKING(Theme('the beer cans in the kitchen'))
+3123,robot why do n't you go around and search for my hat,"MOTION(Theme('you'), Area('around')) - LOCATING(Sought_entity('for my hat'))"
+3056,could you take the knife on the cutting board,"TAKING(Agent('you'), Theme('the knife on the cutting board'))"
+3057,do you think you can find my wallet,"LOCATING(Cognizer('you'), Sought_entity('my wallet'))"
+3071,go next to the door,MOTION(Goal('next to the door'))
+3126,search for the scissors they should be in the blue drawer,"LOCATING(Sought_entity('for the scissors')) - BEING_LOCATED(Theme('they'), Location('in the blue drawer'))"
+3096,please find the toilet paper,LOCATING(Sought_entity('the toilet paper'))
+3088,look for a blue book in the lounge,"LOCATING(Sought_entity('for a blue book'), Ground('in the lounge'))"
+3146,take the orange juice from the fridge,"TAKING(Theme('the orange juice'), Source('from the fridge'))"
+3094,move to the dining room,MOTION(Goal('to the dining room'))
+3101,put my clothes in the washing machine,"PLACING(Theme('my clothes'), Goal('in the washing machine'))"
+3076,go to the right of the sofa,MOTION(Goal('to the right of the sofa'))
+3047,can you bring me my tablet,"BRINGING(Agent('you'), Beneficiary('me'), Theme('my tablet'))"
+3069,go near the lamp,MOTION(Goal('near the lamp'))
+3102,put my jacket on the bed,"PLACING(Theme('my jacket'), Goal('on the bed'))"
+3083,i need my watch find it please,LOCATING(Sought_entity('it'))
+3048,can you bring the glass to the sink,"BRINGING(Agent('you'), Theme('the glass'), Goal('to the sink'))"
+3058,drop the vase,RELEASING(Theme('the vase'))
+3140,take the coke that is in the kitchen,"TAKING(Theme('the coke that is in the kitchen')) - BEING_LOCATED(Theme('that'), Location('in the kitchen'))"
+3127,search the living room for my mobile phone,"LOCATING(Ground('the living room'), Sought_entity('for my mobile phone'))"
+3148,take three coffee cups and bring them to me,"TAKING(Theme('three coffee cups')) - BRINGING(Theme('them'), Beneficiary('to me'))"
+3144,take the knife with the black handle,TAKING(Theme('the knife with the black handle'))
+3080,grab the key lanyard,TAKING(Theme('the key lanyard'))
+3110,put the soap on the bathroom sink,"PLACING(Theme('the soap'), Goal('on the bathroom sink'))"
+3106,put the milk in the fridge,"PLACING(Theme('the milk'), Goal('in the fridge'))"
+3139,take the coffee mugs from the kitchen cabinet and put them on the table,"TAKING(Theme('the coffee mugs'), Source('from the kitchen cabinet')) - PLACING(Theme('them'), Goal('on the table'))"
+3046,can you bring me my eyeglass you can find it on the table in the dining room,"BRINGING(Agent('you'), Beneficiary('me'), Theme('my eyeglass')) - LOCATING(Perceiver('you'), Sought_entity('it'), Ground('on the table in the dining room'))"
+2670,turn on the switch,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the switch'))"
+2667,take the phone on the couch,TAKING(Theme('the phone on the couch'))
+2640,close the case on the bed,CLOSURE(Containing_object('the case on the bed'))
+2668,take the phone on the left of the pc,TAKING(Theme('the phone on the left of the pc'))
+2635,carry the laptop to daniele,"BRINGING(Theme('the laptop'), Beneficiary('to daniele'))"
+2642,close the jar,CLOSURE(Containing_object('the jar'))
+2669,take the screwdriver to daniele,"BRINGING(Theme('the screwdriver'), Beneficiary('to daniele'))"
+2657,move near the counter,MOTION(Goal('near the counter'))
+2653,look at me,PERCEPTION_ACTIVE(Phenomenon('at me'))
+2661,search in the corridor for the jar,"LOCATING(Ground('in the corridor'), Sought_entity('for the jar'))"
+2646,enter the door of the kitchen,ARRIVING(Goal('the door of the kitchen'))
+2647,enter the kitchen,ARRIVING(Goal('the kitchen'))
+2632,open the bottle,CLOSURE(Containing_object('the bottle'))
+2634,bring the pillow to the couch of the bedroom,"BRINGING(Theme('the pillow'), Goal('to the couch of the bedroom'))"
+2644,connect to the pc on your left,ATTACHING(Goal('to the pc on your left'))
+2662,take the bottle near the fridge,TAKING(Theme('the bottle near the fridge'))
+2630,enter the door,ARRIVING(Goal('the door'))
+2649,go to the toilet,MOTION(Goal('to the toilet'))
+2671,walk to the stairs quickly,"MOTION(Goal('to the stairs'), Manner('quickly'))"
+2638,catch the phone at the right of the desk,TAKING(Theme('the phone at the right of the desk'))
+2655,look for the wrench in the bathroom,"LOCATING(Sought_entity('for the wrench'), Ground('in the bathroom'))"
+2664,take the jar to the table of the kitchen,"BRINGING(Theme('the jar'), Goal('to the table of the kitchen'))"
+2636,carry the paper near the counter,"BRINGING(Theme('the paper'), Goal('near the counter'))"
+2641,close the door on the right,CLOSURE(Container_portal('the door on the right'))
+2659,move to the fridge,MOTION(Goal('to the fridge'))
+2637,carry the pillow near the window of the bedroom,"BRINGING(Theme('the pillow'), Goal('near the window of the bedroom'))"
+2658,move near the window,MOTION(Goal('near the window'))
+2643,close the window on the left,CLOSURE(Container_portal('the window on the left'))
+2629,bring the box near the closet of the bedroom,"BRINGING(Theme('the box'), Goal('near the closet of the bedroom'))"
+2660,open the box on the left of the recorder,CLOSURE(Containing_object('the box on the left of the recorder'))
+2665,take the paper to the bathroom,"BRINGING(Theme('the paper'), Goal('to the bathroom'))"
+2652,grab the pillow at the left of the couch,TAKING(Theme('the pillow at the left of the couch'))
+2650,grab the cigarettes next to the phone,TAKING(Theme('the cigarettes next to the phone'))
+2645,enter the bathroom,ARRIVING(Goal('the bathroom'))
+2633,bring the paper near the television,"BRINGING(Theme('the paper'), Goal('near the television'))"
+2651,grab the bottle,TAKING(Theme('the bottle'))
+2663,take the case at the left of the box,TAKING(Theme('the case at the left of the box'))
+2639,catch the pillow,TAKING(Theme('the pillow'))
+2656,move near the couch of the bedroom slowly,"MOTION(Goal('near the couch of the bedroom'), Manner('slowly'))"
+2648,go to the counter at your left,MOTION(Goal('to the counter at your left'))
+2654,look for the glass in the bedroom,"LOCATING(Sought_entity('for the glass'), Ground('in the bedroom'))"
+3551,take the box from the table to the kitchen,"BRINGING(Theme('the box'), Source('from the table'), Goal('to the kitchen'))"
+3485,bring the remote controller to the left of the television,"BRINGING(Theme('the remote controller'), Goal('to the left of the television'))"
+3503,go to the dinner table take the plates and bring them to the side table,"MOTION(Goal('to the dinner table')) - TAKING(Theme('the plates')) - BRINGING(Theme('them'), Goal('to the side table'))"
+3562,turn off the white radio,"CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the white radio'))"
+3520,please inspect the kitchen,INSPECTING(Ground('the kitchen'))
+3505,go to the kitchen and take the glass near the book on the table,MOTION(Goal('to the kitchen')) - TAKING(Theme('the glass near the book on the table'))
+3516,please go to the kitchen and then in the bathroom,MOTION(Goal('to the kitchen')) - MOTION(Goal('in the bathroom'))
+3540,robot move to your right and search for the pen please,MOTION(Direction('to your right')) - LOCATING(Sought_entity('for the pen'))
+3538,robot move to your left and find a red book please,MOTION(Direction('to your left')) - LOCATING(Sought_entity('a red book'))
+3495,could you please take it to the restroom,"BRINGING(Agent('you'), Theme('it'), Goal('to the restroom'))"
+3524,please take the television to the bedroom on the left,"BRINGING(Theme('the television'), Goal('to the bedroom on the left'))"
+3489,check whether the lights in the bathroom are switched off,"INSPECTING(Ground('the lights in the bathroom'), Desired_state('off'))"
+3522,please move towards the tv and turn it off,"MOTION(Goal('towards the tv')) - CHANGE_OPERATIONAL_STATE(Device('it'), Operational_state('off'))"
+3511,may you please take it to the restroom,"BRINGING(Agent('you'), Theme('it'), Goal('to the restroom'))"
+3532,robot could you please move to the washing machine and turn it on,"MOTION(Theme('you'), Goal('to the washing machine')) - CHANGE_OPERATIONAL_STATE(Agent('you'), Device('it'), Operational_state('on'))"
+3512,move to the living room by crossing the open door,"MOTION(Goal('to the living room'), Path('by crossing the open door'))"
+3545,sorry may you find me the newspaper,"LOCATING(Perceiver('you'), Sought_entity('the newspaper'))"
+3542,robot please go to the kitchen by crossing the bathroom door,"MOTION(Goal('to the kitchen'), Path('by crossing the bathroom door'))"
+3537,robot move to your left and find a red book,MOTION(Direction('to your left')) - LOCATING(Sought_entity('a red book'))
+3555,take the cover on the bed in the living room,"BRINGING(Theme('the cover on the bed'), Goal('in the living room'))"
+3498,get me the wallet on the pillow,"BRINGING(Beneficiary('me'), Theme('the wallet on the pillow'))"
+3499,go backward,MOTION(Direction('backward'))
+3548,take the book on the table near the wine glass,"BRINGING(Theme('the book on the table'), Goal('near the wine glass'))"
+3494,could you please move towards the washing machine and turn it on,"MOTION(Theme('you'), Goal('towards the washing machine')) - CHANGE_OPERATIONAL_STATE(Agent('you'), Device('it'), Operational_state('on'))"
+3535,robot inspect the closet that is in the bedroom,"INSPECTING(Ground('the closet')) - BEING_LOCATED(Theme('that'), Location('in the bedroom'))"
+3500,go forward,MOTION(Direction('forward'))
+3559,take them to the side table,"BRINGING(Theme('them'), Goal('to the side table'))"
+3528,please turn on the tv that is on the table,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the tv')) - BEING_LOCATED(Theme('that'), Location('on the table'))"
+3561,turn left by almost 90 degrees,"CHANGE_DIRECTION(Direction('left'), Angle('by almost 90 degrees'))"
+3527,please turn on the black radio on the table,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the black radio on the table'))"
+3518,please go to the kitchen through the door,"MOTION(Goal('to the kitchen'), Path('through the door'))"
+3508,inspect the bathroom,INSPECTING(Ground('the bathroom'))
+3546,take both books to the living room on the sofa,"BRINGING(Theme('both books'), Goal('to the living room on the sofa'))"
+3525,please turn left,CHANGE_DIRECTION(Direction('left'))
+3543,robot please turn on the black radio on the table,"CHANGE_OPERATIONAL_STATE(Operational_state('on'), Device('the black radio on the table'))"
+3492,could you inspect the box behind the tv,"INSPECTING(Inspector('you'), Ground('the box behind the tv'))"
+3513,please go back,MOTION(Direction('back'))
+3564,turn right by 180 degrees,"CHANGE_DIRECTION(Direction('right'), Angle('by 180 degrees'))"
+3565,veer to the left,CHANGE_DIRECTION(Direction('to the left'))
+3547,take the book near the glass on the table,TAKING(Theme('the book near the glass on the table'))
+3530,robot check whether the oven is hot,"INSPECTING(Ground('the oven'), Desired_state('is hot'))"
+3488,check if the oven is hot,"INSPECTING(Ground('the oven'), Desired_state('is hot'))"
+3553,take the box on the table on the couch,"BRINGING(Theme('the box on the table'), Goal('on the couch'))"
+3550,take the bottles and bring them to the side table,"TAKING(Theme('the bottles')) - BRINGING(Theme('them'), Goal('to the side table'))"
+3529,please turn right by 60 degrees quickly,"CHANGE_DIRECTION(Direction('right'), Angle('by 60 degrees'), Speed('quickly'))"
+3514,please go next to the radio and switch it on,"MOTION(Goal('next to the radio')) - CHANGE_OPERATIONAL_STATE(Device('it'), Operational_state('on'))"
+3549,take the books to the living room on the sofa,"BRINGING(Theme('the books'), Goal('to the living room on the sofa'))"
+3539,robot move to your right and find the box,MOTION(Direction('to your right')) - LOCATING(Sought_entity('the box'))
+3531,robot could you inspect the item and bring it in the kitchen,"INSPECTING(Inspector('you'), Ground('the item')) - BRINGING(Agent('you'), Theme('it'), Goal('in the kitchen'))"
+3526,please turn left and go forward,CHANGE_DIRECTION(Direction('left')) - MOTION(Direction('forward'))
+3497,find the tv remote controller on the couch,"LOCATING(Sought_entity('the tv remote controller'), Ground('on the couch'))"
+3490,control the pocket please,INSPECTING(Ground('the pocket'))
+3533,robot go near the tv and switch it off please,"MOTION(Goal('near the tv')) - CHANGE_OPERATIONAL_STATE(Device('it'), Operational_state('off'))"
+3552,take the box from the table to the kitchen please,"BRINGING(Theme('the box'), Source('from the table'), Goal('to the kitchen'))"
+3544,robot take the box on the floor and inspect it,TAKING(Theme('the box on the floor')) - INSPECTING(Ground('it'))
+3509,may you inspect the box behind the tv,"INSPECTING(Inspector('you'), Ground('the box behind the tv'))"
+3523,please robot take the box on the table on the couch,"BRINGING(Theme('the box on the table'), Goal('on the couch'))"
+3486,check if the lights are off,"INSPECTING(Ground('the lights'), Desired_state('are off'))"
+3560,turn left,CHANGE_DIRECTION(Direction('left'))
+3487,check if the lights are turned on please,"INSPECTING(Ground('the lights'), Desired_state('on'))"
+3556,take the laptop and the book on the table on the couch,"BRINGING(Theme('the laptop and the book on the table'), Goal('on the couch'))"
+3504,go to the kitchen and take the glass near the book on the red table,"MOTION(Goal('to the kitchen')) - BRINGING(Theme('the glass'), Goal('near the book on the red table'))"
+3536,robot may you inspect the item and bring it in the kitchen,"INSPECTING(Inspector('you'), Ground('the item')) - BRINGING(Agent('you'), Theme('it'), Goal('in the kitchen'))"
+3501,go near the tv and switch it off please,"MOTION(Goal('near the tv')) - CHANGE_OPERATIONAL_STATE(Device('it'), Operational_state('off'))"
+3484,bring the laptop on the table near the tv,"BRINGING(Theme('the laptop on the table'), Goal('near the tv'))"
+3541,robot please check whether the tv is on the table,"INSPECTING(Ground('the tv')) - BEING_LOCATED(Theme('the tv'), Location('on the table'))"
+3517,please go to the kitchen by crossing the bathroom door,"MOTION(Goal('to the kitchen'), Path('by crossing the bathroom door'))"
+3491,could you go to the kitchen and take the plate please,"MOTION(Theme('you'), Goal('to the kitchen')) - TAKING(Agent('you'), Theme('the plate'))"
+3483,bring the book on the table in the kitchen,"BRINGING(Theme('the book'), Goal('on the table in the kitchen'))"
+3507,go to the kitchen and then in the bathroom,"MOTION(Goal('to the kitchen'), Goal('in the bathroom'))"
+3563,turn right,CHANGE_DIRECTION(Direction('right'))
+3521,please inspect the wallet,INSPECTING(Ground('the wallet'))
+3502,go to the bathroom through the main door,"MOTION(Goal('to the bathroom'), Path('through the main door'))"
+3506,go to the kitchen and take the plate please,MOTION(Goal('to the kitchen')) - TAKING(Theme('the plate'))
+3558,take the phone near the tv on the table,TAKING(Theme('the phone near the tv on the table'))
+3496,could you please turn right,"CHANGE_DIRECTION(Theme('you'), Direction('right'))"
+3519,please inspect the bathroom,INSPECTING(Ground('the bathroom'))
+3557,take the laptop that is on the table on the couch,"BRINGING(Theme('the laptop'), Goal('on the couch')) - BEING_LOCATED(Theme('that'), Location('on the table'))"
+3493,could you please move forward,"MOTION(Theme('you'), Direction('forward'))"
+3510,may you please move towards the washing machine and turn it on,"MOTION(Theme('you'), Goal('towards the washing machine')) - CHANGE_OPERATIONAL_STATE(Agent('you'), Device('it'), Operational_state('on'))"
+3534,robot go to the bathroom through the main door,"MOTION(Goal('to the bathroom'), Path('through the main door'))"
+3515,please go to the kitchen and inspect the sink,MOTION(Goal('to the kitchen')) - INSPECTING(Ground('the sink'))
+3554,take the cover on the bed in the bedroom,"BRINGING(Theme('the cover'), Goal('on the bed in the bedroom'))"
+3648,robot release the pillow on the bed,"RELEASING(Theme('the pillow'), Goal('on the bed'))"
+3649,watch the tv with me,PERCEPTION_ACTIVE(Phenomenon('the tv'))
+3628,look at marco,PERCEPTION_ACTIVE(Phenomenon('at marco'))
+3609,connect to the web please,ATTACHING(Goal('to the web'))
+3627,look at daniel,PERCEPTION_ACTIVE(Phenomenon('at daniel'))
+3643,robot give her some milk,"GIVING(Recipient('her'), Theme('some milk'))"
+3637,reach the dining room from the living room,"ARRIVING(Goal('the dining room'), Path('from the living room'))"
+3634,please enter the bedroom slowly turn left and turn off the lights,"ARRIVING(Goal('the bedroom'), Manner('slowly')) - CHANGE_DIRECTION(Direction('left')) - CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the lights'))"
+3616,go to the bedroom and release the pillow on the bed,"MOTION(Goal('to the bedroom')) - RELEASING(Theme('the pillow'), Goal('on the bed'))"
+3632,move to the dining room and take the fork near the plate on the table,"MOTION(Goal('to the dining room')) - BRINGING(Theme('the fork'), Goal('near the plate on the table'))"
+3613,enter the house by the back door,"ARRIVING(Goal('the house'), Path('by the back door'))"
+3633,move to the kitchen and grasp the spoon near the knife on the table,MOTION(Goal('to the kitchen')) - MANIPULATION(Entity('the spoon near the knife on the table'))
+3639,robot attach the shelf to the wall please,"ATTACHING(Item('the shelf'), Goal('to the wall'))"
+3614,give me the keys please,"GIVING(Recipient('me'), Theme('the keys'))"
+3636,please robot connect the microwave to the socket,"ATTACHING(Item('the microwave'), Goal('to the socket'))"
+3635,please grab the cover on the bed in the living room,TAKING(Theme('the cover on the bed in the living room'))
+3641,robot disconnect yourself from the power supplies,"ATTACHING(Item('yourself'), Goal('from the power supplies'))"
+3611,enter the bathroom please,ARRIVING(Goal('the bathroom'))
+3638,reach the kitchen from the corridor and give me the pan,"ARRIVING(Goal('the kitchen'), Path('from the corridor')) - GIVING(Recipient('me'), Theme('the pan'))"
+3626,grasp the book on the table near the wine glass,MANIPULATION(Entity('the book on the table near the wine glass'))
+3612,enter the building via backstairs,"ARRIVING(Goal('the building'), Path('via backstairs'))"
+3646,robot please connect the laptop to the internet socket,"ATTACHING(Item('the laptop'), Goal('to the internet socket'))"
+3608,connect the small wire to the wall,"ATTACHING(Item('the small wire'), Goal('to the wall'))"
+3610,disconnect yourself from the power socket,"ATTACHING(Item('yourself'), Goal('from the power socket'))"
+3622,go to the living room and take the book near the pillow on the couch,"MOTION(Goal('to the living room')) - BRINGING(Theme('the book near the pillow'), Goal('on the couch'))"
+3617,go to the bedroom and take the mobile near the pillow on the bed,"MOTION(Goal('to the bedroom')) - BRINGING(Theme('the mobile near the pillow'), Goal('on the bed'))"
+3640,robot disconnect the tv from the socket,"ATTACHING(Item('the tv'), Goal('from the socket'))"
+3629,look at the table and leave the box on it,"PERCEPTION_ACTIVE(Phenomenon('at the table')) - RELEASING(Theme('the box'), Goal('on it'))"
+3623,grab the cover on the bed in the bedroom,TAKING(Theme('the cover on the bed in the bedroom'))
+3619,go to the kitchen and look at the window,MOTION(Goal('to the kitchen')) - PERCEPTION_ACTIVE(Phenomenon('at the window'))
+3620,go to the kitchen and take the glass near the bottle on the table,MOTION(Goal('to the kitchen')) - TAKING(Theme('the glass near the bottle on the table'))
+3647,robot please grasp the book near the glass on the table,MANIPULATION(Entity('the book near the glass on the table'))
+3630,look for daniel,LOCATING(Sought_entity('for daniel'))
+3618,go to the corridor and take the ruler near the box on the shelf,"MOTION(Goal('to the corridor')) - BRINGING(Theme('the ruler'), Goal('near the box on the shelf'))"
+3631,move to the bedroom and take the mouse near the laptop on the bed,MOTION(Goal('to the bedroom')) - TAKING(Theme('the mouse near the laptop on the bed'))
+3645,robot grab the box on the floor and inspect it,TAKING(Theme('the box on the floor')) - INSPECTING(Ground('it'))
+3625,grab the phone near the tv on the table,TAKING(Theme('the phone near the tv on the table'))
+3621,go to the living room and grasp the guitar near the phone on the sofa,MOTION(Goal('to the living room')) - MANIPULATION(Entity('the guitar near the phone on the sofa'))
+3642,robot enter the house through the kitchen door,"ARRIVING(Goal('the house'), Path('through the kitchen door'))"
+3615,go to the bedroom and grasp the mobile near the pillow on the bed,MOTION(Goal('to the bedroom')) - MANIPULATION(Entity('the mobile near the pillow on the bed'))
+3624,grab the cover on the sofa in the living room,TAKING(Theme('the cover on the sofa in the living room'))
+3644,robot give me the remote controller and switch off the lights please,"GIVING(Recipient('me'), Theme('the remote controller')) - CHANGE_OPERATIONAL_STATE(Operational_state('off'), Device('the lights'))"

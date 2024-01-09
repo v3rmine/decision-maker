@@ -51,9 +51,6 @@ std.mergePatch(common_parameters,
     },
     num_epochs: 150,
     patience: 30,
-    validation_metric: '+seq_acc',
-    checkpointer: {
-        num_serialized_models_to_keep: 0
-    }
+    validation_metric: '+seq_acc'
   },
 })

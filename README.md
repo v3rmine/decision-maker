@@ -4,13 +4,10 @@
 
 ## Introduction
 
-
 ### Definitions
 
 - **[Ontologie en informatique](https://en.wikipedia.org/wiki/Ontology_(information_science)):** Representation, formal naming, and definitions of the categories, properties, and relations between the concepts, data, or entities that pertain to one, many, or all domains of discourse.
-
 - **[Sementic Role Labelling](https://en.wikipedia.org/wiki/Semantic_role_labeling):** Process of assigning labels to words or phrases in a sentence that indicates their semantic role in the sentence, such as that of an agent, goal, or result.
-
 
 ## Technical
 
@@ -21,8 +18,13 @@
 - Python 3.11 (EOL : October 2027)
 
 ### Solutions
+
 - [Semantic role labelling (SpaCy)](./SRL_SpaCy/)
 - [Via LLM](./ExplorationLLM/README.md)
+
+## CICD
+
+[Pipeline](https://cicd.planchon.dev/teams/main/pipelines/cpe.robot-project-mirror)
 
 ## Setup Jetson AGX Orin Devkit
 1. OEM setup ubuntu

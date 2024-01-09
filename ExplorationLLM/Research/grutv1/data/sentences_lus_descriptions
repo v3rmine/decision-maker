@@ -1,0 +1,656 @@
+3483	bring can evoke BRINGING
+3484	bring can evoke BRINGING
+3485	bring can evoke BRINGING
+3486	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3487	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3488	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3489	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY,switch can evoke CHANGE_OPERATIONAL_STATE
+3490	control can evoke INSPECTING
+3491	go can evoke MOTION,take can evoke TAKING or BRINGING
+3492	inspect can evoke INSPECTING
+3493	move can evoke MOTION or BRINGING
+3494	move can evoke MOTION or BRINGING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3495	take can evoke TAKING or BRINGING
+3496	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3497	find can evoke LOCATING
+3498	get can evoke BRINGING or TAKING
+3499	go can evoke MOTION
+3500	go can evoke MOTION
+3501	go can evoke MOTION,switch can evoke CHANGE_OPERATIONAL_STATE
+3502	go can evoke MOTION
+3503	go can evoke MOTION,take can evoke TAKING or BRINGING,bring can evoke BRINGING
+3504	go can evoke MOTION,take can evoke TAKING or BRINGING
+3505	go can evoke MOTION,take can evoke TAKING or BRINGING
+3506	go can evoke MOTION,take can evoke TAKING or BRINGING
+3507	go can evoke MOTION
+3508	inspect can evoke INSPECTING
+3509	inspect can evoke INSPECTING
+3510	move can evoke MOTION or BRINGING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3511	take can evoke TAKING or BRINGING
+3512	move can evoke MOTION or BRINGING,open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3513	go can evoke MOTION
+3514	go can evoke MOTION,switch can evoke CHANGE_OPERATIONAL_STATE
+3515	go can evoke MOTION,inspect can evoke INSPECTING
+3516	go can evoke MOTION
+3517	go can evoke MOTION
+3518	go can evoke MOTION
+3519	inspect can evoke INSPECTING
+3520	inspect can evoke INSPECTING
+3521	inspect can evoke INSPECTING
+3522	move can evoke MOTION or BRINGING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3523	take can evoke TAKING or BRINGING
+3524	take can evoke TAKING or BRINGING
+3525	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,leave can evoke RELEASING
+3526	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,leave can evoke RELEASING,go can evoke MOTION
+3527	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3528	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3529	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3530	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3531	inspect can evoke INSPECTING,bring can evoke BRINGING
+3532	move can evoke MOTION or BRINGING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3533	go can evoke MOTION,switch can evoke CHANGE_OPERATIONAL_STATE
+3534	go can evoke MOTION
+3535	inspect can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3536	inspect can evoke INSPECTING,bring can evoke BRINGING
+3537	move can evoke MOTION or BRINGING,find can evoke LOCATING
+3538	move can evoke MOTION or BRINGING,find can evoke LOCATING
+3539	move can evoke MOTION or BRINGING,find can evoke LOCATING
+3540	move can evoke MOTION or BRINGING,search can evoke LOCATING
+3541	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3542	go can evoke MOTION
+3543	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3544	take can evoke TAKING or BRINGING,inspect can evoke INSPECTING
+3545	find can evoke LOCATING
+3546	take can evoke TAKING or BRINGING
+3547	take can evoke TAKING or BRINGING
+3548	take can evoke TAKING or BRINGING
+3549	take can evoke TAKING or BRINGING
+3550	take can evoke TAKING or BRINGING,bring can evoke BRINGING
+3551	take can evoke TAKING or BRINGING
+3552	take can evoke TAKING or BRINGING
+3553	take can evoke TAKING or BRINGING
+3554	take can evoke TAKING or BRINGING
+3555	take can evoke TAKING or BRINGING
+3556	take can evoke TAKING or BRINGING
+3557	take can evoke TAKING or BRINGING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3558	take can evoke TAKING or BRINGING
+3559	take can evoke TAKING or BRINGING
+3560	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,leave can evoke RELEASING
+3561	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,leave can evoke RELEASING
+3562	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3563	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3564	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3565	veer can evoke CHANGE_DIRECTION
+3608	connect can evoke ATTACHING
+3609	connect can evoke ATTACHING
+3610	disconnect can evoke ATTACHING
+3611	enter can evoke ARRIVING
+3612	enter can evoke ARRIVING
+3613	enter can evoke ARRIVING
+3614	give can evoke GIVING
+3615	go can evoke MOTION,grasp can evoke MANIPULATION
+3616	go can evoke MOTION,release can evoke RELEASING
+3617	go can evoke MOTION,take can evoke TAKING or BRINGING
+3618	go can evoke MOTION,take can evoke TAKING or BRINGING
+3619	go can evoke MOTION,look can evoke PERCEPTION_ACTIVE or LOCATING
+3620	go can evoke MOTION,take can evoke TAKING or BRINGING
+3621	go can evoke MOTION,grasp can evoke MANIPULATION
+3622	go can evoke MOTION,take can evoke TAKING or BRINGING
+3623	grab can evoke TAKING
+3624	grab can evoke TAKING
+3625	grab can evoke TAKING
+3626	grasp can evoke MANIPULATION
+3627	look can evoke PERCEPTION_ACTIVE or LOCATING
+3628	look can evoke PERCEPTION_ACTIVE or LOCATING
+3629	look can evoke PERCEPTION_ACTIVE or LOCATING,leave can evoke RELEASING
+3630	look can evoke PERCEPTION_ACTIVE or LOCATING
+3631	move can evoke MOTION or BRINGING,take can evoke TAKING or BRINGING
+3632	move can evoke MOTION or BRINGING,take can evoke TAKING or BRINGING
+3633	move can evoke MOTION or BRINGING,grasp can evoke MANIPULATION
+3634	enter can evoke ARRIVING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,leave can evoke RELEASING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3635	grab can evoke TAKING
+3636	connect can evoke ATTACHING
+3637	reach can evoke ARRIVING or MOTION
+3638	reach can evoke ARRIVING or MOTION,give can evoke GIVING
+3639	attach can evoke ATTACHING
+3640	disconnect can evoke ATTACHING
+3641	disconnect can evoke ATTACHING
+3642	enter can evoke ARRIVING
+3643	give can evoke GIVING
+3644	give can evoke GIVING,switch can evoke CHANGE_OPERATIONAL_STATE
+3645	grab can evoke TAKING,inspect can evoke INSPECTING
+3646	connect can evoke ATTACHING
+3647	grasp can evoke MANIPULATION
+3648	release can evoke RELEASING
+3649	watch can evoke PERCEPTION_ACTIVE
+2170	follow can evoke COTHEME
+2171	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2172	search can evoke LOCATING
+2173	carry can evoke BRINGING
+2174	go can evoke MOTION
+2175	carry can evoke BRINGING
+2176	find can evoke LOCATING
+2177	bring can evoke BRINGING
+2178	find can evoke LOCATING
+2181	follow can evoke COTHEME
+2182	move can evoke MOTION or BRINGING
+2183	bring can evoke BRINGING
+2184	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2185	bring can evoke BRINGING
+2186	follow can evoke COTHEME
+2187	drive can evoke MOTION
+2188	search can evoke LOCATING
+2189	follow can evoke COTHEME
+2190	bring can evoke BRINGING
+2191	search can evoke LOCATING
+2192	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2193	drive can evoke MOTION
+2194	follow can evoke COTHEME
+2195	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2196	find can evoke LOCATING
+2197	go can evoke MOTION
+2198	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2199	go can evoke MOTION,find can evoke LOCATING
+2200	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2248	carry can evoke BRINGING
+2249	go can evoke MOTION
+2250	be can evoke BEING_LOCATED or BEING_IN_CATEGORY,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2251	bring can evoke BRINGING
+2252	follow can evoke COTHEME
+2253	bring can evoke BRINGING
+2254	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2255	follow can evoke COTHEME
+2256	move can evoke MOTION or BRINGING
+2257	bring can evoke BRINGING
+2258	bring can evoke BRINGING
+2259	follow can evoke COTHEME
+2260	go can evoke MOTION,search can evoke LOCATING
+2261	go can evoke MOTION,follow can evoke COTHEME
+2262	move can evoke MOTION or BRINGING
+2263	place can evoke PLACING
+2264	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2265	go can evoke MOTION
+2266	find can evoke LOCATING
+2267	go can evoke MOTION,go along can evoke COTHEME
+2268	bring can evoke BRINGING
+2269	go can evoke MOTION
+2270	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2271	follow can evoke COTHEME
+2272	bring can evoke BRINGING
+2273	get can evoke BRINGING or TAKING
+2274	bring can evoke BRINGING
+2275	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2276	find can evoke LOCATING
+2277	follow can evoke COTHEME
+2278	go can evoke MOTION
+2279	follow can evoke COTHEME
+2280	bring can evoke BRINGING
+2281	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2282	bring can evoke BRINGING
+2283	follow can evoke COTHEME
+2285	find can evoke LOCATING
+2287	move can evoke MOTION or BRINGING
+2288	go can evoke MOTION
+2289	go can evoke MOTION,get can evoke BRINGING or TAKING
+2290	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2291	take can evoke TAKING or BRINGING
+2292	go can evoke MOTION
+2293	go can evoke MOTION,follow can evoke COTHEME
+2294	grab can evoke TAKING
+2295	go can evoke MOTION,bring can evoke BRINGING
+2296	go can evoke MOTION
+2297	follow can evoke COTHEME
+2298	take can evoke TAKING or BRINGING,place can evoke PLACING
+2299	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2300	get can evoke BRINGING or TAKING
+2301	come can evoke COTHEME or MOTION
+2302	take can evoke TAKING or BRINGING
+2303	find can evoke LOCATING
+2304	carry can evoke BRINGING
+2305	go can evoke MOTION
+2306	follow can evoke COTHEME
+2307	be can evoke BEING_LOCATED or BEING_IN_CATEGORY,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2332	take can evoke TAKING or BRINGING
+2333	find can evoke LOCATING
+2335	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2336	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2337	go can evoke MOTION
+2338	find can evoke LOCATING
+2339	follow can evoke COTHEME
+2340	fetch can evoke BRINGING
+2342	find can evoke LOCATING
+2343	go can evoke MOTION
+2344	place can evoke PLACING
+2345	follow can evoke COTHEME
+2346	follow can evoke COTHEME
+2347	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2348	move can evoke MOTION or BRINGING
+2349	find can evoke LOCATING
+2350	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2351	pick can evoke TAKING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2352	move can evoke MOTION or BRINGING,open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+2353	go can evoke MOTION,take can evoke TAKING or BRINGING
+2354	take can evoke TAKING or BRINGING,bring can evoke BRINGING
+2355	go can evoke MOTION,get can evoke BRINGING or TAKING
+2356	find can evoke LOCATING
+2358	follow can evoke COTHEME
+2359	follow can evoke COTHEME
+2360	bring can evoke BRINGING
+2361	follow can evoke COTHEME
+2362	move can evoke MOTION or BRINGING
+2363	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2364	find can evoke LOCATING
+2365	follow can evoke COTHEME
+2366	go can evoke MOTION,close can evoke CLOSURE
+2367	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2368	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2369	follow can evoke COTHEME
+2370	bring can evoke BRINGING
+2371	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2372	search can evoke LOCATING
+2373	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2374	take can evoke TAKING or BRINGING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2375	follow can evoke COTHEME,go can evoke MOTION
+2376	take can evoke TAKING or BRINGING
+2377	find can evoke LOCATING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2378	enter can evoke ARRIVING,go can evoke MOTION
+2379	follow can evoke COTHEME
+2380	go can evoke MOTION
+2381	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2382	search can evoke LOCATING,bring can evoke BRINGING
+2387	follow can evoke COTHEME
+2390	take can evoke TAKING or BRINGING
+2394	follow can evoke COTHEME
+2397	go can evoke MOTION
+2403	carry can evoke BRINGING
+2404	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2405	find can evoke LOCATING
+2406	go can evoke MOTION
+2407	follow can evoke COTHEME
+2408	bring can evoke BRINGING
+2409	go can evoke MOTION,take can evoke TAKING or BRINGING,go can evoke MOTION
+2410	move can evoke MOTION or BRINGING
+2411	bring can evoke BRINGING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2412	deliver can evoke BRINGING
+2413	go can evoke MOTION,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+2414	take can evoke TAKING or BRINGING,control can evoke INSPECTING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+2415	go can evoke MOTION,open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+2416	grab can evoke TAKING
+2417	bring can evoke BRINGING
+2418	move can evoke MOTION or BRINGING
+2419	disconnect can evoke ATTACHING
+2422	hang can evoke PLACING
+2423	check can evoke INSPECTING
+2424	check can evoke INSPECTING
+2425	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2426	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2427	move can evoke MOTION or BRINGING
+2429	be can evoke BEING_LOCATED or BEING_IN_CATEGORY,find can evoke LOCATING
+2430	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2431	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2433	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2434	give can evoke GIVING
+3038	bring can evoke BRINGING
+3039	bring can evoke BRINGING
+3040	bring can evoke BRINGING
+3041	bring can evoke BRINGING
+3042	bring can evoke BRINGING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3043	bring can evoke BRINGING
+3044	bring can evoke BRINGING
+3045	bring can evoke BRINGING
+3046	bring can evoke BRINGING,find can evoke LOCATING
+3047	bring can evoke BRINGING
+3048	bring can evoke BRINGING
+3049	bring can evoke BRINGING
+3050	find can evoke LOCATING
+3051	go can evoke MOTION,find can evoke LOCATING,bring can evoke BRINGING
+3052	move can evoke MOTION or BRINGING
+3053	search can evoke LOCATING
+3054	go can evoke MOTION,take can evoke TAKING or BRINGING
+3055	bring can evoke BRINGING
+3056	take can evoke TAKING or BRINGING
+3057	find can evoke LOCATING
+3058	drop can evoke RELEASING
+3059	find can evoke LOCATING
+3060	find can evoke LOCATING
+3061	find can evoke LOCATING
+3062	find can evoke LOCATING
+3063	find can evoke LOCATING
+3064	go can evoke MOTION,close can evoke CLOSURE
+3065	go can evoke MOTION
+3066	go can evoke MOTION,find can evoke LOCATING
+3067	go can evoke MOTION,remove can evoke TAKING
+3068	go can evoke MOTION,switch can evoke CHANGE_OPERATIONAL_STATE
+3069	go can evoke MOTION
+3070	go can evoke MOTION
+3071	go can evoke MOTION
+3072	go can evoke MOTION
+3073	go can evoke MOTION
+3074	go can evoke MOTION,take can evoke TAKING or BRINGING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3075	go can evoke MOTION
+3076	go can evoke MOTION
+3077	grab can evoke TAKING
+3078	grab can evoke TAKING
+3079	grab can evoke TAKING
+3080	grab can evoke TAKING
+3081	grab can evoke TAKING
+3082	search can evoke LOCATING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3083	watch can evoke PERCEPTION_ACTIVE,find can evoke LOCATING
+3084	bring can evoke BRINGING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3085	bring can evoke BRINGING
+3086	grab can evoke TAKING,bring can evoke BRINGING
+3087	go can evoke MOTION,let go can evoke RELEASING
+3088	look can evoke PERCEPTION_ACTIVE or LOCATING
+3089	look can evoke PERCEPTION_ACTIVE or LOCATING
+3090	move can evoke MOTION or BRINGING
+3091	move can evoke MOTION or BRINGING
+3092	move can evoke MOTION or BRINGING
+3093	move can evoke MOTION or BRINGING
+3094	move can evoke MOTION or BRINGING
+3095	find can evoke LOCATING
+3096	find can evoke LOCATING
+3097	move can evoke MOTION or BRINGING
+3098	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE,control can evoke INSPECTING
+3099	take can evoke TAKING or BRINGING
+3100	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3101	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3102	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3103	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3104	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3105	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3106	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3107	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3108	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3109	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3110	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3111	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3112	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3113	release can evoke RELEASING
+3114	release can evoke RELEASING
+3115	bring can evoke BRINGING
+3116	find can evoke LOCATING
+3117	search can evoke LOCATING
+3118	move can evoke MOTION or BRINGING
+3119	go can evoke MOTION
+3120	go can evoke MOTION,find can evoke LOCATING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3121	search can evoke LOCATING
+3122	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3123	go can evoke MOTION,search can evoke LOCATING
+3124	search can evoke LOCATING
+3125	search can evoke LOCATING
+3126	search can evoke LOCATING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3127	search can evoke LOCATING
+3128	search can evoke LOCATING,control can evoke INSPECTING
+3129	go can evoke MOTION,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3130	take can evoke TAKING or BRINGING
+3132	take can evoke TAKING or BRINGING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3133	take can evoke TAKING or BRINGING
+3134	take can evoke TAKING or BRINGING
+3135	take can evoke TAKING or BRINGING
+3136	take can evoke TAKING or BRINGING
+3137	take can evoke TAKING or BRINGING
+3138	take can evoke TAKING or BRINGING
+3139	take can evoke TAKING or BRINGING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3140	take can evoke TAKING or BRINGING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3141	take can evoke TAKING or BRINGING
+3142	take can evoke TAKING or BRINGING
+3143	take can evoke TAKING or BRINGING
+3144	take can evoke TAKING or BRINGING
+3145	take can evoke TAKING or BRINGING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3146	take can evoke TAKING or BRINGING
+3147	take can evoke TAKING or BRINGING
+3148	take can evoke TAKING or BRINGING,bring can evoke BRINGING
+3149	be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3150	be can evoke BEING_LOCATED or BEING_IN_CATEGORY,bring can evoke BRINGING
+3151	be can evoke BEING_LOCATED or BEING_IN_CATEGORY,take can evoke TAKING or BRINGING,bring can evoke BRINGING
+3152	be can evoke BEING_LOCATED or BEING_IN_CATEGORY,bring can evoke BRINGING
+3153	be can evoke BEING_LOCATED or BEING_IN_CATEGORY,bring can evoke BRINGING
+3154	bring can evoke BRINGING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3272	bring can evoke BRINGING
+3273	bring can evoke BRINGING
+3274	bring can evoke BRINGING
+3275	bring can evoke BRINGING
+3276	bring can evoke BRINGING
+3277	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3278	start can evoke CHANGE_OPERATIONAL_STATE
+3279	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3280	pass can evoke GIVING
+3281	take can evoke TAKING or BRINGING
+3283	take can evoke TAKING or BRINGING
+3284	take can evoke TAKING or BRINGING
+3285	take can evoke TAKING or BRINGING
+3287	bring can evoke BRINGING
+3288	bring can evoke BRINGING
+3289	bring can evoke BRINGING
+3290	bring can evoke BRINGING,control can evoke INSPECTING
+3291	bring can evoke BRINGING
+3292	bring can evoke BRINGING
+3293	bring can evoke BRINGING
+3294	bring can evoke BRINGING
+3295	bring can evoke BRINGING
+3296	take can evoke TAKING or BRINGING
+3297	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3298	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3299	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3300	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3301	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3302	check can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3303	check can evoke INSPECTING
+3304	close can evoke CLOSURE
+3305	bring can evoke BRINGING
+3306	close can evoke CLOSURE
+3307	hang can evoke PLACING
+3308	pick can evoke TAKING,pick up can evoke TAKING
+3309	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3310	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3311	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3312	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3313	switch can evoke CHANGE_OPERATIONAL_STATE
+3314	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3315	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3316	find can evoke LOCATING
+3317	find can evoke LOCATING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3318	find can evoke LOCATING
+3319	follow can evoke COTHEME
+3320	get can evoke BRINGING or TAKING
+3321	get can evoke BRINGING or TAKING
+3322	get can evoke BRINGING or TAKING
+3323	get can evoke BRINGING or TAKING
+3324	get can evoke BRINGING or TAKING
+3325	go can evoke MOTION
+3326	go can evoke MOTION,bring can evoke BRINGING
+3327	go can evoke MOTION
+3328	go can evoke MOTION,check can evoke INSPECTING
+3329	get can evoke BRINGING or TAKING
+3330	take can evoke TAKING or BRINGING
+3331	go can evoke MOTION,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3332	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3333	watch can evoke PERCEPTION_ACTIVE,bring can evoke BRINGING
+3334	get can evoke BRINGING or TAKING
+3335	get can evoke BRINGING or TAKING
+3336	bring can evoke BRINGING
+3337	take can evoke TAKING or BRINGING,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3338	go can evoke MOTION
+3339	switch can evoke CHANGE_OPERATIONAL_STATE
+3340	go can evoke MOTION,get can evoke BRINGING or TAKING
+3341	go can evoke MOTION
+3342	go can evoke MOTION
+3343	take can evoke TAKING or BRINGING
+3344	look can evoke PERCEPTION_ACTIVE or LOCATING
+3345	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3346	close can evoke CLOSURE
+3347	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3348	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3349	pick can evoke TAKING,pick up can evoke TAKING
+3350	take can evoke TAKING or BRINGING
+3351	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3352	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3353	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3354	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3355	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3356	bring can evoke BRINGING
+3357	bring can evoke BRINGING
+3358	bring can evoke BRINGING
+3359	come can evoke COTHEME or MOTION
+3360	lower can evoke CLOSURE
+3361	get can evoke BRINGING or TAKING
+3362	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3363	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3364	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+3365	pass can evoke GIVING
+3366	pass can evoke GIVING
+3367	pass can evoke GIVING
+3368	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3369	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3370	take can evoke TAKING or BRINGING
+3371	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3372	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3373	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3374	come can evoke COTHEME or MOTION
+3375	see can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3376	see can evoke INSPECTING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+3377	shut can evoke CHANGE_OPERATIONAL_STATE
+3378	stop can evoke CHANGE_OPERATIONAL_STATE
+3379	switch can evoke CHANGE_OPERATIONAL_STATE
+3380	take can evoke TAKING or BRINGING
+3381	take can evoke TAKING or BRINGING,put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+3382	take can evoke TAKING or BRINGING
+3383	go can evoke MOTION,take can evoke TAKING or BRINGING
+3384	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3385	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3386	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3387	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3388	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,go can evoke MOTION
+3389	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3390	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION
+3391	restart can evoke CHANGE_OPERATIONAL_STATE
+3393	hang can evoke PLACING
+3395	carry can evoke BRINGING,be can evoke BEING_LOCATED or BEING_IN_CATEGORY
+2672	activate can evoke CHANGE_OPERATIONAL_STATE
+2673	activate can evoke CHANGE_OPERATIONAL_STATE
+2674	bring can evoke BRINGING
+2675	bring can evoke BRINGING
+2676	bring can evoke BRINGING
+2677	bring can evoke BRINGING
+2678	bring can evoke BRINGING
+2679	bring can evoke BRINGING
+2680	bring can evoke BRINGING
+2681	bring can evoke BRINGING
+2682	bring can evoke BRINGING
+2683	carry can evoke BRINGING
+2684	come can evoke COTHEME or MOTION
+2685	bring can evoke BRINGING
+2686	find can evoke LOCATING
+2687	find can evoke LOCATING
+2688	find can evoke LOCATING
+2689	find can evoke LOCATING
+2690	find can evoke LOCATING
+2691	find can evoke LOCATING
+2692	find can evoke LOCATING
+2693	find can evoke LOCATING
+2694	find can evoke LOCATING
+2695	find can evoke LOCATING
+2696	find can evoke LOCATING
+2697	find can evoke LOCATING
+2698	find can evoke LOCATING
+2699	find can evoke LOCATING
+2700	find can evoke LOCATING
+2701	find can evoke LOCATING
+2702	follow can evoke COTHEME
+2703	follow can evoke COTHEME
+2704	follow can evoke COTHEME
+2705	follow can evoke COTHEME
+2706	get can evoke BRINGING or TAKING,take can evoke TAKING or BRINGING
+2707	go can evoke MOTION,find can evoke LOCATING
+2708	go can evoke MOTION,get can evoke BRINGING or TAKING
+2709	go can evoke MOTION
+2710	go can evoke MOTION
+2711	go can evoke MOTION
+2712	go can evoke MOTION
+2713	go can evoke MOTION
+2714	go can evoke MOTION
+2715	go can evoke MOTION
+2716	go can evoke MOTION
+2717	go can evoke MOTION
+2718	go can evoke MOTION
+2719	go can evoke MOTION
+2720	go can evoke MOTION
+2721	look can evoke PERCEPTION_ACTIVE or LOCATING
+2722	look can evoke PERCEPTION_ACTIVE or LOCATING
+2723	look can evoke PERCEPTION_ACTIVE or LOCATING
+2724	look can evoke PERCEPTION_ACTIVE or LOCATING
+2725	look can evoke PERCEPTION_ACTIVE or LOCATING
+2726	move can evoke MOTION or BRINGING
+2727	move can evoke MOTION or BRINGING
+2728	find can evoke LOCATING
+2729	find can evoke LOCATING
+2730	follow can evoke COTHEME
+2731	follow can evoke COTHEME
+2732	get can evoke BRINGING or TAKING
+2733	move can evoke MOTION or BRINGING
+2734	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2735	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2736	take can evoke TAKING or BRINGING
+2737	take can evoke TAKING or BRINGING
+2738	walk can evoke MOTION
+2739	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2740	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2741	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2742	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2743	put can evoke PLACING or CLOSURE or CHANGE_OPERATIONAL_STATE
+2744	search can evoke LOCATING
+2745	reach can evoke ARRIVING or MOTION
+2746	search can evoke LOCATING
+2747	search can evoke LOCATING
+2748	take can evoke TAKING or BRINGING
+2749	take can evoke TAKING or BRINGING
+2750	take can evoke TAKING or BRINGING
+2751	take can evoke TAKING or BRINGING
+2752	take can evoke TAKING or BRINGING
+2754	take can evoke TAKING or BRINGING
+2755	take can evoke TAKING or BRINGING
+2756	drop can evoke RELEASING
+2757	leave can evoke RELEASING
+2758	give can evoke GIVING
+2764	disconnect can evoke ATTACHING
+2629	bring can evoke BRINGING
+2630	enter can evoke ARRIVING
+2632	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+2633	bring can evoke BRINGING
+2634	bring can evoke BRINGING
+2635	carry can evoke BRINGING
+2636	carry can evoke BRINGING
+2637	carry can evoke BRINGING
+2638	catch can evoke TAKING
+2639	catch can evoke TAKING
+2640	close can evoke CLOSURE
+2641	close can evoke CLOSURE
+2642	close can evoke CLOSURE
+2643	close can evoke CLOSURE
+2644	connect can evoke ATTACHING
+2645	enter can evoke ARRIVING
+2646	enter can evoke ARRIVING
+2647	enter can evoke ARRIVING
+2648	go can evoke MOTION
+2649	go can evoke MOTION
+2650	grab can evoke TAKING
+2651	grab can evoke TAKING
+2652	grab can evoke TAKING
+2653	look can evoke PERCEPTION_ACTIVE or LOCATING
+2654	look can evoke PERCEPTION_ACTIVE or LOCATING
+2655	look can evoke PERCEPTION_ACTIVE or LOCATING
+2656	move can evoke MOTION or BRINGING
+2657	move can evoke MOTION or BRINGING
+2658	move can evoke MOTION or BRINGING
+2659	move can evoke MOTION or BRINGING
+2660	open can evoke CHANGE_OPERATIONAL_STATE or CLOSURE
+2661	search can evoke LOCATING
+2662	take can evoke TAKING or BRINGING
+2663	take can evoke TAKING or BRINGING
+2664	take can evoke TAKING or BRINGING
+2665	take can evoke TAKING or BRINGING
+2667	take can evoke TAKING or BRINGING
+2668	take can evoke TAKING or BRINGING
+2669	take can evoke TAKING or BRINGING
+2670	turn can evoke CHANGE_OPERATIONAL_STATE or CHANGE_DIRECTION,switch can evoke CHANGE_OPERATIONAL_STATE
+2671	walk can evoke MOTION

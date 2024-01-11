@@ -1,10 +1,10 @@
 import tomllib
 
 from termcolor import colored
-from typing_extensions import List
 
-from models import Memory, Ontology, Location, InterestPoint, Human, Object, Languages, Robot, Middlewares, ABILITIES, \
-    Task, ACCEPTED_TYPES, BASE_ENTITIES, ENTITIES_NOT_ALLOWED, entity_initialisation
+from constants import BASE_TASKS
+from models import Ontology, Languages, Robot, Human, Object, InterestPoint, Location, Middlewares, entity_initialisation, ACCEPTED_TYPES, BASE_ENTITIES, ENTITIES_NOT_ALLOWED
+from pipeline import Task
 
 
 class ParseTOMLOntologyException(Exception):
@@ -117,9 +117,9 @@ def parseOntologyConfig(file_name: str) -> Ontology:
         raise ParseTOMLOntologyException('The "Robot.Abilities" parameter value must be a table')
 
     for key in abilities:
-        if key not in ABILITIES:
+        if key not in BASE_TASKS.get_categories():
             raise ParseTOMLOntologyException(
-                f'The "Robot.Abilities" parameter keys must be the following list: {list(ABILITIES)}')
+                f'The "Robot.Abilities" parameter keys must be in the following list: { [task.name for task in BASE_TASKS.get_categories()] }')
 
         ability = abilities[key]
 
@@ -127,19 +127,19 @@ def parseOntologyConfig(file_name: str) -> Ontology:
             raise ParseTOMLOntologyException(f'The "Robot.Abilities" parameter value "{key}" must be an array')
 
         if len(ability) == 1 and ability[0] == '*':
-            tasks: List[Task] = ABILITIES[key]
+            tasks = BASE_TASKS.group_by_category(key)
             ontology.available_tasks += tasks
         else:
             for task_name in ability:
                 task_found = None
 
-                for task in ABILITIES[key]:
+                for task in BASE_TASKS.group_by_category(key):
                     if task_name == task.name:
                         task_found = task
 
                 if task_found is None:
                     raise ParseTOMLOntologyException(
-                        f'The "Robot.Abilities.{key}" parameter value "{task_name}" must be in the following list: {list(ABILITIES[key])}')
+                        f'The "Robot.Abilities.{key}" parameter value "{task_name}" must be in the following list: { [task.name for task in BASE_TASKS]}')
 
                 ontology.available_tasks.append(task_found)
 
@@ -154,39 +154,51 @@ def parseOntologyConfig(file_name: str) -> Ontology:
         raise ParseTOMLOntologyException('The "Ontology.Entities" parameter value must be a table')
 
     for entity_name in entities:
+        capitalized_entity_name = entity_name.capitalize()
+        lower_entity_name = entity_name.lower()
+        upper_entity_name = entity_name.upper()
+
         entity = entities[entity_name]
 
         if not isinstance(entity, dict):
-            raise ParseTOMLOntologyException(f'The "Ontology.Entities" parameter value "{entity_name}" must be a table')
+            raise ParseTOMLOntologyException(f'The "Ontology.Entities" parameter value "{capitalized_entity_name}" must be a table')
 
         if entity_name in ENTITIES_NOT_ALLOWED:
-            raise ParseTOMLOntologyException(f'The entity name "{entity_name}" is not allowed')
+            raise ParseTOMLOntologyException(f'The entity name "{capitalized_entity_name}" is not allowed')
         elif entity_name in BASE_ENTITIES:
-            entity_class = eval(entity_name)
+            entity_class = eval(capitalized_entity_name)
         else:
-            entity_class = type(entity_name, (object,), {
+            entity_class = type(capitalized_entity_name, (object,), {
                 '__module__': 'models',
                 '__init__': entity_initialisation,
                 'additional_attributes': {}
             })
 
-        lower_entity_name = entity_name.lower()
-        upper_entity_name = entity_name.upper()
-
         for key, value in entity.items():
+            upper_key = key.upper()
+            capitalized_key = key.capitalize()
+
             value_type = type(value)
 
             if value_type not in ACCEPTED_TYPES:
                 raise ParseTOMLOntologyException(
-                    f'The "Ontology.Entities.{entity_name}" parameter value "{key}" type must be in the following list: {ACCEPTED_TYPES}')
+                    f'The "Ontology.Entities.{capitalized_entity_name}" parameter value "{key}" type must be in the following list: {ACCEPTED_TYPES}')
 
             entity_class.additional_attributes[key] = value
+
+            if upper_key not in ontology.NER_labels:
+                ontology.NER_labels.append(upper_key)
+
+            ontology.REL_relations.append(f'{capitalized_entity_name}Has{capitalized_key}')
 
             new_task_params = {lower_entity_name: entity_class}
             new_task = Task(f'get_{key}', lower_entity_name, new_task_params, value_type)
             ontology.available_tasks.append(new_task)
 
         ontology.entities[upper_entity_name] = entity_class
+
+        if upper_entity_name not in ontology.NER_labels:
+            ontology.NER_labels.append(upper_entity_name)
 
     # ========
 

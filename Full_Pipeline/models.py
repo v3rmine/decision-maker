@@ -1,8 +1,12 @@
+import typing
 import uuid
 from enum import Enum
 from typing import List, Optional
 
 from termcolor import colored
+
+from middlewares import Middlewares
+from pipeline import TaskList
 
 ENTITIES_NOT_ALLOWED = ['Memory', 'Ontology', 'Task', 'InterestPoint']
 BASE_ENTITIES = ['Robot', 'Human', 'Object', 'Location']
@@ -12,11 +16,6 @@ ACCEPTED_TYPES = [bool, int, float, str]
 class Languages(Enum):
     English = 'english'
     French = 'french'
-
-
-class Middlewares(Enum):
-    ROS2 = 'ROS2'
-    API = 'API'
 
 
 def entity_initialisation(self):
@@ -82,15 +81,17 @@ class Human(object):
     """
     Represent a human being
     """
-    id: int
+    id: str
     name: str
-    interest_point: InterestPoint
+    interest_point: Optional[InterestPoint]
+    is_querier: bool
     additional_attributes: dict = {}
 
-    def __init__(self, id: int, name: str, interest_point: InterestPoint):
-        self.id = id
+    def __init__(self, name: str, interest_point: Optional[InterestPoint] = None, is_querier=False):
+        self.id = str(uuid.uuid4())
         self.name = name
         self.interest_point = interest_point
+        self.is_querier = is_querier
 
         for name, value in self.additional_attributes.items():
             self.__setattr__(name, value)
@@ -110,25 +111,16 @@ class Robot(object):
         self.abilities = abilities
 
 
-class Task:
-    def __init__(self, name: str, prefix: str, params: dict, returns: type):
-        self.name = name
-        self.params = params
-        self.returns = returns
-        self.prefix = prefix
-
-
 class Ontology:
     """
     Represent an ontology
     """
 
-    def __init__(self, name: str = "default", description: str = "default description",
-                 language: Languages = Languages.English):
+    def __init__(self, name: str = "default", description: str = "default description", language: Languages = Languages.English):
         self.name = name
         self.description = description
         self.language = language
-        self.available_tasks: List[Task] = []
+        self.available_tasks = TaskList([])
         self.robot: Optional[Robot] = None
         self.entities: dict[str, type] = {
             'ROBOT': Robot,
@@ -136,6 +128,8 @@ class Ontology:
             'OBJECT': Object,
             'LOCATION': Location
         }
+        self.NER_labels = list(self.entities.keys())
+        self.REL_relations = []
 
     def print_entities(self, prefix=''):
         for entity in self.entities.values():
@@ -144,18 +138,17 @@ class Ontology:
             for index, (attribute, value_type) in enumerate(entity.__annotations__.items()):
                 if attribute.startswith('__'):
                     continue
+                elif attribute == 'additional_attributes':
+                    continue
 
-                attributes += f'{attribute}: {colored(value_type.__name__, "light_red")}'
-
-                if attribute in entity.__dict__:
-                    if value_type == str:
-                        attribute_str = '"' + entity.__dict__[attribute] + '"'
-                        attributes += f' = {colored(attribute_str, "light_cyan")}'
-                    else:
-                        attributes += f' = {colored(entity.__dict__[attribute], "light_cyan")}'
+                attributes += print_attribute(attribute, value_type, entity.__dict__)
 
                 if index + 1 < len(entity.__annotations__):
                     attributes += ', '
+
+            if hasattr(entity, 'additional_attributes'):
+                for (attribute, value) in entity.additional_attributes.items():
+                    attributes += print_attribute(attribute, type(value), entity.additional_attributes)
 
             print(f'{prefix}{colored(entity.__name__, "light_magenta")}({attributes})')
 
@@ -164,43 +157,25 @@ class Ontology:
             params = ''.join(
                 [f'{param}: {colored(task.params[param].__name__, "light_yellow")}' for param in task.params])
             print(
-                f'{prefix}{task.prefix}\\{colored(task.name, "light_magenta")}({params}) -> {colored(None if task.returns is None else task.returns.__name__, "light_red")}')
+                f'{prefix}{task.category}\\{colored(task.name, "light_magenta")}({params}) -> {colored(None if task.returns is None else task.returns.__name__, "light_red")}')
 
 
-class Memory(dict):
-    """
-    Represent the robot memory
-    """
+def print_attribute(attribute: str, value_type: type, attributes) -> str:
+    result = f'{attribute}: '
 
+    match typing.get_origin(value_type):
+        case typing.Union:
+            type_str = f'{value_type.__qualname__}[{value_type.__args__[0].__name__}]'
+            result += f'{colored(type_str, "light_red")}'
 
-ABILITIES = {
-    'navigation_2d': [
-        Task('get_current_interest_point', prefix='navigation_2d', params={}, returns=InterestPoint),
-        Task('get_object_interest_point', prefix='navigation_2d', params={'object': Object}, returns=InterestPoint),
-        Task('get_interest_point_location', prefix='navigation_2d', params={'interest_point': InterestPoint},
-             returns=Location),
-        Task('go_to', prefix='navigation_2d', params={'interest_point': InterestPoint}, returns=bool),
-    ],
-    'vision': [
-        Task('detect_object', prefix='vision', params={'object': Object}, returns=Object),
-        Task('detect_objects', prefix='vision', params={}, returns=List[Object]),
-        Task('detect_humans', prefix='vision', params={}, returns=List[Object]),
-    ],  # TODO: 'gesture_recognition'
-    'object_grasping': [
-        Task('grab_object', prefix='object_grasping', params={'object': Object}, returns=bool),
-        Task('put_object', prefix='object_grasping', params={'object': Object}, returns=bool),
-    ],  # TODO: 'push_object', 'pull_object'
-    'speech_recognition': [
-        Task('speech_to_text', prefix='speech_recognition', params={}, returns=str),
-        Task('detect_sound', prefix='speech_recognition', params={}, returns=bool),
-    ],  # TODO: 'detect_language'
-    'text_to_speech': [
-        Task('say', prefix='text_to_speech', params={'text': str}, returns=None),
-    ],  # TODO: 'change_language'
-    'display': [
-        Task('display_text', prefix='display', params={'text': str}, returns=None),
-    ],  # TODO: 'display_image', 'display_video'
-    'audio': [
-        Task('play_sound', prefix='audio', params={'sound_name': str}, returns=None),
-    ]
-}
+        case _:
+            result += f'{colored(value_type.__name__, "light_red")}'
+
+    if attribute in attributes:
+        if value_type == str:
+            attribute_str = '"' + attributes[attribute] + '"'
+            result += f' = {colored(attribute_str, "light_cyan")}'
+        else:
+            result += f' = {colored(attributes[attribute], "light_cyan")}'
+
+    return result

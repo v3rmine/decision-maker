@@ -1,7 +1,13 @@
 import time
+from enum import Enum
 
 import jsonpickle
 import requests
+
+
+class Middlewares(Enum):
+    ROS2 = 'ROS2'
+    API = 'API'
 
 
 def send_api_action(url: str, params: dict):

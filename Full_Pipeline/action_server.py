@@ -17,6 +17,16 @@ def detect_object():
     return data['object']
 
 
+@app.post(f'{API_PREFIX}/vision/detect_human', endpoint='detect_human')
+def detect_object():
+    content = request.get_json()
+    data = json.loads(content)
+
+    print(data['human'])
+
+    return data['human']
+
+
 @app.post(f'{API_PREFIX}/object_grasping/grab_object', endpoint='grab_object')
 def detect_object():
     content = request.get_json()

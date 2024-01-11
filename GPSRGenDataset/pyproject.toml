@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "gpsrgendataset"
+version = "0.1.0"
+description = ""
+authors = ["Johan Planchon <dev@johan.moe>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+spacy = "^3.7.2"
+
+[tool.poetry.dependencies.en_core_web_sm]
+url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

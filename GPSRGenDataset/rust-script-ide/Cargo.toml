@@ -1,0 +1,14 @@
+[package]
+name = "rust-script-ide"
+version = "0.1.0"
+
+[[bin]]
+name = "gen-dataset"
+path = "../gen-dataset.rs"
+
+[[bin]]
+name = "process-dataset"
+path = "../process-dataset.rs"
+
+[dependencies]
+duct = "0.13"

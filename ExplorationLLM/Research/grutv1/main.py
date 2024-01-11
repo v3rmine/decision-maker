@@ -213,8 +213,10 @@ def main():
             model = args.model
         if args.input != None:
             text = args.input
+        if args.model_name != None:
+            model_name = args.model_name
 
-        predictor = Predictor(model, num_beans=num_beams, return_sequences=return_sequences)
+        predictor = Predictor(model=model_name, model_dir=model, num_beans=num_beams, return_sequences=return_sequences)
         result = predictor.predict(task, text)
         print(result)
 

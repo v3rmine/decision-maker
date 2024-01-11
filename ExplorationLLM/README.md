@@ -5,7 +5,7 @@
   - [Repository de Code](#repository-de-code)
   - [Papier de Recherche](#papier-de-recherche)
   - [Datasets](#datasets)
-  - [Résultats gpsr-command-understanding](#résultats-gpsr-command-understanding)
+  - [Résultats](#résultats)
     - [Phrases de test](#phrases-de-test)
     - [Trained LLM List](#trained-llm-list)
     - [`Take the tray and put it on the desk`](#take-the-tray-and-put-it-on-the-desk)
@@ -32,19 +32,26 @@
 
 ## Papier de Recherche
 - [Language and Robotics: Complex SentenceUnderstanding](https://sci-hub.se/10.1007/978-3-030-27529-7_54)
+> 
 - [Enabling human-like task identification from natural conversation](https://arxiv.org/abs/2008.10073)
+> 
 - [Natural Spoken Instructions Understanding for Robot with Dependency Parsing](https://sci-hub.se/10.1109/CYBER46603.2019.9066566)
+> 
 - [Mapping natural language procedures descriptions to linear temporal logic templates](https://link.springer.com/article/10.1007/s10489-023-04882-0)
+> 
 - [Foundation Model based Open Vocabulary Task Planning andExecutive System for General Purpose Service Robots](https://arxiv.org/abs/2308.03357)
+> 
 - [tagE: Enabling an Embodied Agent to Understand Human Instructions](https://arxiv.org/abs/2310.15605)
+> 
 - [Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots](https://arxiv.org/abs/1907.01115v1)
+> 
 
 ## Datasets
 - [Human Robot Interaction Corpus (HuRIC 2.1)](https://github.com/crux82/huric)
 - [RoboCup@Home Command Generator](https://github.com/kyordhel/GPSRCmdGen)
 - [Rockin - FBM3@Home: Speech Understanding](https://web.archive.org/web/20170603103044/http://thewiki.rockinrobotchallenge.eu/index.php?title=Datasets#FBM3.40Home:_Speech_Understanding)
 
-## Résultats gpsr-command-understanding
+## Résultats
 ### Phrases de test
 ```
 Take the tray and put it on the desk
@@ -84,6 +91,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | 4min    (1.61s/epoch)     | 1.5G     | 148/149 (99%)      |
 | roberta-basetransformer_seq2seq            | 3min50s (1.54s/epoch)     | 1.8G     | 121/149 (81%)      |
 | xlnet-base-casedtransformer_seq2seq        | 4min07s (1.66s/epoch)     | 1.4G     | **149/149** (100%) |
+| grut-v1-bart   | 15min10s | 533M | NA |
+| grut-v1-bart-grut   | 28min32s | 533M | NA |
+| grut-v1-mt5   | 1h22min | 2.2G | NA |
+| grut-v1-mt5-grut   | 101m | 2.2G | NA |
+| grut-v2-bart   | 14min44s | 533M | NA |
+| grut-v2-bart-grut   | 32min59s | 533M | NA |
+| grut-v2-t5   | 1h11min | 2.2G | NA |
+| grut-v2-t5-grut   | 1h26min | 2.2G | NA |
 
 ### `Take the tray and put it on the desk`
 
@@ -101,6 +116,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( lambda $1 e ( lambda $2 e ( person $2 ) ( gender $2 $1 ) ( at $2 \" <room> \" ) ) ) )` | 193ms        |
 | roberta-basetransformer_seq2seq            | `( bring ( lambda $1 e ( is_a $1 \" <object> \" ) ) )`                                          | 196ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( guide ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ) UNKNOWN )`                      | 157ms        |
+| grut-v1-bart | `["TAKING(Theme(Theme('the tray')) - PLACING(Theme"]` | 4s |
+| grut-v1-bart-grut | `["ATTACHING(Item('the tray')) - PLACING(Theme('"]` | 4s |
+| grut-v1-mt5 | `["TAKING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 11.7s |
+| grut-v1-mt5-grut | `["TAKING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 11.3s |
+| grut-v2-bart | `["TAKING(Theme('it'), Goal('on the desk')) - PLAC"]` | 3s |
+| grut-v2-bart-grut | `["TAKING(Theme('it'), Goal('on the desk'))"]` | 3.21s |
+| grut-v2-mt5 | `["TAKING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 10.7s |
+| grut-v2-mt5-grut | `["TAKING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 12.4s |
 
 ### `Tell me how many people are in the corridor`
 
@@ -118,6 +141,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( count ( lambda $1 e ( person $1 ) ( female $1 ) ( at $1 \" <room> \" ) ) ) )`            | 164ms        |
 | roberta-basetransformer_seq2seq            | `( say ( count ( lambda $1 e ( person $1 ) ( standing $1 ) ( at $1 \" <room> \" ) ) ) )`    138ms |              |
 | xlnet-base-casedtransformer_seq2seq        | `( say ( count ( lambda $1 e ( person $1 ) ( male $1 ) ( at $1 \" <room> \" ) ) ) )`              | 171ms        |
+| grut-v1-bart | `["BRINGING(Agent('me'), Theme('how many people'), Location('in"]` | 4s |
+| grut-v1-bart-grut | `["BEING_LOCATED(Cognizer('me'), Location('where'), Location"]` | 4s |
+| grut-v1-mt5 | `["BEING_LOCATED(Theme('many people'), Location('in the corridor'))"]` | 11.7s |
+| grut-v1-mt5-grut | `["TAKING(Theme('many people'), Location('in the corridor'))"]` | 10.8s |
+| grut-v2-bart | `["BRINGING(Beneficiary('me'), Theme('many people'), Location('in"]` | 3s |
+| grut-v2-bart-grut | `["BRINGING(Agent('you'), Location('in the corridor'))"]` | 3.13s |
+| grut-v2-mt5 | `["CHANGE_DIRECTION(Theme('you'), Location('in the corridor'))"]` | 11.2s |
+| grut-v2-mt5-grut | `["CHANGE_DIRECTION(Phenomenon('many people'), Area('on the corridor"]` | 12.4s |
 
 ### `Could you meet Robin at the dining table and follow her to the dining room`
 
@@ -135,6 +166,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( count ( lambda $1 e ( person $1 ) ( male $1 ) ( at $1 \" <room> \" ) ) ) )`                      | 174ms        |
 | roberta-basetransformer_seq2seq            | `( follow ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ( at $1 \" <location> \" ) ) )`            | 158ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( guide ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ) UNKNOWN )`                                | 169ms        |
+| grut-v1-bart | `["COTHEME(Theme('you'), Goal('at the dining table'))"]` | 3.5s |
+| grut-v1-bart-grut | `["MOTION(Theme('you'), Goal('to the dining table')) -"]` | 4s |
+| grut-v1-mt5 | `["MOTION(Theme('you'), Goal('at the dining table')) - COTH"]` | 11.8s |
+| grut-v1-mt5-grut | `["MOTION(Theme('you'), Goal('to the dining room'))"]` | 10.9s |
+| grut-v2-bart | `["COTHEME(Theme('you'), Cotheme('Robin at the dining"]` | 3s |
+| grut-v2-bart-grut | `["MOTION(Theme('you'), Goal('at the dining table')) -"]` | 3.22s |
+| grut-v2-mt5 | `["MOTION(Theme('you'), Goal('at the dining table')) - COTH"]` | 11.3s |
+| grut-v2-mt5-grut | `["MOTION(Theme('Robin at the dining table')) - COTHEME(Co"]` | 12s |
 
 ### `Could you grasp the tray from the side table and bring it to me`
 
@@ -152,6 +191,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( lambda $1 e ( lambda $2 e ( person $2 ) ( gender $2 $1 ) ( at $2 \" <room> \" ) ) ) )` | 179ms        |
 | roberta-basetransformer_seq2seq            | `( bring ( lambda $1 e ( person $1 ) ( at $1 \" <location> \" ) ) )`                            | 133ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( bring ( lambda $1 e ( largest $1 ) ) \" <location> \" )`                                     | 135ms        |
+| grut-v1-bart | `["MANIPULATION(Entity('you'), Theme('the tray'), Source('from"]` | 4s |
+| grut-v1-bart-grut | `["MANIPULATION(Agent('you'), Device('the tray'), Source('from"]` | 4s |
+| grut-v1-mt5 | `["GIVING(Agent('you'), Theme('the tray'), Source('from the side table"]` | 11.7s |
+| grut-v1-mt5-grut | `["GIVING(Agent('you'), Theme('the tray'), Source('from the side table"]` | 11.2s |
+| grut-v2-bart | `["MANIPULATION(Entity('you'),Entity('the tray'), Source('from"]` | 3s |
+| grut-v2-bart-grut | `["MANIPULATION(Entity('the tray'), Source('from the side table'"]` | 3.16s |
+| grut-v2-mt5 | `["MANIPULATION(Entity('you'), Theme('the tray'), Source('from the side"]` | 11.4s |
+| grut-v2-mt5-grut | `["MANIPULATION(Entity('the tray'), Source('from the side table')) -"]` | 12s |
 
 ### `Please follow Robin from the entrance to the bedroom`
 
@@ -169,6 +216,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( go \" <room> \" )`                                                                          | 149ms        |
 | roberta-basetransformer_seq2seq            | `( guide ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ( at $1 \" <location> \" ) ) )`  | 134ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( follow ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ) )`                            | 132ms        |
+| grut-v1-bart | `["COTHEME(Cotheme('Robin'), Path('from the entrance to"]` | 4s |
+| grut-v1-bart-grut | `["COTHEME(Cotheme('Robin'), Path('from the entrance to"]` | 4s |
+| grut-v1-mt5 | `["COTHEME(Cotheme('Robin'), Path('from the entrance to the bedroom'))"]` | 11.7s |
+| grut-v1-mt5-grut | `["COTHEME(Cotheme('Robin'), Path('from the entrance to the bedroom'))"]` | 11.2s |
+| grut-v2-bart | `["COTHEME(Cotheme('Robin'), Path('from the entrance to"]` | 3s |
+| grut-v2-bart-grut | `["COTHEME(Cotheme('Robin'), Path('from the entrance to"]` | 3.15s |
+| grut-v2-mt5 | `["COTHEME(Cotheme('Robin'), Path('from the entrance to the bedroom'))"]` | 11.4s |
+| grut-v2-mt5-grut | `["COTHEME(Cotheme('Robin'), Path('from the entrance'), Goal('to"]` | 12.4s |
 
 ### `Give me the bowl`
 
@@ -186,6 +241,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( bring ( lambda $1 e ( lightest $1 ) ) \" <location> \" )`  | 111ms        |
 | roberta-basetransformer_seq2seq            | `( bring ( lambda $1 e ( is_a $1 \" <object> \" ) ) )`        | 97ms         |
 | xlnet-base-casedtransformer_seq2seq        | `( bring ( lambda $1 e ( is_a $1 \" <object> \" ) ) )`        | 97ms         |
+| grut-v1-bart | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 4s |
+| grut-v1-bart-grut | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 4s |
+| grut-v1-mt5 | `["GIVING(Beneficiary('me'), Theme('the bowl'))"]` | 11.2s |
+| grut-v1-mt5-grut | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 10.8s |
+| grut-v2-bart | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 3s |
+| grut-v2-bart-grut | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 3s |
+| grut-v2-mt5 | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 10.7s |
+| grut-v2-mt5-grut | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 11.95s |
 
 ### `Please Tell me how many tableware there are on the bookcase`
 
@@ -203,6 +266,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( count ( lambda $1 e ( person $1 ) ( male $1 ) ( at $1 \" <room> \" ) ) ) )`        | 153ms        |
 | roberta-basetransformer_seq2seq            | `( say ( count ( lambda $1 e ( person $1 ) ( sitting $1 ) ( at $1 \" <room> \" ) ) ) )`     | 146ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( say ( count ( lambda $1 e ( person $1 ) ( male $1 ) ( at $1 \" <location> \" ) ) ) )`    | 162ms        |
+| grut-v1-bart | `["BRINGING(Agent('me'), Theme('how many tableware'), Location('"]` | 4s |
+| grut-v1-bart-grut | `["BRINGING(Beneficiary('me'), Theme('how many tableware'), Location"]` | 4s |
+| grut-v1-mt5 | `["BEING_LOCATED(Theme('many tableware'), Location('on the bookcase'))"]` | 11.7s |
+| grut-v1-mt5-grut | `["ATTACHING(Item('the tableware'), Location('on the bookcase'))"]` | 11.5s |
+| grut-v2-bart | `["BRINGING(Beneficiary('me'), Theme('many tableware'), Location('"]` | 3s |
+| grut-v2-bart-grut | `["BRINGING(Agent('you'), Theme('many tableware')) - BE"]` | 3.17s |
+| grut-v2-mt5 | `["CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the tableware'),"]` | 11.3s |
+| grut-v2-mt5-grut | `["BRINGING(Theme('many tableware'), Location('on the bookcase'))"]` | 12.38s |
 
 ### `Take the orange from the dining room to the counter`
 
@@ -220,6 +291,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( lambda $1 e ( and ( lightest $1 ) ( at $1 \" <room> \" ) ) ) )`                                       | 186ms        |
 | roberta-basetransformer_seq2seq            | `UNKNOWN`                                                                                                      | 140ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( bring ( lambda $1 e ( is_a $1 \" <object> \" ) ) )`                                                         | 170ms        |
+| grut-v1-bart | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal"]` | 4s |
+| grut-v1-bart-grut | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal"]` | 4s |
+| grut-v1-mt5 | `["TAKING(Theme('the orange'), Source('from the dining room'), Goal('to"]` | 11.7s |
+| grut-v1-mt5-grut | `["TAKING(Theme('the orange'), Source('from the dining room'), Goal('to"]` | 11.9s |
+| grut-v2-bart | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal"]` | 3s |
+| grut-v2-bart-grut | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal"]` | 3.19s |
+| grut-v2-mt5 | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal('"]` | 11.3s |
+| grut-v2-mt5-grut | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal('"]` | 12.4s |
 
 ### `Grasp the tray and put it on the dining table`
 
@@ -237,6 +316,14 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( lambda $1 e ( lambda $2 e ( person $2 ) ( gender $2 $1 ) ( at $2 \" <room> \" ) ) ) )` | 164ms        |
 | roberta-basetransformer_seq2seq            | `( put ( lambda $1 e ( is_a $1 \" <object> \" ) ) \" <location> \" )`                           | 160ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( bring ( lambda $1 e ( is_a $1 \" <object> \" ) ) )`                                          | 164ms        |
+| grut-v1-bart | `["CLOSURE(Entity('the tray')) - PLACING(Theme('"]` | 4s |
+| grut-v1-bart-grut | `["MANIPULATION(Entity('the tray')) - PLACING(Theme"]` | 4s |
+| grut-v1-mt5 | `["PLACING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 11.7s |
+| grut-v1-mt5-grut | `["PLACING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 11.6s |
+| grut-v2-bart | `["MANIPULATION(Entity('it'), Goal('on the dining table'))"]` | 3s |
+| grut-v2-bart-grut | `["TAKING(Theme('it'), Goal('on the dining table'))"]` | 3.16s |
+| grut-v2-mt5 | `["MANIPULATION(Entity('the tray')) - PLACING(Theme('it'),"]` | 11.2s |
+| grut-v2-mt5-grut | `["MANIPULATION(Entity('the tray')) - PLACING(Theme('it'),"]` | 12.5s |
 
 ### `Greet Francis at the bed and lead her to her uber`
 
@@ -254,3 +341,11 @@ Greet Francis at the bed and lead her to her uber
 | gpt2transformer_seq2seq                    | `( say ( count ( lambda $1 e ( person $1 ) ( male $1 ) ( at $1 \" <room> \" ) ) ) )`                                    | 164ms        |
 | roberta-basetransformer_seq2seq            | `( guide ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ) )`                                                      | 121ms        |
 | xlnet-base-casedtransformer_seq2seq        | `( guide ( lambda $1 e ( person $1 ) ( name $1 \" <name> \" ) ) \" <location> \" )`                                     | 126ms        |
+| grut-v1-bart | `["Greet Francis at the bed')) - BRINGING(Theme('her'),"]` | 4s |
+| grut-v1-bart-grut | `["GOTHEME(Phenomenon('at the bed')) - BR"]` | 4s |
+| grut-v1-mt5 | `["BEING_LOCATED(Theme('Francis at the bed')) - LOCATING("]` | 11.7s |
+| grut-v1-mt5-grut | `["TAKING(Theme('Francis at the bed')) - DIRECTION(Direction('"]` | 11.4s |
+| grut-v2-bart | `["GIVING(Recipient('me'), Goal('at the bed')) -"]` | 3s |
+| grut-v2-bart-grut | `["GIVING(Recipient('her'), Goal('to her uber'))"]` | 3s |
+| grut-v2-mt5 | `["RELEASING(Theme(' Francis at the bed')) - LOCATING(Sought_"]` | 11.3s |
+| grut-v2-mt5-grut | `["Greet Francis at the bed')) - CHANGE_DIRECTION(Direction('her'),"]` | 12.6s |

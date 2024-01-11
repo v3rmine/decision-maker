@@ -1,4 +1,4 @@
-# General Purpose Service Robot
+# General Purpose Service Robot [![status](https://cicd.planchon.dev/api/v1/teams/main/pipelines/cpe.robot-project-mirror/badge)](https://cicd.planchon.dev/teams/main/pipelines/cpe.robot-project-mirror)
 
 [RoboCup](https://robocup.org/) scenario manager
 

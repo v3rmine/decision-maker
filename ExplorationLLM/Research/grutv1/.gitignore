@@ -7,4 +7,5 @@ __pycache__/
 test.py
 confronto/
 external_scripts/
-todo.txt
+todo.txtoutputs/
+data/huric_dataset/en_lmd_halfgrounding.csv

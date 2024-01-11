@@ -33,7 +33,7 @@ parser = argparse.ArgumentParser(description='GrUT Models')
 parser.add_argument('mode', type=str,
                     help='The modality: train or predict')
 
-def defineTrainArguments(n_fold, use_cuda, epochs, targetType, modelName, modelVariant, batchSize, learning_rate, early_stopping, quick_train, addMap, addLUType, mapType, grounding, lexicalReferences, thresholdW2V, thresholdLDIST, additional_training_data_path):
+def defineTrainArguments(n_fold, use_cuda, epochs, targetType, modelVariant, batchSize, learning_rate, early_stopping, quick_train, addMap, addLUType, mapType, grounding, lexicalReferences, thresholdW2V, thresholdLDIST, additional_training_data_path):
     global parser
 
     # Optional argument
@@ -56,10 +56,6 @@ def defineTrainArguments(n_fold, use_cuda, epochs, targetType, modelName, modelV
     parser.add_argument('-tt','--target_type', type=str,
                         help='Type of target. Default "' + targetType + '". Define only in train mode. Possible values: frame | frame+pos | frame+token')
 
-    # Optional argument
-    parser.add_argument('-mn','--model_name', type=str,
-                        help='model name. Choices: ["bart", "mbart", "t5", "mt5"], Default "' + str(modelName) + '". Define only in train mode.') 
-    
     # Optional argument
     parser.add_argument('-mv','--model_variant', type=str,
                         help='model variant. Default "' + str(modelVariant) + '". Define only in train mode.') 
@@ -126,9 +122,13 @@ def definePredictArguments(model_dir, text, huric_file_path):
                         help='path to huric file. Default "' + str(huric_file_path) + '". Define only in predict mode.')
 
 
-def defineGlobalArguments(task, num_beams, return_sequences, language, entityRetrievalType):
+def defineGlobalArguments(task, num_beams, return_sequences, language, entityRetrievalType, modelName):
     global parser
 
+    # Optional argument
+    parser.add_argument('-mn','--model_name', type=str,
+                        help='model name. Choices: ["bart", "mbart", "t5", "mt5"], Default "' + str(modelName)) 
+    
     # Optional argument
     parser.add_argument('-t','--task', type=str,
                         help='task type, one of \{FP, BD, AC, SRL\}. Default "' + task + '". Define both in train and predict mode.')
@@ -158,8 +158,9 @@ def main():
     task = 'SRL'
     language = Language.ENGLISH
     entityRetrievalType = "STR"
+    modelName = "bart"
 
-    defineGlobalArguments(task, num_beams, return_sequences, language, entityRetrievalType)
+    defineGlobalArguments(task, num_beams, return_sequences, language, entityRetrievalType, modelName)
 
     # train mode
     n_fold = 2
@@ -167,7 +168,6 @@ def main():
     epochs = 1
     learning_rate = 1e-4
     target_type = 'SRL'
-    modelName = "bart"
     modelVariant = "small"
     batch_size = 4
     early_stopping = True
@@ -181,7 +181,7 @@ def main():
     thresholdLDIST = 0.8
     additional_training_data_path = ""
     
-    defineTrainArguments(n_fold, use_cuda, epochs, target_type, modelName, modelVariant, batch_size, learning_rate, early_stopping, quick_train, addMap, addLUType, mapType, grounding, lexicalReferences, thresholdW2V, thresholdLDIST, additional_training_data_path)
+    defineTrainArguments(n_fold, use_cuda, epochs, target_type, modelVariant, batch_size, learning_rate, early_stopping, quick_train, addMap, addLUType, mapType, grounding, lexicalReferences, thresholdW2V, thresholdLDIST, additional_training_data_path)
 
     #predict mode
     model_dir = '/model'
@@ -258,6 +258,8 @@ def main():
         print('Starting predict mode...')
         if args.model_dir != None:
             model_dir = args.model_dir
+        if args.model_name != None:
+            modelName = args.model_name
         if args.input != None:
             text = args.input
         if args.huric_file_path != None:
@@ -273,7 +275,8 @@ def main():
         else:
             print("Huric file path not given, no map added (maybe it's already appended to the input?)")
 
-        predictor = Predictor(model_dir=model_dir, num_beans=num_beams, return_sequences=return_sequences)
+        print(f"Model name is {modelName}")
+        predictor = Predictor(model_name=modelName, model_dir=model_dir, num_beans=num_beams, return_sequences=return_sequences)
         result = predictor.predict(task, text)
         print(result)
 

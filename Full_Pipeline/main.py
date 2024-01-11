@@ -68,7 +68,7 @@ if __name__ == '__main__':
 
     try:
         while True:
-            print('------------------------')
+            print('================================================')
             input_text = input('Enter a sentence: ')
             print()
 
@@ -127,6 +127,9 @@ if __name__ == '__main__':
 
             print(colored('TASK PIPELINE', attrs=['underline']))
             memory.execute_pipeline()
+
+            # Reset the memory
+            memory.reset()
 
     except KeyboardInterrupt:
         exit(0)

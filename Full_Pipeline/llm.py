@@ -9,7 +9,7 @@ def generate_ner_config(labels: List[str]):
             'labels': labels,  # ['ROBOT', 'HUMAN', 'LOCATION', 'OBJECT', 'FURNITURE', 'COLOR', 'AGE', 'WEIGHT']
             'label_definitions': {
                 'ROBOT': 'You as a general purpose service robot, e.g. you, your',
-                'PERSON': 'A person, e.g. I, me, him, John, her, Anna.',
+                'HUMAN': 'A person, e.g. I, me, him, John, her, Anna.',
                 'LOCATION': 'A room in a house, e.g. kitchen, living-room, bathroom',
                 'OBJECT': 'Any object that can be used by a human, e.g. pencil, apple, drink, phone',
                 # Any object that can be found in a house

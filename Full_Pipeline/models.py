@@ -2,7 +2,7 @@ import builtins
 import typing
 import uuid
 from enum import Enum
-from typing import List, Optional
+from typing import Optional
 
 from termcolor import colored
 
@@ -34,12 +34,12 @@ class InterestPoint:
     Represent an interest point
     """
 
-    id: int
+    id: str
     coordinates: (float, float)
     additional_attributes: dict = {}
 
-    def __init__(self, id: int, coordinates: (float, float)):
-        self.int = id
+    def __init__(self, coordinates: (float, float)):
+        self.id = str(uuid.uuid4())
         self.coordinates = coordinates
 
         entity_initialisation(self)
@@ -50,13 +50,13 @@ class Location(object):
     Represent a physical location
     """
 
-    id: int
+    id: str
     name: str
-    interest_points: List[InterestPoint]
+    interest_points: list[InterestPoint]
     additional_attributes: dict = {}
 
-    def __init__(self, id: int, name: str, interest_points: List[InterestPoint]):
-        self.id = id
+    def __init__(self, name: str, interest_points: list[InterestPoint] = []):
+        self.id = str(uuid.uuid4())
         self.name = name
         self.interest_points = interest_points
 

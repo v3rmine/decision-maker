@@ -80,6 +80,15 @@ class Memory:
         self.memory_stack = MemoryStack()
         self.answers: list[GoalAnswer] = []
 
+    def reset(self):
+        """
+            Reset the memory
+        """
+        self.entities: list[Span] = []
+        self.relations: list[EntityRelation] = []
+        self.goals: list[Goal] = []
+        self.answers: list[GoalAnswer] = []
+
     def print_entities(self):
         """
             Pretty print the memory entities
@@ -139,6 +148,11 @@ class Memory:
             case models.Robot:
                 # assemble the entity to the Robot class
                 assembled_entity: models.Robot = self.ontology.robot
+
+            # Location
+            case models.Location:
+                # assemble the entity to the Location class
+                assembled_entity: models.Location = entity_class(entity_text)
 
             case _:
                 # assemble the entity to another class, likely the entities registered from the ontology
@@ -205,25 +219,30 @@ class Memory:
 
     def select_goals(self, candidate_goals: dict[str, float]):
         """
-            Select the goals that are valid based on their textcat score
+            Select the goal that is valid based on the textcat score
 
             :param candidate_goals:
         """
+        validated_goal = None
 
         # For each textcat label (with its score)
-        for label, score in candidate_goals.items():
+        for goal in BASE_GOALS:
+            score = candidate_goals[goal.name]
+
             # If the score equals to 1.0, then the goal is valid
             if score == 1.0:
-                print(f'\t{label} {score}')
+                print(f'\t{goal.name} {score}')
 
                 # Get the goal
-                goal = BASE_GOALS[label]
-
-                # Add the goal to the memory
-                self.goals.append(goal)
+                validated_goal = goal
 
             else:
-                print(colored(f'\t{label} {score}', 'grey'))
+                print(colored(f'\t{goal.name} {score}', 'grey'))
+
+        # If a goal was validated
+        if validated_goal is not None:
+            # Add the goal to the memory
+            self.goals.append(validated_goal)
 
     def fill_answers_and_memory_stack(self):
         """
@@ -304,7 +323,7 @@ class Memory:
         # For each goal
         for goal_index, current_goal in enumerate(self.goals):
 
-            print(colored(f'\tGoal {goal_index + 1} - {current_goal.name}', attrs=['bold']))
+            print(colored(f'-------- Goal {goal_index + 1} - {current_goal.name} --------\n', attrs=['bold']))
 
             # Print the validation sentence
             print('\t>', self.answers[goal_index].validation, '\n')
@@ -330,6 +349,8 @@ class Memory:
                         # Call the function that will handle the element
                         self.handle_task(index=pipeline_element_index, task=current_pipeline_element)
 
+                print('\t\t--------')
+
             # Print the finished sentence
             print('\t>', self.answers[goal_index].finished)
             print()
@@ -342,7 +363,7 @@ class Memory:
             :param retrieve_property:
         """
 
-        print(colored(f'\t\tTask {index + 1} - Retrieving {retrieve_property.output_type} from {retrieve_property.input_type}\n', attrs=['bold']))
+        print(colored(f'\t\tElement {index + 1} - Retrieving {retrieve_property.output_type} from {retrieve_property.input_type}\n', attrs=['bold']))
 
         # Get the input type
         input_type = retrieve_property.input_type.__name__.upper()
@@ -367,7 +388,7 @@ class Memory:
             :param index:
             :param condition:
         """
-        print(colored(f'\t\tTask {index + 1} - Condition {condition.condition_value}', attrs=['bold']))
+        print(colored(f'\t\tElement {index + 1} - Condition {condition.condition_value}', attrs=['bold']))
 
     def handle_task(self, index: int, task: Task):
         """
@@ -377,7 +398,7 @@ class Memory:
             :param task:
         """
 
-        print(colored(f'\t\tTask {index + 1} - {task.name}', attrs=['bold']))
+        print(colored(f'\t\tElement {index + 1} - Task {task.name}', attrs=['bold']))
 
         filled_params = {}
 

@@ -21,6 +21,9 @@ def send_api_action(url: str, params: dict):
     json_response = response.content
     print('Response:', str(json_response))
 
+    if response.status_code != 200:
+        raise Exception('Action went not well')
+
     return jsonpickle.decode(json_response)
 
 

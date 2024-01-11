@@ -10,6 +10,8 @@
 > > source venv/bin/activate
 > > ```
 
+> Set your `OPENAPI_KEY` environment variable if used with ChatGPT 
+
 Launch the main script:
 
 ```bash

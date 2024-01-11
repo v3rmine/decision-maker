@@ -41,13 +41,13 @@ BASE_TASKS = TaskList([
     Task('play_sound', category='audio', params={'sound_name': str}, returns=None),
 ])
 
-GOALS = GoalList([
+BASE_GOALS = GoalList([
     Goal(
         'DESCRIPTION',
         params=[],
         pipeline=[],
         validation=lambda: f'Great.',
-        answer=lambda: '',
+        finished=lambda: '',
     ),
     Goal(
         'GRAB AN OBJECT',
@@ -57,7 +57,7 @@ GOALS = GoalList([
             BASE_TASKS['grab_object'],
         ],
         validation=lambda object: f'I am going to grab a {object}.',
-        answer=lambda object: f'I am done grabbing a {object}.',
+        finished=lambda object: f'I am done grabbing a {object}.',
     ),
     Goal(
         'GRAB AN OBJECT IN A LOCATION',
@@ -68,7 +68,7 @@ GOALS = GoalList([
             BASE_TASKS['grab_object'],
         ],
         validation=lambda object, location: f'I am going to grab a {object} in the {location}.',
-        answer=lambda object, location: f'I am done grabbing {object} in the {location}.',
+        finished=lambda object, location: f'I am done grabbing {object} in the {location}.',
     ),
     Goal(
         'BRING AN OBJECT TO SOMEONE',
@@ -81,7 +81,7 @@ GOALS = GoalList([
             BASE_TASKS['go_to_interest_point'],
         ],
         validation=lambda object, human: f'I am going to bring a {object} to {human}.',
-        answer=lambda object, human: f'I am done bringing {object} to {human}.',
+        finished=lambda object, human: f'I am done bringing {object} to {human}.',
     ),
     Goal(
         'BRING AN OBJECT TO SOMEONE FROM A LOCATION',
@@ -95,7 +95,7 @@ GOALS = GoalList([
             BASE_TASKS['go_to_interest_point'],
         ],
         validation=lambda object, human, location: f'I am going to bring a {object} to {human} from the {location}.',
-        answer=lambda object, human, location: f'I am done bringing {object} to {human} from the {location}.',
+        finished=lambda object, human, location: f'I am done bringing {object} to {human} from the {location}.',
     ),
     Goal(
         'SAY SOMETHING',
@@ -103,7 +103,7 @@ GOALS = GoalList([
         pipeline=[
         ],
         validation=lambda _: f'',
-        answer=lambda _: f'',
+        finished=lambda _: f'',
     ),
     Goal(
         'GO TO LOCATION',
@@ -112,6 +112,6 @@ GOALS = GoalList([
             BASE_TASKS['go_to_location'],
         ],
         validation=lambda location: f'I am going to the {location}',
-        answer=lambda location: f'I am done going to the {location}',
+        finished=lambda location: f'I am done going to the {location}',
     ),
 ])

@@ -6,10 +6,17 @@ class PipelineException(Exception):
 
 
 class PipelineElement:
+    """
+        Mother class of Task, Condition and RetrieveProperty
+    """
     pass
 
 
 class Condition(PipelineElement):
+    """
+        TODO
+    """
+
     def __init__(self, condition_value):
         self.condition_value = condition_value
 
@@ -18,6 +25,10 @@ class Condition(PipelineElement):
 
 
 class RetrieveProperty(PipelineElement):
+    """
+        Output a property retrieved from an input
+    """
+
     def __init__(self, input_type: type, output_type: type, value_key: str):
         self.input_type = input_type
         self.output_type = output_type
@@ -31,6 +42,10 @@ class RetrieveProperty(PipelineElement):
 
 
 class Task(PipelineElement):
+    """
+        A task to be executed in the pipeline
+    """
+
     def __init__(self, name: str, category: str, params: dict, returns: Optional[type]):
         self.name = name
         self.category = category
@@ -39,15 +54,23 @@ class Task(PipelineElement):
 
 
 class Goal:
-    def __init__(self, name: str, params: List[str], pipeline: List[PipelineElement], validation: callable, answer: callable):
+    """
+        A goal that mainly represent a sequence of tasks
+    """
+
+    def __init__(self, name: str, params: List[str], pipeline: List[PipelineElement], validation: callable, finished: callable):
         self.name = name
         self.params = params
         self.pipeline = pipeline
         self.validation = validation
-        self.answer = answer
+        self.finished = finished
 
 
 class GoalList(list):
+    """
+        A rewrite of list using the "name" property as the item key
+    """
+
     def __init__(self, elements: List[Goal]):
         super(GoalList, self).__init__(elements)
 
@@ -59,6 +82,10 @@ class GoalList(list):
 
 
 class TaskList(list):
+    """
+        A rewrite of list using the "name" property as the item key that can also use the "category" property
+    """
+
     def __init__(self, elements: List[Task]):
         super(TaskList, self).__init__(elements)
 

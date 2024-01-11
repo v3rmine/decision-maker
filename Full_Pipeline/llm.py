@@ -52,6 +52,10 @@ def generate_textcat_config(labels: List[str]):
 
 
 class EntityRelation:
+    """
+        Similar to SpaCy RelationItem but stores the whole entities instead of their doc index
+    """
+
     def __init__(self, destination: Span, dependency: Span, name: str):
         self.destination = destination
         self.dependency = dependency

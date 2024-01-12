@@ -1,0 +1,17 @@
+huric_id,sentence,frame_name,frame_token,sem_type,sem_head,tokens
+2170,"follow this guy","Cotheme",1,"Cotheme",3,2;3
+2172,"search for the coffee cups","Locating",1,"Sought_entity",5,2;3;4;5
+2173,"carry the book to my nightstand","Bringing",1,"Theme",3,2;3
+2173,"carry the book to my nightstand","Bringing",1,"Goal",6,4;5;6
+2174,"go to the kitchen","Motion",1,"Goal",4,2;3;4
+2175,"please carry the mug to the bathroom","Bringing",2,"Theme",4,3;4
+2175,"please carry the mug to the bathroom","Bringing",2,"Goal",7,5;6;7
+2176,"please find the lamp","Locating",2,"Sought_entity",4,3;4
+2177,"please bring the mobile phone to the livingroom","Bringing",2,"Theme",5,3;4;5
+2177,"please bring the mobile phone to the livingroom","Bringing",2,"Goal",8,6;7;8
+2178,"can you find the refrigerator for me","Locating",3,"Perceiver",2,2
+2178,"can you find the refrigerator for me","Locating",3,"Sought_entity",5,4;5
+2181,"follow the person with the blonde hair and the black pants fast","Cotheme",1,"Cotheme",3,2;3;4;5;6;7;8;9;10;11
+2181,"follow the person with the blonde hair and the black pants fast","Cotheme",1,"Speed",12,12
+2182,"can you please move near the right lamp","Motion",4,"Theme",2,2
+2182,"can you please move near the right lamp","Motion",4,"Goal",8,5;6;7;8

@@ -7,8 +7,6 @@
 extern crate duct;
 use std::error::Error;
 
-use duct::cmd;
-
 fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }

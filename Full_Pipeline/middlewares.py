@@ -21,10 +21,15 @@ def send_api_action(url: str, params: dict):
     json_response = response.content
     print('Response:', str(json_response))
 
-    if response.status_code != 200:
-        raise Exception('Action went not well')
+    match response.status_code:
+        case 200:
+            return jsonpickle.decode(json_response)
 
-    return jsonpickle.decode(json_response)
+        case 204:
+            return None
+
+        case _:
+            raise Exception('Action went not well')
 
 
 def send_ros_action(topic_name: str, params: dict):

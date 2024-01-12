@@ -9,7 +9,7 @@ from termcolor import colored
 
 import models
 import pipeline
-from constants import BASE_GOALS
+from constants import BASE_GOALS, BASE_TASKS
 from llm import EntityRelation
 from middlewares import Middlewares, send_ros_action, send_api_action
 from models import Ontology
@@ -108,8 +108,11 @@ class Memory:
             for entity in self.memory_stack[entity_name]:
                 print('\t\t-', end='')
 
-                for key, value in vars(entity).items():
-                    print(f' {key}={value}', end='')
+                if hasattr(entity, '__dict__'):
+                    for key, value in vars(entity).items():
+                        print(f' {key}={value}', end='')
+                else:
+                    print(' ', entity)
 
                 print()
 
@@ -286,6 +289,12 @@ class Memory:
             # Call the goal finished function with the retrieved params
             finished_sentence = goal.finished(*params_entities_name)
 
+            goal.pipeline.insert(0, BASE_TASKS['say'])
+            goal.pipeline.append(BASE_TASKS['say'])
+            self.memory_stack['TEXT'].append(finished_sentence)
+            self.memory_stack['TEXT'].append(validation_sentence)
+
+            """
             # Create a goal answer from both
             answer = GoalAnswer(
                 validation=validation_sentence,
@@ -294,6 +303,7 @@ class Memory:
 
             # Add the answer to the memory
             self.answers.append(answer)
+            """
 
             # For each element of the goal pipeline
             for pipeline_element in goal.pipeline:
@@ -323,10 +333,10 @@ class Memory:
         # For each goal
         for goal_index, current_goal in enumerate(self.goals):
 
-            print(colored(f'-------- Goal {goal_index + 1} - {current_goal.name} --------\n', attrs=['bold']))
+            print('--------', colored(f'Goal {goal_index + 1} - {current_goal.name}', attrs=['bold']), '--------\n')
 
             # Print the validation sentence
-            print('\t>', self.answers[goal_index].validation, '\n')
+            # print('\t>', self.answers[goal_index].validation, '\n')
 
             # For each pipeline element in the current pipeline
             for pipeline_element_index, current_pipeline_element in enumerate(current_goal.pipeline):
@@ -349,12 +359,6 @@ class Memory:
                         # Call the function that will handle the element
                         self.handle_task(index=pipeline_element_index, task=current_pipeline_element)
 
-                print('------------------------------------------------------------------------')
-
-            # Print the finished sentence
-            print('\t>', self.answers[goal_index].finished)
-            print()
-
     def handle_retrieve_property(self, index: int, retrieve_property: RetrieveProperty):
         """
             Handle a RetrieveProperty pipeline element
@@ -363,7 +367,7 @@ class Memory:
             :param retrieve_property:
         """
 
-        print(colored(f'\t\tElement {index + 1} - Retrieving {retrieve_property.output_type} from {retrieve_property.input_type}\n', attrs=['bold']))
+        print('----------------', colored(f'Element {index + 1}', attrs=['bold']), f'- Retrieving {retrieve_property.output_type} from {retrieve_property.input_type} ----------------')
 
         # Get the input type
         input_type = retrieve_property.input_type.__name__.upper()
@@ -388,7 +392,7 @@ class Memory:
             :param index:
             :param condition:
         """
-        print(colored(f'\t\tElement {index + 1} - Condition {condition.condition_value}', attrs=['bold']))
+        print('----------------', colored(f'Element {index + 1}', attrs=['bold']), f'- Condition {condition.condition_value} ----------------')
 
     def handle_task(self, index: int, task: Task):
         """
@@ -398,19 +402,23 @@ class Memory:
             :param task:
         """
 
-        print(colored(f'\t\tElement {index + 1} - Task {task.name}', attrs=['bold']))
+        print('----------------', colored(f'Element {index + 1}', attrs=['bold']), f'- Task {task.name} ----------------')
 
         filled_params = {}
 
         # For each task param (and its value)
         for param, value in task.params.items():
-            # Get the entity label
-            entity_label = value.__name__.upper()
+            if value in (int, float, str, bool):
+                # Get the entity label
+                entity_label = param.upper()
+            else:
+                # Get the entity label
+                entity_label = value.__name__.upper()
 
             # Pop the value from the memory stack and add it to the filled params
             filled_params[param] = self.memory_stack[entity_label].pop()
 
-        print('\t\t\t> Params:', filled_params, '\n')
+        print('> Params:', filled_params, '\n')
 
         response = None
 
@@ -433,7 +441,7 @@ class Memory:
                 # Send the API action
                 response = send_api_action(url, filled_params)
 
-        print('\n\t\t\t> Returned:', response, '\n')
+        print('\n> Returned:', response, '\n')
 
         # Match the task return type
         match task.returns:

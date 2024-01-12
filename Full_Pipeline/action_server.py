@@ -1,13 +1,19 @@
+import random
+import time
 import jsonpickle
-
-import models
 import json
+import pyttsx3
+import models
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 
 app = Flask(__name__)
 
 API_PREFIX = '/api'
+
+
+def random_wait():
+    time.sleep(random.random() * 4 + 1)
 
 
 def create_interest_point(coordinates: (float, float)):
@@ -26,6 +32,8 @@ def detect_object():
 
     print(data['object'])
 
+    random_wait()
+
     return data['object']
 
 
@@ -38,6 +46,8 @@ def detect_object():
 
     print(data['human'])
 
+    random_wait()
+
     return data['human']
 
 
@@ -47,6 +57,8 @@ def detect_object():
     data = json.loads(content)
 
     print(data['object'])
+
+    random_wait()
 
     return jsonify(True)
 
@@ -58,6 +70,8 @@ def go_to_location():
 
     print(data['location'])
 
+    random_wait()
+
     return jsonify(True)
 
 
@@ -68,4 +82,21 @@ def go_to_interest_point():
 
     print(data['interest_point'])
 
+    random_wait()
+
     return jsonify(True)
+
+
+@app.post(f'{API_PREFIX}/text_to_speech/say', endpoint='say')
+def say():
+    content = request.get_json()
+    data = json.loads(content)
+
+    print(data['text'])
+
+    engine = pyttsx3.init()
+    engine.setProperty('rate', 135)
+    engine.say(data['text'])
+    engine.runAndWait()
+
+    return Response(status=204)

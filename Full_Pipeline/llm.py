@@ -1,6 +1,14 @@
 from spacy.tokens import Span
 from typing_extensions import List
 
+LLM_MODEL = {
+    'model': {
+        '@llm_models': 'spacy.GPT-4.v2',
+        'name': 'gpt-4',
+        'config': {'temperature': 0.0}
+    }
+}
+
 
 def generate_ner_config(labels: List[str]):
     return {
@@ -15,11 +23,7 @@ def generate_ner_config(labels: List[str]):
                 # Any object that can be found in a house
             },
         },
-        'model': {
-            '@llm_models': 'spacy.GPT-3-5.v2',
-            'name': 'gpt-3.5-turbo',
-            'config': {'temperature': 0.0}
-        }
+        **LLM_MODEL
     }
 
 
@@ -29,11 +33,7 @@ def generate_rel_config(labels: List[str]):
             '@llm_tasks': 'spacy.REL.v1',
             'labels': labels,
         },
-        'model': {
-            '@llm_models': 'spacy.GPT-3-5.v2',
-            'name': 'gpt-3.5-turbo',
-            'config': {'temperature': 0.0}
-        }
+        **LLM_MODEL
     }
 
 
@@ -43,11 +43,7 @@ def generate_textcat_config(labels: List[str]):
             '@llm_tasks': 'spacy.TextCat.v3',
             'labels': labels
         },
-        'model': {
-            '@llm_models': 'spacy.GPT-3-5.v2',
-            'name': 'gpt-3.5-turbo',
-            'config': {'temperature': 0.0}
-        }
+        **LLM_MODEL
     }
 
 

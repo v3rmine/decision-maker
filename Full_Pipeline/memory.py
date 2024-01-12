@@ -349,7 +349,7 @@ class Memory:
                         # Call the function that will handle the element
                         self.handle_task(index=pipeline_element_index, task=current_pipeline_element)
 
-                print('\t\t--------')
+                print('------------------------------------------------------------------------')
 
             # Print the finished sentence
             print('\t>', self.answers[goal_index].finished)

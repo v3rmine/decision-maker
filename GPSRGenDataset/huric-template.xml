@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<huricExample id="{{ id }}">
+  <commands>
+    <command>
+      <sentence>{{ prompt }}</sentence>
+      <tokens>
+        {% for token in tokens %}
+        <token id="{{ token.id }}" lemma="{{ token.lemma }}" pos="{{ token.pos }}" surface="{{ token.surface }}"/>
+        {% endfor %}
+      </tokens>
+      <dependencies>
+        {% for dep in dependencies %}
+        <dep from="{{ dep.from }}" to="{{ dep.to }}" type="{{ dep.type }}"/>
+        {% endfor %}
+      </dependencies>
+      <semantics>
+        <frames>
+          {% for frame in semantics_frames %}
+          <frame name="{% frame.name %}">
+            <lexicalUnit>
+              <token id="{% frame.token_id %}"/>
+            </lexicalUnit>
+            <frameElements>
+              {% for frame_element in frame.elements %}
+              <frameElement type="{{ frame_element.type }}" semanticHead="{{ frame_element.semantic_head_id }}">
+                {% for token_id in frame_element.tokens_id %}
+                <token id="{{ token_id }}"/>
+                {% endfor %}
+              </frameElement>
+              {% endfor %}
+            </frameElements>
+          </frame>
+          {% endfor %}
+        </frames>
+      </semantics>
+    </command>
+  </commands>
+  <semanticMap>
+    <entities>
+      {% for entity in entities %}
+      <entity atom="{{ entity.atom }}" type="{{ entity.type }}">
+        <attributes>
+          {% for attribute in entity.attributes %}
+          <attribute name="{{ attribute.name }}">
+            <value>{{ attribute.value }}</value>
+          </attribute>
+          {% endfor %}
+        </attributes>
+        {% if entity.coordinate %}
+        <coordinate angle="{{ entity.coordinate.angle }}" x="{{ entity.coordinate.x }}" y="{{ entity.coordinate.y }}" z="{{ entity.coordinate.z }}"/>
+        {% endif %}
+      </entity>
+      {% endfor %}
+    </entities>
+  </semanticMap>
+  <lexicalGroundings>
+    {% for lexical_grounding in lexical_groundings %}
+    <lexicalGrounding atom="{{ lexical_grounding.atom }}" tokenId="{{ lexical_grounding.tokenId }}"/>
+    {% endfor %}
+  </lexicalGroundings>
+</huricExample>

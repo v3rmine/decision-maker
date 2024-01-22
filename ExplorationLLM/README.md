@@ -31,20 +31,13 @@
 - [LU4R: adaptive spoken Language Understanding For Robots](http://sag.art.uniroma2.it/lu4r.html)
 
 ## Papier de Recherche
-- [Language and Robotics: Complex SentenceUnderstanding](https://sci-hub.se/10.1007/978-3-030-27529-7_54)
-> 
-- [Enabling human-like task identification from natural conversation](https://arxiv.org/abs/2008.10073)
-> 
-- [Natural Spoken Instructions Understanding for Robot with Dependency Parsing](https://sci-hub.se/10.1109/CYBER46603.2019.9066566)
-> 
-- [Mapping natural language procedures descriptions to linear temporal logic templates](https://link.springer.com/article/10.1007/s10489-023-04882-0)
-> 
-- [Foundation Model based Open Vocabulary Task Planning andExecutive System for General Purpose Service Robots](https://arxiv.org/abs/2308.03357)
-> 
-- [tagE: Enabling an Embodied Agent to Understand Human Instructions](https://arxiv.org/abs/2310.15605)
-> 
-- [Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots](https://arxiv.org/abs/1907.01115v1)
-> 
+- TLDR; Full pipeline, compréhension, questions en cas d'informations incomplètes, mémoire et planification de tâches  [Enabling human-like task identification from natural conversation](./Research/Papers/Enabling%20human-like%20task%20identification%20from%20natural%20conversation.pdf) https://arxiv.org/abs/2008.10073
+- TLDR; State Of The Art, Robocup Japan 2022: [Foundation Model based Open Vocabulary Task Planning andExecutive System for General Purpose Service Robots](./Research/Papers/Foundation%20Model%20based%20Open%20Vocabulary%20Task%20Planning%20and%20Executive%20System%20for%20General%20Purpose%20Service%20Robots.pdf) https://arxiv.org/abs/2308.03357
+- TLDR; How to parse natural language: [Language and Robotics: Complex Sentence Understanding](./Research/Papers/Language%20and%20Robotics%20-%20Complex%20Sentence.pdf) https://sci-hub.se/10.1007/978-3-030-27529-7_54
+- TLDR; Syntaxic tree and tasks/dependencies extraction: [Natural Spoken Instructions Understanding for Robot with Dependency Parsing](./Research/Papers/Natural%20Spoken%20Instructions%20Understanding%20for%20Robot%20with%20Dependency%20Parsing.pdf) https://sci-hub.se/10.1109/CYBER46603.2019.9066566
+- TLDR; Tasks and arguments extraction: [Mapping natural language procedures descriptions to linear temporal logic templates](./Research/Papers/Mapping%20natural%20language%20procedures%20descriptions%20to%20linear%20temporal%20logic%20templates:%20an%20application%20in%20the%20surgical%20robotic%20domain.pdf) https://link.springer.com/article/10.1007/s10489-023-04882-0
+- TLDR; Tasks with parameters extraction: [tagE: Enabling an Embodied Agent to Understand Human Instructions](./Research/Papers/tagE%20-%20Enabling%20an%20Embodied%20Agent%20to%20Understand%20Human%20Instructions.pdf) https://arxiv.org/abs/2310.15605
+- TLDR; Simple tasks and parameters extractor:  [Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots](./Research/Papers/Neural%20Semantic%20Parsing%20with%20Anonymization%20for%20Command%20Understanding%20in%20General-Purpose%20Service%20Robots.pdf) https://arxiv.org/abs/1907.01115v1
 
 ## Datasets
 - [Human Robot Interaction Corpus (HuRIC 2.1)](https://github.com/crux82/huric)

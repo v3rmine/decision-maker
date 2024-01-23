@@ -8,10 +8,6 @@ authors = ["Johan Planchon <dev@johan.moe>"]
 python = "^3.9"
 torch = { version = ">=1.7.0 !=1.8.0 <2", source = "pytorch" }
 # torch = { version = "<1.8.0+cu116", source = "pytorch" }
-onnx_graphsurgeon = { version = "^0.3", source = "nvidia" }
-numpy = "^1.26.3"
-sentencepiece = "^0.1.99"
-transformers = "^4.37.0"
 
 [[tool.poetry.source]]
 name = "pytorch"

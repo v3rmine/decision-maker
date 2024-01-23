@@ -1,11 +1,33 @@
-use bert_loader::{load_config_from_json, load_model};
-use burn::backend::{wgpu::WgpuDevice, Autodiff, Wgpu};
+use std::path::Path;
 
-mod bert_loader;
+use burn::{
+    backend::{
+        wgpu::{AutoGraphicsApi, WgpuDevice},
+        Autodiff, Wgpu,
+    },
+    data::dataset::{source::huggingface::MNISTDataset, Dataset},
+    optim::AdamConfig,
+};
+use model::{infer, ModelConfig};
+use train::TrainingConfig;
+
+mod data;
 mod model;
+mod train;
+
+type Backend = Wgpu<AutoGraphicsApi, f32, i32>;
+type AutodiffBackend = Autodiff<Backend>;
 
 fn main() {
     let device = WgpuDevice::default();
-    let config = load_config_from_json("config.json");
-    let _model = load_model::<Autodiff<Wgpu>>("model", &device, config);
+
+    if Path::new("model").exists() {
+        infer::<Backend>("model", device, MNISTDataset::train().get(1).unwrap())
+    } else {
+        train::train::<AutodiffBackend>(
+            "model",
+            TrainingConfig::new(ModelConfig::new(10, 512), AdamConfig::new()),
+            device,
+        );
+    }
 }

@@ -7,7 +7,12 @@ edition = "2021"
 
 [dependencies]
 burn = { version = "0.11.1", features = ["wgpu", "tui", "train"] }
-libm = "0.2"
-npy = "0.4"
 serde = "1"
 serde_json = "1"
+
+# Enable max optimizations for dependencies, but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.dev]
+opt-level = 1

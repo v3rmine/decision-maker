@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "brain-experiment"
+version = "0.1.0"
+description = ""
+authors = ["Johan Planchon <dev@johan.moe>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = { version = ">=1.7.0 !=1.8.0 <2", source = "pytorch" }
+# torch = { version = "<1.8.0+cu116", source = "pytorch" }
+onnx_graphsurgeon = { version = "^0.3", source = "nvidia" }
+numpy = "^1.26.3"
+sentencepiece = "^0.1.99"
+transformers = "^4.37.0"
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+# url = "https://download.pytorch.org/whl/cu116"
+priority = "explicit"
+
+[[tool.poetry.source]]
+name = "nvidia"
+url = "https://pypi.ngc.nvidia.com"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,8 @@
+# ONNX Models source
+models/*
+
+# Rust dist
+target/
+
+# Editors
+.vscode/history/model/

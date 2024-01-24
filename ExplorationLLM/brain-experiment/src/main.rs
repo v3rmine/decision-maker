@@ -11,9 +11,12 @@ use burn::{
 use model::{infer, ModelConfig};
 use train::TrainingConfig;
 
+mod activation;
 mod data;
 mod model;
+mod parts;
 mod train;
+mod utils;
 
 type Backend = Wgpu<AutoGraphicsApi, f32, i32>;
 type AutodiffBackend = Autodiff<Backend>;

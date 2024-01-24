@@ -1,5 +1,5 @@
 use burn::{
-    config::Config,
+    config::{self, Config},
     data::{dataloader::batcher::Batcher, dataset::source::huggingface::MNISTItem},
     module::Module,
     nn::{
@@ -61,10 +61,31 @@ impl<B: Backend> Model<B> {
 
 #[derive(Config, Debug)]
 pub struct ModelConfig {
-    num_classes: usize,
-    hidden_sizes: usize,
-    #[config(default = "0.5")]
-    dropout: f64,
+    pub vocab_size: usize,
+    /// Maximum Length for Positional Embeddings
+    #[config(default = "512")]
+    pub max_length: usize,
+    /// Number of Sentence Segments
+    #[config(default = "2")]
+    pub segments_count: usize,
+    /// Dimension of Hidden Layer in Transformer Encoder
+    #[config(default = "768")]
+    pub hidden_sizes: usize,
+    /// Number of Hidden Layers
+    #[config(default = "12")]
+    pub hidden_count: usize,
+    /// Numher of Heads in Multi-Headed Attention Layers
+    #[config(default = 12)]
+    pub heads_count: usize,
+    /// Dimension of Intermediate Layers in Positionwise Feedforward Net
+    #[config(default = "768 * 4")]
+    pub feedforward_sizes: usize,
+    /// Probability of Dropout of various Hidden Layers
+    #[config(default = "0.1")]
+    pub dropout_hidden: f64,
+    /// Probability of Dropout of Attention Layers
+    #[config(default = "0.1")]
+    pub dropout_attention: f64,
 }
 
 impl ModelConfig {

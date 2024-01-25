@@ -40,16 +40,16 @@
 
 ## Résultats
 ### Phrases de test
-- Take the tray and put it on the desk
-- Tell me how many people are in the corridor
-- Could you meet Robin at the dining table and follow her to the dining room
-- Could you grasp the tray from the side table and bring it to me
-- Please follow Robin from the entrance to the bedroom
-- Give me the bowl
-- Please Tell me how many tableware there are on the bookcase
-- Take the orange from the dining room to the counter
-- Grasp the tray and put it on the dining table
-- Greet Francis at the bed and lead her to her uber
+- [Take the tray and put it on the desk](#take-the-tray-and-put-it-on-the-desk-index)
+- [Tell me how many people are in the corridor](#tell-me-how-many-people-are-in-the-corridor-index)
+- [Could you meet Robin at the dining table and follow her to the dining room](#could-you-meet-robin-at-the-dining-table-and-follow-her-to-the-dining-room-index)
+- [Could you grasp the tray from the side table and bring it to me](#could-you-grasp-the-tray-from-the-side-table-and-bring-it-to-me-index)
+- [Please follow Robin from the entrance to the bedroom](#please-follow-robin-from-the-entrance-to-the-bedroom-index)
+- [Give me the bowl](#give-me-the-bowl-index)
+- [Please Tell me how many tableware there are on the bookcase](#please-tell-me-how-many-tableware-there-are-on-the-bookcase-index)
+- [Take the orange from the dining room to the counter](#take-the-orange-from-the-dining-room-to-the-counter-index)
+- [Grasp the tray and put it on the dining table](#grasp-the-tray-and-put-it-on-the-dining-table-index)
+- [Greet Francis at the bed and lead her to her uber](#greet-francis-at-the-bed-and-lead-her-to-her-uber-index)
 
 ### Trained LLM List
 
@@ -76,7 +76,7 @@
 | grut-v2-t5   | 1h11min | 2.2G | NA |
 | grut-v2-t5-grut   | 1h26min | 2.2G | NA |
 
-### `Take the tray and put it on the desk` ([Index](#Phrases-de-test))
+### `Take the tray and put it on the desk` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                        | Durée (cold) |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ |
@@ -101,7 +101,7 @@
 | grut-v2-mt5 | `["TAKING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 10.7s |
 | grut-v2-mt5-grut | `["TAKING(Theme('the tray')) - PLACING(Theme('it'), Goal"]` | 12.4s |
 
-### `Tell me how many people are in the corridor`
+### `Tell me how many people are in the corridor` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                          | Durée (cold) |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------- | ------------ |
@@ -126,7 +126,7 @@
 | grut-v2-mt5 | `["CHANGE_DIRECTION(Theme('you'), Location('in the corridor'))"]` | 11.2s |
 | grut-v2-mt5-grut | `["CHANGE_DIRECTION(Phenomenon('many people'), Area('on the corridor"]` | 12.4s |
 
-### `Could you meet Robin at the dining table and follow her to the dining room`
+### `Could you meet Robin at the dining table and follow her to the dining room` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                                  | Durée (cold) |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------- | ------------ |
@@ -151,7 +151,7 @@
 | grut-v2-mt5 | `["MOTION(Theme('you'), Goal('at the dining table')) - COTH"]` | 11.3s |
 | grut-v2-mt5-grut | `["MOTION(Theme('Robin at the dining table')) - COTHEME(Co"]` | 12s |
 
-### `Could you grasp the tray from the side table and bring it to me`
+### `Could you grasp the tray from the side table and bring it to me` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                        | Durée (cold) |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ |
@@ -176,7 +176,7 @@
 | grut-v2-mt5 | `["MANIPULATION(Entity('you'), Theme('the tray'), Source('from the side"]` | 11.4s |
 | grut-v2-mt5-grut | `["MANIPULATION(Entity('the tray'), Source('from the side table')) -"]` | 12s |
 
-### `Please follow Robin from the entrance to the bedroom`
+### `Please follow Robin from the entrance to the bedroom` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                       | Durée (cold) |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------- | ------------ |
@@ -201,7 +201,7 @@
 | grut-v2-mt5 | `["COTHEME(Cotheme('Robin'), Path('from the entrance to the bedroom'))"]` | 11.4s |
 | grut-v2-mt5-grut | `["COTHEME(Cotheme('Robin'), Path('from the entrance'), Goal('to"]` | 12.4s |
 
-### `Give me the bowl`
+### `Give me the bowl` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                      | Durée (cold) |
 | ------------------------------------------ | ------------------------------------------------------------- | ------------ |
@@ -226,7 +226,7 @@
 | grut-v2-mt5 | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 10.7s |
 | grut-v2-mt5-grut | `["GIVING(Recipient('me'), Theme('the bowl'))"]` | 11.95s |
 
-### `Please Tell me how many tableware there are on the bookcase`
+### `Please Tell me how many tableware there are on the bookcase` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                    | Durée (cold) |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------- | ------------ |
@@ -251,7 +251,7 @@
 | grut-v2-mt5 | `["CHANGE_OPERATIONAL_STATE(Agent('you'), Device('the tableware'),"]` | 11.3s |
 | grut-v2-mt5-grut | `["BRINGING(Theme('many tableware'), Location('on the bookcase'))"]` | 12.38s |
 
-### `Take the orange from the dining room to the counter`
+### `Take the orange from the dining room to the counter` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                                       | Durée (cold) |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- | ------------ |
@@ -276,7 +276,7 @@
 | grut-v2-mt5 | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal('"]` | 11.3s |
 | grut-v2-mt5-grut | `["BRINGING(Theme('the orange'), Source('from the dining room'), Goal('"]` | 12.4s |
 
-### `Grasp the tray and put it on the dining table`
+### `Grasp the tray and put it on the dining table` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                        | Durée (cold) |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ |
@@ -301,7 +301,7 @@
 | grut-v2-mt5 | `["MANIPULATION(Entity('the tray')) - PLACING(Theme('it'),"]` | 11.2s |
 | grut-v2-mt5-grut | `["MANIPULATION(Entity('the tray')) - PLACING(Theme('it'),"]` | 12.5s |
 
-### `Greet Francis at the bed and lead her to her uber`
+### `Greet Francis at the bed and lead her to her uber` ([Index](#phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                                                | Durée (cold) |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------ |

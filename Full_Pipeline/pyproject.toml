@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "full-pipeline"
+version = "0.1.0"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^1.9.0"
+sounddevice = "^0.4.6"
+pydub = "^0.25.1"
+numpy = "^1.26.3"
+soundfile = "^0.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,4 +1,10 @@
+# Full pipeline
 
+## Prérequis
+- python 3.11
+  - poetry (`pip install poetry`)
+
+## Mise en place
 > Create env
 > > On Windows / Linux / OSX
 > > ```bash
@@ -11,7 +17,7 @@
 > > poetry install
 > > ```
 
-
+## Éxecution
 > Set your `OPENAPI_KEY` environment variable if used with ChatGPT 
 
 Launch the main script:

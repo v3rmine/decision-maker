@@ -1,3 +1,4 @@
+#!/usr/bin/env -S poetry run python3
 import spacy
 from termcolor import colored
 
@@ -5,6 +6,8 @@ from constants import BASE_GOALS
 from llm import generate_ner_config, generate_rel_config, generate_textcat_config
 from memory import Memory
 from parse_ontology import parseOntologyConfig
+import argparse
+import stt
 
 if __name__ == '__main__':
     """
@@ -66,10 +69,18 @@ if __name__ == '__main__':
     
     """
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-r", "--record", help="Get the input with mic", action='store_true')
+    args = parser.parse_args()
+
     try:
-        while True:
+        # while True:
             print('================================================')
-            input_text = input('Enter a sentence: ')
+            if args.record:
+                input_text = stt.rec()
+                print(input_text)
+            else:
+                input_text = input('Enter a sentence: ')
             print()
 
             # Process the text with NLP

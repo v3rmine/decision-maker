@@ -15,10 +15,10 @@
 Launch the main script:
 
 ```bash
-python main.py
+poetry run python main.py
 ```
 
 Launch the action server:
 ```bash
-flask --app action_server run
+poetry run flask --app action_server run
 ```

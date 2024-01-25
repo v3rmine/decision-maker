@@ -11,6 +11,17 @@ sounddevice = "^0.4.6"
 pydub = "^0.25.1"
 numpy = "^1.26.3"
 soundfile = "^0.12.1"
+typing-extensions = "^4.9.0"
+spacy = "^3.7.2"
+jsonpickle = "^3.0.2"
+flask = "^3.0.1"
+pyttsx3 = "^2.90"
+termcolor = "^2.4.0"
+spacy-llm = "^0.7.0"
+argparse = "^1.4.0"
+en_core_web_lg = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1.tar.gz" }
+gtts = "^2.5.0"
+translate = "^3.6.1"
 
 [build-system]
 requires = ["poetry-core"]

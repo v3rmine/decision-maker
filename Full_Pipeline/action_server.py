@@ -2,8 +2,12 @@ import random
 import time
 import jsonpickle
 import json
-import pyttsx3
+from gtts import gTTS
 import models
+from pydub import AudioSegment
+from pydub.audio_segment import NamedTemporaryFile
+from pydub.playback import play
+from translate import Translator
 
 from flask import Flask, request, jsonify, Response
 
@@ -93,10 +97,15 @@ def say():
     data = json.loads(content)
 
     print(data['text'])
+    translator = Translator(to_lang="fr")
+    translation = translator.translate(data['text'])
+    print(translation)
 
-    engine = pyttsx3.init()
-    engine.setProperty('rate', 135)
-    engine.say(data['text'])
-    engine.runAndWait()
+    temp = NamedTemporaryFile(suffix=".mp3")
+    tts = gTTS(text=translation, lang="fr", slow=False)
+    tts.save(temp.file.name)
+    audio = AudioSegment.from_mp3(temp.file)
+    play(audio)
+    
 
     return Response(status=204)

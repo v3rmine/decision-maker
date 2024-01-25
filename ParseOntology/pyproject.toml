@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "parse_ontology"
+version = "0.1.0"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = "^3.11"
+toml = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

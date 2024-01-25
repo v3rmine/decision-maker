@@ -20,6 +20,9 @@ xlsxwriter = "3.0.2"
 openpyxl = "3.1.1"
 typing_extensions = "<4.6.0"
 
+[tool.poetry.dependencies.en_core_web_sm]
+url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0.tar.gz"
+
 [[tool.poetry.source]]
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cu116"

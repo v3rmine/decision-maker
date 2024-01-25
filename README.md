@@ -38,11 +38,11 @@
 
 ### Structure
 
-- [SRL_SpaCy](./SRL_SpaCy/): Exploration de la piste du Semantic role labelling (SpaCy)
 - [ExplorationLLM](./ExplorationLLM/README.md): Exploration de la piste des LLM et **état de l'art**
 - [Full_Pipeline](./Full_Pipeline/README.md): **Pipeline complet de compréhension** mixant SRL, algorithmie et LLM (SpaCy)
 - [GPSRGenDataset](./GPSRGenDataset/README.md): Exploration de pistes pour la génération la plus automatisée possible d'un dataset à jour (Robocup 2023)
-- [ParseOntology](./ParseOntology/): Librairie pour parser le fichier d'ontologie
+- [ParseOntology](./ParseOntology/README.md): Librairie pour parser le fichier d'ontologie
+- [SRL_SpaCy](./SRL_SpaCy/README.md): Exploration de la piste du Semantic role labelling (SpaCy)
 
 ## Autre
 

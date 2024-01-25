@@ -9,8 +9,8 @@ license = "MIT"
 python = "^3.11"
 spacy = "^3.7.2"
 
-[tool.poetry.dependencies.en_core_web_sm]
-url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz"
+[tool.poetry.dependencies.en_core_web_lg]
+url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1.tar.gz"
 
 [build-system]
 requires = ["poetry-core"]

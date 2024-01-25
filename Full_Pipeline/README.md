@@ -5,25 +5,26 @@
   - poetry (`pip install poetry`)
 
 ## Mise en place
-> Create env
-> > On Windows / Linux / OSX
-> > ```bash
-> > poetry env use 3.11
-> > ```
+**Creation de l'env**
+```bash
+poetry env use 3.11
+```
 
-> Install dependencies
-> > On Windows / Linux / OSX
-> > ```bash
-> > poetry install
-> > ```
+**Installation des dépendances**
+```bash
+poetry install
+```
 
 ## Éxecution
-1. Set your `OPENAPI_KEY` environment variable if used with ChatGPT 
-2. Launch the action server:
+1. Assigner la variable d'env `OPENAPI_KEY` à une clef API OpenAI 
+2. Lancer le serveur d'action (simulateur du robot)
 ```bash
 poetry run flask --app action_server run
 ```
-3. Launch the main script:
+3. Lancer le script principal
 ```bash
+# Entrée de la phrase par le clavier (texte)
 poetry run python main.py
+# Entrée de la phrase via le micro
+poetry run python main.py --record
 ```

@@ -24,7 +24,7 @@ poetry run flask --app action_server run
 3. Lancer le script principal
 ```bash
 # Entrée de la phrase par le clavier (texte)
-poetry run python main.py
+poetry run python3 main.py
 # Entrée de la phrase via le micro
-poetry run python main.py --record
+poetry run python3 main.py --record
 ```

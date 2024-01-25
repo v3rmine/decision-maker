@@ -1,6 +1,18 @@
 # Exploration LLM
 > Cette piste a été abandonnée pour des raison du manque de temps pour faire un dataset correct, ainsi que le temps d'inférence de Llama2 qui est trop élevé sur le Jetson.
 
+## Prérequis
+```sh
+poetry env use 3.11
+poetry install
+```
+
+## Lancement
+```sh
+poetry run python3 llama2-binding-function.py
+poetry run python3 llama2-server-function.py
+```
+
 ## Exploration solution llama2
 - Code pour appeller le serveur de llama.cpp : [llama2-binding-function.py](./llama2-binding-function.py)
 - Code pour invoquer directement le modèle avec Python : [llama2-binding-function.py](./llama2-binding-function.py)

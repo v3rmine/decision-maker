@@ -1,15 +1,15 @@
 # Brain-experiment (wip name)
 > Code from https://github.com/tvergho/sentence-transformers-burn
+> Se base sur [la recherche sur l'état de l'art](../Research/README.md)
+> **Mis en pose après 1j de travail par manque de temps**
 
-Points to evaluate:
-- Task identification
-- Order of the tasks
-- Task linking (Parameters of the task)
+## Process
+1. Bert/Bart pour extraire les tâches, leur ordre et sur quelles tâches elles dépendent
+2. Loop sur la récupération des informations manquantes/d'affinage des instructions
+3. Bert/Bart pour extraire les paramètres
+4. Traitement?
 
-Model :
-1. SRL Using T5/Bert/Bart
-
-## Links dump
+## Liens en vrac
 ### Dataset
 - https://github.com/crux82/huric/tree/master
 

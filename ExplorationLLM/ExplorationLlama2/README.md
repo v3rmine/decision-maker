@@ -1,3 +1,6 @@
+# Exploration LLM
+> Cette piste a été abandonnée pour des raison du manque de temps pour faire un dataset correct, ainsi que le temps d'inférence de Llama2 qui est trop élevé sur le Jetson.
+
 ## Exploration solution llama2
 - Code pour appeller le serveur de llama.cpp : [llama2-binding-function.py](./llama2-binding-function.py)
 - Code pour invoquer directement le modèle avec Python : [llama2-binding-function.py](./llama2-binding-function.py)
@@ -51,8 +54,9 @@
 ### Retours
 Les premiers retour sont concluents, nous pensons qu'avec un TPU optimisé pour la génération de texte, un modèle généraliste finetuné sur des exemples de requêtes avec retours et contraint avec le format JSON. Il est possible de générer une chaine d'appel depuis un simple prompt en language naturel. Cependant entre la contrainte de temps et celle de puissance, nous ne poursuivrons pas cette piste pour la suite du projet.
 
-### WIP: Rocket3-b
+### Recherche autour de Rocket3-b (temps d'inférence très court)
 prompt:
+```
 <pre>
 <|im_start|>user
 I will send a task and you will reply using only the known functions.
@@ -76,3 +80,4 @@ GO(to:$initial_loc)<|im_end|>
 Bring me back one of the apple from the kitchen<|im_end|>
 <|im_start|>assistant\n
 </pre>
+```

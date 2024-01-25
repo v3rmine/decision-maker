@@ -1,14 +1,15 @@
 # Exploration de la piste des LLM
 
+## TOC
 - [Exploration de la piste des LLM](#exploration-de-la-piste-des-llm)
+  - [TOC](#toc)
   - [Pistes personnelles](#pistes-personnelles)
-  - [Repository de Code](#repository-de-code)
-  - [Papier de Recherche](#papier-de-recherche)
+  - [Repos de code en rapport avec le projet et préparés pour un usage avec poetry](#repos-de-code-en-rapport-avec-le-projet-et-préparés-pour-un-usage-avec-poetry)
   - [Datasets](#datasets)
   - [Résultats](#résultats)
     - [Phrases de test](#phrases-de-test)
     - [Trained LLM List](#trained-llm-list)
-    - [`Take the tray and put it on the desk`](#take-the-tray-and-put-it-on-the-desk)
+    - [`Take the tray and put it on the desk` (Index)](#take-the-tray-and-put-it-on-the-desk-index)
     - [`Tell me how many people are in the corridor`](#tell-me-how-many-people-are-in-the-corridor)
     - [`Could you meet Robin at the dining table and follow her to the dining room`](#could-you-meet-robin-at-the-dining-table-and-follow-her-to-the-dining-room)
     - [`Could you grasp the tray from the side table and bring it to me`](#could-you-grasp-the-tray-from-the-side-table-and-bring-it-to-me)
@@ -20,24 +21,17 @@
     - [`Greet Francis at the bed and lead her to her uber`](#greet-francis-at-the-bed-and-lead-her-to-her-uber)
 
 ## Pistes personnelles
-- [LLM fonctionnel via un model fine-tuned](./ExplorationLlama2/README.md)
-- [Spacy et LLM](./LlmSpacy/README.md)
+- [Finetuning LLM](./ExplorationLlama2/README.md): Traitement avec LLM seul via un model fine-tuned
+- [Research](./Research/README.md): Analyse de l'état de l'art
+- [brain-experiment](./brain-experiment/README.md): Finetunage de Bert + algorithmie
 
-## Repository de Code
-- [GRUT: Grounded language Understanding via Transformers](./Research/grut/README.md) (source: https://github.com/crux82/grut)
+## Repos de code en rapport avec le projet et préparés pour un usage avec poetry
+- [GRUT v1: Grounded language Understanding via Transformers](./Research/grutv1/README.md) (source: https://github.com/crux82/grut) (version avec uniquement compréhension du language naturel)
+- [GRUT v2: Grounded language Understanding via Transformers](./Research/grutv1/README.md) (source: https://github.com/crux82/grut) (version avec liens entre paramètres et entitées d'ontologie)
 - [GPSR Command Understanding](./Research/gpsr-command-understanding/README.md) (source: https://github.com/nickswalker/gpsr-command-understanding)
 - [REL/SRL recherche italienne](./Research/NLP-Semantic-Role-Labeling/README.md) (source: https://github.com/andreabac3/NLP-Semantic-Role-Labeling)
 - [tagE: Enabling an Embodied Agent to Understand Human Instructions](./Research/tagE/README.md) (source: https://github.com/csarkar/tagE)
 - [LU4R: adaptive spoken Language Understanding For Robots](http://sag.art.uniroma2.it/lu4r.html)
-
-## Papier de Recherche
-- TLDR; Full pipeline, compréhension, questions en cas d'informations incomplètes, mémoire et planification de tâches  [Enabling human-like task identification from natural conversation](./Research/Papers/Enabling%20human-like%20task%20identification%20from%20natural%20conversation.pdf) https://arxiv.org/abs/2008.10073
-- TLDR; State Of The Art, Robocup Japan 2022: [Foundation Model based Open Vocabulary Task Planning andExecutive System for General Purpose Service Robots](./Research/Papers/Foundation%20Model%20based%20Open%20Vocabulary%20Task%20Planning%20and%20Executive%20System%20for%20General%20Purpose%20Service%20Robots.pdf) https://arxiv.org/abs/2308.03357
-- TLDR; How to parse natural language: [Language and Robotics: Complex Sentence Understanding](./Research/Papers/Language%20and%20Robotics%20-%20Complex%20Sentence.pdf) https://sci-hub.se/10.1007/978-3-030-27529-7_54
-- TLDR; Syntaxic tree and tasks/dependencies extraction: [Natural Spoken Instructions Understanding for Robot with Dependency Parsing](./Research/Papers/Natural%20Spoken%20Instructions%20Understanding%20for%20Robot%20with%20Dependency%20Parsing.pdf) https://sci-hub.se/10.1109/CYBER46603.2019.9066566
-- TLDR; Tasks and arguments extraction: [Mapping natural language procedures descriptions to linear temporal logic templates](./Research/Papers/Mapping%20natural%20language%20procedures%20descriptions%20to%20linear%20temporal%20logic%20templates:%20an%20application%20in%20the%20surgical%20robotic%20domain.pdf) https://link.springer.com/article/10.1007/s10489-023-04882-0
-- TLDR; Tasks with parameters extraction: [tagE: Enabling an Embodied Agent to Understand Human Instructions](./Research/Papers/tagE%20-%20Enabling%20an%20Embodied%20Agent%20to%20Understand%20Human%20Instructions.pdf) https://arxiv.org/abs/2310.15605
-- TLDR; Simple tasks and parameters extractor:  [Neural Semantic Parsing with Anonymization for Command Understanding in General-Purpose Service Robots](./Research/Papers/Neural%20Semantic%20Parsing%20with%20Anonymization%20for%20Command%20Understanding%20in%20General-Purpose%20Service%20Robots.pdf) https://arxiv.org/abs/1907.01115v1
 
 ## Datasets
 - [Human Robot Interaction Corpus (HuRIC 2.1)](https://github.com/crux82/huric)
@@ -46,27 +40,16 @@
 
 ## Résultats
 ### Phrases de test
-```
-Take the tray and put it on the desk
-
-Tell me how many people are in the corridor
-
-Could you meet Robin at the dining table and follow her to the dining room
-
-Could you grasp the tray from the side table and bring it to me
-
-Please follow Robin from the entrance to the bedroom
-
-Give me the bowl
-
-Please Tell me how many tableware there are on the bookcase
-
-Take the orange from the dining room to the counter
-
-Grasp the tray and put it on the dining table
-
-Greet Francis at the bed and lead her to her uber
-```
+- Take the tray and put it on the desk
+- Tell me how many people are in the corridor
+- Could you meet Robin at the dining table and follow her to the dining room
+- Could you grasp the tray from the side table and bring it to me
+- Please follow Robin from the entrance to the bedroom
+- Give me the bowl
+- Please Tell me how many tableware there are on the bookcase
+- Take the orange from the dining room to the counter
+- Grasp the tray and put it on the dining table
+- Greet Francis at the bed and lead her to her uber
 
 ### Trained LLM List
 
@@ -93,7 +76,7 @@ Greet Francis at the bed and lead her to her uber
 | grut-v2-t5   | 1h11min | 2.2G | NA |
 | grut-v2-t5-grut   | 1h26min | 2.2G | NA |
 
-### `Take the tray and put it on the desk`
+### `Take the tray and put it on the desk` ([Index](#Phrases-de-test))
 
 | Version LLM                                | Résultat                                                                                        | Durée (cold) |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------ |

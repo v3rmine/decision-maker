@@ -1,14 +1,16 @@
 
-> **For both:** activate venv
-> > On Windows
+> Create env
+> > On Windows / Linux / OSX
 > > ```bash
-> > .\venv\Scripts\Activate
+> > poetry env use 3.11
 > > ```
-> 
-> > On Linux
+
+> Install dependencies
+> > On Windows / Linux / OSX
 > > ```bash
-> > source venv/bin/activate
+> > poetry install
 > > ```
+
 
 > Set your `OPENAPI_KEY` environment variable if used with ChatGPT 
 

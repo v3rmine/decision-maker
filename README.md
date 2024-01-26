@@ -2,6 +2,8 @@
 
 [RoboCup](https://robocup.org/) scenario manager
 
+Vidéo de présentation : https://youtu.be/VEUW_xUpAgg
+
 ## Contributeurs
 
 - Julien CAPOSIENA ([@julien-cpsn](https://github.com/Julien-cpsn))

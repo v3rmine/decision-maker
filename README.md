@@ -46,6 +46,12 @@
 
 ## Autre
 
+
+### Notre super modèle maison
+
+Il sert à labeliser quelques goals pour l'instant mais on peu sans soucis penser à le train sur un plus grand dataset.
+https://huggingface.co/julien-cpsn/BERT-GSPR-text-classification
+
 ### CICD
 
 [Pipeline](https://cicd.planchon.dev/teams/main/pipelines/cpe.robot-project-mirror)
